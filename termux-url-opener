@@ -1,3 +1,2 @@
 #!/data/data/com.termux/files/usr/bin/bash
-am broadcast --user '0' -a com.ytdl.yturl -e url "$1"
-shw
+am broadcast --user '0' -a tasker.ytdl -e url "$1"
