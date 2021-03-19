@@ -21,7 +21,7 @@
 
 1. Copy and paste the following command in termux and press Enter key.
       
-      ```curl https://raw.githubusercontent.com/Practicalbutterfly5/Ytdl/work/installytdl.sh > installytdl.sh && chmod +x installytdl.sh && bash installytdl.sh```
+      ```curl https://raw.githubusercontent.com/Practicalbutterfly5/Ytdl/work/installytdl > installytdl && chmod +x installytdl && bash installytdl```
 
 2. Tasker will open automatically and ask to import ytdl profile. If it doesn't do so automatically, you can import xml from [this TaskerNet share.](https://taskernet.com/shares/?user=AS35m8nYO2KrDhtHnG3NNyeEpC1I3aBlL349HB7KHCBcBdz7DgYGq9nCOtOP%2BuTRApmJuA0UCGgl&id=Project%3Aytdl)
 
