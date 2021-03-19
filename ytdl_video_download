@@ -5,13 +5,12 @@
 # $3 is download directory 
 # $4 is options 
 # $5 is is mode
-# $6 is resolution
 
 IFS="|" read -a array <<< $1
 IFS="|" read -a array2 <<< $2
 for i in "${!array[@]}"; do
 echo "Starting download">/sdcard/Tasker/ytdl/"${array2[i]}"
-am broadcast --user '0' -a tasker.ytdl -e startids "${array2[i]}" -e startname     "${array[i]}" -e mode "$5" -e resolution "$6"
+am broadcast --user '0' -a tasker.ytdl -e startids "${array2[i]}" -e startname     "${array[i]}" -e mode "$5"
 youtube-dl --newline --embed-subs --embed-thumbnail -f "$4" "${array2[i]}" -o "$3">>/sdcard/Tasker/ytdl/"${array2[i]}"
 errorcode="$?"
 if [ $errorcode == 0 ]
