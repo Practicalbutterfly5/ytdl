@@ -1,12 +1,25 @@
 <TaskerData sr="" dvi="1" tv="5.11.14">
-	<Profile sr="prof103" ve="2">
-		<cdate>1616170418196</cdate>
+	<Profile sr="prof135" ve="2">
+		<cdate>1616170566364</cdate>
+		<edate>1616170727036</edate>
+		<id>135</id>
+		<mid0>137</mid0>
+		<nme>ytdl_Clipboard_set</nme>
+		<Event sr="con0" ve="2">
+			<code>3050</code>
+			<pri>0</pri>
+			<Str sr="arg0" ve="3">%CLIP</Str>
+			<Str sr="arg1" ve="3"/>
+			<Int sr="arg2" val="0"/>
+		</Event>
+	</Profile>
+	<Profile sr="prof136" ve="2">
+		<cdate>1616170566376</cdate>
 		<clp>true</clp>
 		<edate>1616141169951</edate>
 		<flags>8</flags>
-		<id>103</id>
-		<limit>true</limit>
-		<mid0>59</mid0>
+		<id>136</id>
+		<mid0>131</mid0>
 		<nme>ytdl_Intent_recieved</nme>
 		<Event sr="con0" ve="2">
 			<code>599</code>
@@ -18,924 +31,21 @@
 			<Str sr="arg4" ve="3"/>
 		</Event>
 	</Profile>
-	<Profile sr="prof104" ve="2">
-		<cdate>1616170418201</cdate>
-		<clp>true</clp>
-		<edate>1616141169713</edate>
-		<id>104</id>
-		<limit>true</limit>
-		<mid0>72</mid0>
-		<nme>ytdl_Clipboard_set</nme>
-		<Event sr="con0" ve="2">
-			<code>3050</code>
-			<pri>0</pri>
-			<Str sr="arg0" ve="3">%CLIP</Str>
-			<Str sr="arg1" ve="3"/>
-			<Int sr="arg2" val="0"/>
-		</Event>
-	</Profile>
 	<Project sr="proj0" ve="2">
 		<cdate>1615345930714</cdate>
 		<name>ytdl</name>
-		<pids>104,103</pids>
-		<tids>59,62,55,56,65,67,60,102,72,69,64,71,53,63</tids>
+		<pids>135,136</pids>
+		<tids>121,125,130,131,129,128,123,122,132,127,124,137,133,126,134</tids>
 		<Share sr="Share">
 			<d>YTDL is tasker+termux project to download YouTube videos on android very easily and seamlessly.</d>
 			<p>false</p>
 			<t>ytdl_initial_setup(run this)</t>
 		</Share>
 	</Project>
-	<Task sr="task102">
-		<cdate>1615918845957</cdate>
-		<edate>1616170221629</edate>
-		<id>102</id>
-		<nme>ytdl_kill_termux_ytdl</nme>
-		<pri>100</pri>
-		<rty>2</rty>
-		<Action sr="act0" ve="7">
-			<code>512</code>
-			<Int sr="arg0" val="1"/>
-		</Action>
-		<Action sr="act1" ve="7">
-			<code>377</code>
-			<Bundle sr="arg0">
-				<Vals sr="val">
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%td_button
-Button
-The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
-				</Vals>
-			</Bundle>
-			<Str sr="arg1" ve="3">Warning!!</Str>
-			<Str sr="arg2" ve="3">This will kill Termux app, and any other ytdl downloads going on will also be terminated.</Str>
-			<Str sr="arg3" ve="3">Force kill and stop downloading</Str>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3">Cancel</Str>
-			<Int sr="arg6" val="30"/>
-			<Int sr="arg7" val="0"/>
-		</Action>
-		<Action sr="act2" ve="7">
-			<code>137</code>
-			<Int sr="arg0" val="0"/>
-			<Str sr="arg1" ve="3"/>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%td_button</lhs>
-					<op>3</op>
-					<rhs>*kill*</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act3" ve="7">
-			<code>779</code>
-			<Str sr="arg0" ve="3">%par1</Str>
-			<Int sr="arg1" val="0"/>
-		</Action>
-		<Action sr="act4" ve="7">
-			<code>365</code>
-			<Bundle sr="arg0">
-				<Vals sr="val">
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""/&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
-				</Vals>
-			</Bundle>
-			<Str sr="arg1" ve="3">TermuxCommand(/data/data/com.termux/files/home/ytdl/kill_termux,,,true)</Str>
-		</Action>
-		<Action sr="act5" ve="7">
-			<code>137</code>
-			<Int sr="arg0" val="0"/>
-			<Str sr="arg1" ve="3">ytdl_downloader</Str>
-		</Action>
-		<Action sr="act6" ve="7">
-			<code>137</code>
-			<Int sr="arg0" val="0"/>
-			<Str sr="arg1" ve="3">ytdl_intent_handler</Str>
-		</Action>
-		<Action sr="act7" ve="7">
-			<code>130</code>
-			<Str sr="arg0" ve="3">ytdl_cleanup_temporary_files</Str>
-			<Int sr="arg1">
-				<var>%priority</var>
-			</Int>
-			<Str sr="arg2" ve="3">suppress toast</Str>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3"/>
-			<Int sr="arg5" val="0"/>
-			<Int sr="arg6" val="0"/>
-			<Str sr="arg7" ve="3"/>
-			<Int sr="arg8" val="0"/>
-			<Int sr="arg9" val="0"/>
-		</Action>
-	</Task>
-	<Task sr="task53">
-		<cdate>1616100669935</cdate>
-		<edate>1616170253983</edate>
-		<id>53</id>
-		<nme>ytdl_retry</nme>
-		<rty>2</rty>
-		<Action sr="act0" ve="7">
-			<code>512</code>
-			<Int sr="arg0" val="1"/>
-		</Action>
-		<Action sr="act1" ve="7">
-			<code>779</code>
-			<Str sr="arg0" ve="3">Download failed - %startname</Str>
-			<Int sr="arg1" val="0"/>
-		</Action>
-		<Action sr="act2" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%info</Str>
-			<Str sr="arg1" ve="3">%startids
-%startname-%startids.extension</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-		</Action>
-		<Action sr="act3" ve="7">
-			<code>130</code>
-			<Str sr="arg0" ve="3">ytdl_downloader</Str>
-			<Int sr="arg1">
-				<var>%priority</var>
-			</Int>
-			<Str sr="arg2" ve="3"/>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3"/>
-			<Int sr="arg5" val="0"/>
-			<Int sr="arg6" val="1"/>
-			<Str sr="arg7" ve="3"/>
-			<Int sr="arg8" val="0"/>
-			<Int sr="arg9" val="0"/>
-		</Action>
-	</Task>
-	<Task sr="task55">
-		<cdate>1616109319759</cdate>
-		<edate>1616170250424</edate>
-		<id>55</id>
-		<nme>ytdl_open_file_notify_cancel</nme>
-		<rty>2</rty>
-		<Action sr="act0" ve="7">
-			<code>512</code>
-			<Int sr="arg0" val="1"/>
-		</Action>
-		<Action sr="act1" ve="7">
-			<code>779</code>
-			<Str sr="arg0" ve="3">%par1</Str>
-			<Int sr="arg1" val="0"/>
-		</Action>
-		<Action sr="act2" ve="7">
-			<code>590</code>
-			<Str sr="arg0" ve="3">%par2</Str>
-			<Str sr="arg1" ve="3">,</Str>
-			<Int sr="arg2" val="0"/>
-		</Action>
-		<Action sr="act3" ve="7">
-			<code>102</code>
-			<Str sr="arg0" ve="3">%par21</Str>
-			<Str sr="arg1" ve="3">%par22</Str>
-		</Action>
-	</Task>
-	<Task sr="task56">
-		<cdate>1616112674679</cdate>
-		<edate>1616170245911</edate>
-		<id>56</id>
-		<nme>ytdl_delete_file_notify_cancel</nme>
-		<rty>2</rty>
-		<Action sr="act0" ve="7">
-			<code>512</code>
-			<Int sr="arg0" val="1"/>
-		</Action>
-		<Action sr="act1" ve="7">
-			<code>779</code>
-			<Str sr="arg0" ve="3">%par1</Str>
-			<Int sr="arg1" val="0"/>
-		</Action>
-		<Action sr="act2" ve="7">
-			<code>406</code>
-			<Str sr="arg0" ve="3">%par2</Str>
-			<Int sr="arg1" val="0"/>
-			<Int sr="arg2" val="0"/>
-		</Action>
-		<Action sr="act3" ve="7">
-			<code>548</code>
-			<Str sr="arg0" ve="3">Video deleted.</Str>
-			<Int sr="arg1" val="0"/>
-		</Action>
-	</Task>
-	<Task sr="task59">
-		<cdate>1616136472683</cdate>
-		<edate>1616136493283</edate>
-		<id>59</id>
-		<Action sr="act0" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%url</Str>
-			<Str sr="arg1" ve="3">%CLIP</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-		</Action>
-		<Action sr="act1" ve="7">
-			<code>130</code>
-			<Str sr="arg0" ve="3">ytdl_check_url</Str>
-			<Int sr="arg1">
-				<var>%priority</var>
-			</Int>
-			<Str sr="arg2" ve="3"/>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3"/>
-			<Int sr="arg5" val="0"/>
-			<Int sr="arg6" val="1"/>
-			<Str sr="arg7" ve="3"/>
-			<Int sr="arg8" val="0"/>
-			<Int sr="arg9" val="0"/>
-		</Action>
-	</Task>
-	<Task sr="task60">
-		<cdate>1615972225558</cdate>
-		<edate>1616119391182</edate>
-		<id>60</id>
-		<nme>ytdl_download_progress</nme>
-		<pri>100</pri>
-		<rty>2</rty>
-		<Action sr="act0" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%extension</Str>
-			<Str sr="arg1" ve="3">mp4</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%mode</lhs>
-					<op>2</op>
-					<rhs>video</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act1" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%extension</Str>
-			<Str sr="arg1" ve="3">m4a</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%mode</lhs>
-					<op>2</op>
-					<rhs>audio</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act10" ve="7">
-			<code>137</code>
-			<Int sr="arg0" val="0"/>
-			<Str sr="arg1" ve="3"/>
-		</Action>
-		<Action sr="act11" ve="7">
-			<code>38</code>
-		</Action>
-		<Action sr="act12" ve="7">
-			<code>342</code>
-			<Int sr="arg0" val="1"/>
-			<Str sr="arg1" ve="3">/sdcard/Tasker/ytdl/%startids</Str>
-			<Str sr="arg2" ve="3">%lastmodified</Str>
-			<Int sr="arg3" val="0"/>
-		</Action>
-		<Action sr="act13" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%diff</Str>
-			<Str sr="arg1" ve="3">%TIMES-%lastmodified</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="1"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-		</Action>
-		<Action sr="act14" ve="7">
-			<code>37</code>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%diff</lhs>
-					<op>7</op>
-					<rhs>30</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act15" ve="7">
-			<code>406</code>
-			<Str sr="arg0" ve="3">/sdcard/Tasker/ytdl/%startids</Str>
-			<Int sr="arg1" val="0"/>
-			<Int sr="arg2" val="0"/>
-		</Action>
-		<Action sr="act16" ve="7">
-			<code>779</code>
-			<Str sr="arg0" ve="3">Downloading - %startname</Str>
-			<Int sr="arg1" val="0"/>
-		</Action>
-		<Action sr="act17" ve="7">
-			<code>523</code>
-			<Str sr="arg0" ve="3">Download timeout - %startname</Str>
-			<Str sr="arg1" ve="3">Download timed out for some reason.</Str>
-			<Str sr="arg10" ve="3"/>
-			<Str sr="arg11" ve="3">ytdl</Str>
-			<Img sr="arg2" ve="2">
-				<nme>mw_image_timer_off</nme>
-			</Img>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="0"/>
-			<Int sr="arg7" val="0"/>
-			<Int sr="arg8" val="0"/>
-			<Str sr="arg9" ve="3"/>
-			<ListElementItem sr="item0">
-				<label>Dismiss</label>
-				<Action sr="action" ve="7">
-					<code>779</code>
-					<Str sr="arg0" ve="3">Download timeout - %startname</Str>
-					<Int sr="arg1" val="0"/>
-				</Action>
-			</ListElementItem>
-			<ListElementItem sr="item1">
-				<label>Retry</label>
-				<Action sr="action" ve="7">
-					<code>130</code>
-					<Str sr="arg0" ve="3">ytdl_retry</Str>
-					<Int sr="arg1">
-						<var>%priority</var>
-					</Int>
-					<Str sr="arg2" ve="3"/>
-					<Str sr="arg3" ve="3"/>
-					<Str sr="arg4" ve="3"/>
-					<Int sr="arg5" val="0"/>
-					<Int sr="arg6" val="0"/>
-					<Str sr="arg7" ve="3"/>
-					<Int sr="arg8" val="0"/>
-					<Int sr="arg9" val="0"/>
-				</Action>
-			</ListElementItem>
-			<ListElementItem sr="item2">
-				<label>Open url</label>
-				<Action sr="action" ve="7">
-					<code>130</code>
-					<Str sr="arg0" ve="3">ytdl_open_link_notify_cancel</Str>
-					<Int sr="arg1">
-						<var>%priority</var>
-					</Int>
-					<Str sr="arg2" ve="3">Download timeout - %startname</Str>
-					<Str sr="arg3" ve="3">https://youtu.be/%startids</Str>
-					<Str sr="arg4" ve="3"/>
-					<Int sr="arg5" val="0"/>
-					<Int sr="arg6" val="0"/>
-					<Str sr="arg7" ve="3"/>
-					<Int sr="arg8" val="0"/>
-					<Int sr="arg9" val="0"/>
-				</Action>
-			</ListElementItem>
-		</Action>
-		<Action sr="act18" ve="7">
-			<code>137</code>
-			<Int sr="arg0" val="0"/>
-			<Str sr="arg1" ve="3"/>
-		</Action>
-		<Action sr="act19" ve="7">
-			<code>38</code>
-		</Action>
-		<Action sr="act2" ve="7">
-			<code>300</code>
-			<label>start</label>
-		</Action>
-		<Action sr="act20" ve="7">
-			<code>523</code>
-			<Str sr="arg0" ve="3">Downloading - %startname</Str>
-			<Str sr="arg1" ve="3">%lastline</Str>
-			<Str sr="arg10" ve="3"/>
-			<Str sr="arg11" ve="3">ytdl</Str>
-			<Img sr="arg2" ve="2">
-				<nme>mw_navigation_arrow_downward</nme>
-			</Img>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="0"/>
-			<Int sr="arg7" val="0"/>
-			<Int sr="arg8" val="0"/>
-			<Str sr="arg9" ve="3"/>
-			<ListElementItem sr="item0">
-				<label>Stop downloading</label>
-				<Action sr="action" ve="7">
-					<code>130</code>
-					<Str sr="arg0" ve="3">ytdl_kill_termux_ytdl</Str>
-					<Int sr="arg1">
-						<var>%priority</var>
-					</Int>
-					<Str sr="arg2" ve="3">Downloading - %startname</Str>
-					<Str sr="arg3" ve="3"/>
-					<Str sr="arg4" ve="3"/>
-					<Int sr="arg5" val="0"/>
-					<Int sr="arg6" val="1"/>
-					<Str sr="arg7" ve="3"/>
-					<Int sr="arg8" val="0"/>
-					<Int sr="arg9" val="0"/>
-				</Action>
-			</ListElementItem>
-		</Action>
-		<Action sr="act21" ve="7">
-			<code>30</code>
-			<Int sr="arg0">
-				<var>200</var>
-			</Int>
-			<Int sr="arg1" val="0"/>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-		</Action>
-		<Action sr="act22" ve="7">
-			<code>135</code>
-			<Int sr="arg0" val="1"/>
-			<Int sr="arg1" val="1"/>
-			<Str sr="arg2" ve="3">start</Str>
-		</Action>
-		<Action sr="act3" ve="7">
-			<code>123</code>
-			<Str sr="arg0" ve="3">tail -n 1 "/sdcard/Tasker/ytdl/%startids"</Str>
-			<Int sr="arg1" val="0"/>
-			<Int sr="arg2" val="0"/>
-			<Str sr="arg3" ve="3">%lastline</Str>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3"/>
-		</Action>
-		<Action sr="act4" ve="7">
-			<code>598</code>
-			<se>false</se>
-			<Str sr="arg0" ve="3">%lastline</Str>
-			<Str sr="arg1" ve="3">[K[download]   </Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Str sr="arg5" ve="3"/>
-			<Int sr="arg6" val="1"/>
-			<Str sr="arg7" ve="3">Progress : </Str>
-		</Action>
-		<Action sr="act5" ve="7">
-			<code>37</code>
-			<ConditionList sr="if">
-				<bool0>Or</bool0>
-				<Condition sr="c0" ve="3">
-					<lhs>%lastline</lhs>
-					<op>2</op>
-					<rhs>Download failed</rhs>
-				</Condition>
-				<Condition sr="c1" ve="3">
-					<lhs>%lastline</lhs>
-					<op>2</op>
-					<rhs>Download complete</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act6" ve="7">
-			<code>406</code>
-			<Str sr="arg0" ve="3">/sdcard/Tasker/ytdl/%startids</Str>
-			<Int sr="arg1" val="0"/>
-			<Int sr="arg2" val="0"/>
-		</Action>
-		<Action sr="act7" ve="7">
-			<code>779</code>
-			<Str sr="arg0" ve="3">Downloading - %startname</Str>
-			<Int sr="arg1" val="0"/>
-		</Action>
-		<Action sr="act8" ve="7">
-			<code>523</code>
-			<Str sr="arg0" ve="3">Download failed - %startname</Str>
-			<Str sr="arg1" ve="3">Media download failed. Try to retry download, or check your network connection.</Str>
-			<Str sr="arg10" ve="3"/>
-			<Str sr="arg11" ve="3">ytdl</Str>
-			<Img sr="arg2" ve="2">
-				<nme>mw_alert_error</nme>
-			</Img>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="0"/>
-			<Int sr="arg7" val="0"/>
-			<Int sr="arg8" val="0"/>
-			<Str sr="arg9" ve="3"/>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%lastline</lhs>
-					<op>2</op>
-					<rhs>Download failed</rhs>
-				</Condition>
-			</ConditionList>
-			<ListElementItem sr="item0">
-				<label>Dismiss</label>
-				<Action sr="action" ve="7">
-					<code>779</code>
-					<Str sr="arg0" ve="3">Download failed - %startname</Str>
-					<Int sr="arg1" val="0"/>
-				</Action>
-			</ListElementItem>
-			<ListElementItem sr="item1">
-				<label>Retry</label>
-				<Action sr="action" ve="7">
-					<code>130</code>
-					<Str sr="arg0" ve="3">ytdl_retry</Str>
-					<Int sr="arg1">
-						<var>%priority</var>
-					</Int>
-					<Str sr="arg2" ve="3"/>
-					<Str sr="arg3" ve="3"/>
-					<Str sr="arg4" ve="3"/>
-					<Int sr="arg5" val="0"/>
-					<Int sr="arg6" val="1"/>
-					<Str sr="arg7" ve="3"/>
-					<Int sr="arg8" val="0"/>
-					<Int sr="arg9" val="0"/>
-				</Action>
-			</ListElementItem>
-			<ListElementItem sr="item2">
-				<label>Open link</label>
-				<Action sr="action" ve="7">
-					<code>130</code>
-					<Str sr="arg0" ve="3">ytdl_open_link_notify_cancel</Str>
-					<Int sr="arg1">
-						<var>%priority</var>
-					</Int>
-					<Str sr="arg2" ve="3">Download failed - %startname</Str>
-					<Str sr="arg3" ve="3">https://youtu.be/%startids</Str>
-					<Str sr="arg4" ve="3"/>
-					<Int sr="arg5" val="0"/>
-					<Int sr="arg6" val="1"/>
-					<Str sr="arg7" ve="3"/>
-					<Int sr="arg8" val="0"/>
-					<Int sr="arg9" val="0"/>
-				</Action>
-			</ListElementItem>
-		</Action>
-		<Action sr="act9" ve="7">
-			<code>523</code>
-			<Str sr="arg0" ve="3">Download complete - %startname</Str>
-			<Str sr="arg1" ve="3"/>
-			<Str sr="arg10" ve="3"/>
-			<Str sr="arg11" ve="3">ytdl</Str>
-			<Img sr="arg2" ve="2">
-				<nme>mw_action_done</nme>
-			</Img>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="0"/>
-			<Int sr="arg7" val="0"/>
-			<Int sr="arg8" val="0"/>
-			<Str sr="arg9" ve="3"/>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%lastline</lhs>
-					<op>2</op>
-					<rhs>Download complete</rhs>
-				</Condition>
-			</ConditionList>
-			<ListElementItem sr="item0">
-				<label>Dismiss</label>
-				<Action sr="action" ve="7">
-					<code>779</code>
-					<Str sr="arg0" ve="3">Download complete - %startname</Str>
-					<Int sr="arg1" val="0"/>
-				</Action>
-			</ListElementItem>
-			<ListElementItem sr="item1">
-				<label>Delete file</label>
-				<Action sr="action" ve="7">
-					<code>130</code>
-					<Str sr="arg0" ve="3">ytdl_delete_file_notify_cancel</Str>
-					<Int sr="arg1">
-						<var>%priority</var>
-					</Int>
-					<Str sr="arg2" ve="3">Download complete - %startname</Str>
-					<Str sr="arg3" ve="3">%Directory_ytdl/%startname.%extension</Str>
-					<Str sr="arg4" ve="3"/>
-					<Int sr="arg5" val="0"/>
-					<Int sr="arg6" val="0"/>
-					<Str sr="arg7" ve="3"/>
-					<Int sr="arg8" val="0"/>
-					<Int sr="arg9" val="0"/>
-				</Action>
-			</ListElementItem>
-			<ListElementItem sr="item2">
-				<label>Open file</label>
-				<Action sr="action" ve="7">
-					<code>130</code>
-					<Str sr="arg0" ve="3">ytdl_open_file_notify_cancel</Str>
-					<Int sr="arg1">
-						<var>%priority</var>
-					</Int>
-					<Str sr="arg2" ve="3">Download complete - %startname</Str>
-					<Str sr="arg3" ve="3">%Directory_ytdl/%startname.%extension,%mode/*</Str>
-					<Str sr="arg4" ve="3"/>
-					<Int sr="arg5" val="0"/>
-					<Int sr="arg6" val="1"/>
-					<Str sr="arg7" ve="3"/>
-					<Int sr="arg8" val="0"/>
-					<Int sr="arg9" val="0"/>
-				</Action>
-			</ListElementItem>
-		</Action>
-	</Task>
-	<Task sr="task62">
-		<cdate>1615878126177</cdate>
-		<edate>1616170523679</edate>
-		<id>62</id>
-		<nme>ytdl_initial_setup(run this)</nme>
-		<pri>100</pri>
-		<Action sr="act0" ve="7">
-			<code>365</code>
-			<Bundle sr="arg0">
-				<Vals sr="val">
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""/&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
-				</Vals>
-			</Bundle>
-			<Str sr="arg1" ve="3">TermuxCommand(/data/data/com.termux/files/home/ytdl/kill_termux,,,true)</Str>
-		</Action>
-		<Action sr="act1" ve="7">
-			<code>549</code>
-			<Str sr="arg0" ve="3">%Prefferedreso_ytdl/%Directory_ytdl/%Tutorial_ytdl</Str>
-			<Int sr="arg1" val="1"/>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-		</Action>
-		<Action sr="act10" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%Prefferedreso_ytdl</Str>
-			<Str sr="arg1" ve="3">%ld_selected</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-		</Action>
-		<Action sr="act11" ve="7">
-			<code>38</code>
-		</Action>
-		<Action sr="act12" ve="7">
-			<code>377</code>
-			<Bundle sr="arg0">
-				<Vals sr="val">
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%td_button
-Button
-The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
-				</Vals>
-			</Bundle>
-			<Str sr="arg1" ve="3">Download mode for individual video downloads?</Str>
-			<Str sr="arg2" ve="3"/>
-			<Str sr="arg3" ve="3">Video (recommended)</Str>
-			<Str sr="arg4" ve="3">Audio</Str>
-			<Str sr="arg5" ve="3">Ask everytime</Str>
-			<Int sr="arg6" val="30"/>
-			<Int sr="arg7" val="0"/>
-		</Action>
-		<Action sr="act13" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%Mode_ytdl</Str>
-			<Str sr="arg1" ve="3">Ask</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%td_button</lhs>
-					<op>2</op>
-					<rhs>*Ask*</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act14" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%Mode_ytdl</Str>
-			<Str sr="arg1" ve="3">audio</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%td_button</lhs>
-					<op>2</op>
-					<rhs>*Audio*</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act15" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%Mode_ytdl</Str>
-			<Str sr="arg1" ve="3">video</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%td_button</lhs>
-					<op>2</op>
-					<rhs>*Video*</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act16" ve="7">
-			<code>159</code>
-			<Str sr="arg0" ve="3">ytdl_Clipboard_set</Str>
-			<Int sr="arg1" val="1"/>
-		</Action>
-		<Action sr="act17" ve="7">
-			<code>159</code>
-			<Str sr="arg0" ve="3">ytdl_Intent_recieved</Str>
-			<Int sr="arg1" val="1"/>
-		</Action>
-		<Action sr="act18" ve="7">
-			<code>377</code>
-			<se>false</se>
-			<Bundle sr="arg0">
-				<Vals sr="val">
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%td_button
-Button
-The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
-				</Vals>
-			</Bundle>
-			<Str sr="arg1" ve="3">Setup complete</Str>
-			<Str sr="arg2" ve="3">You can re-run this anytime if you want to change setting.
-
-
-Usage : 
-
-Method 1: Share YouTube video, playlist, channel link, or in fact any YouTube link to termux app. 
-
-Method 2: Just copy any YouTube link (This will work only on &lt;=android 9 users, or &gt;=android 10 users with tasker having WRITE_SECURE_SETTINGS permission. Visit Tasker website to learn how to grant it.)
-
-
-Individual video download preferences
-Default resolution: %Prefferedreso_ytdl
-Download mode: %Mode_ytdl
-
-Playlist download preferences
-Default resolution: Ask
-Download mode: Ask
-
-
-Output Directory : %Directory_ytdl</Str>
-			<Str sr="arg3" ve="3">Ok understood</Str>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3">Video Tutorial</Str>
-			<Int sr="arg6" val="60"/>
-			<Int sr="arg7" val="0"/>
-		</Action>
-		<Action sr="act19" ve="7">
-			<code>548</code>
-			<label>!!!!</label>
-			<Str sr="arg0" ve="3">Video coming soon!</Str>
-			<Int sr="arg1" val="0"/>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%td_button</lhs>
-					<op>2</op>
-					<rhs>*Video*</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act2" ve="7">
-			<code>390</code>
-			<Bundle sr="arg0">
-				<Vals sr="val">
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%input
-Input
-The text that was retrieved from the dialog&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
-				</Vals>
-			</Bundle>
-			<Str sr="arg1" ve="3">Directory</Str>
-			<Str sr="arg2" ve="3">Set the download folder for ytdl videos.</Str>
-			<Str sr="arg3" ve="3">Press back button when in desired folder to select it.</Str>
-			<Str sr="arg4" ve="3"/>
-		</Action>
-		<Action sr="act20" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%Tutorial_ytdl</Str>
-			<Str sr="arg1" ve="3">completed</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-		</Action>
-		<Action sr="act3" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%Directory_ytdl</Str>
-			<Str sr="arg1" ve="3">%input</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-		</Action>
-		<Action sr="act4" ve="7">
-			<code>548</code>
-			<Str sr="arg0" ve="3">Output directory: %Directory_ytdl</Str>
-			<Int sr="arg1" val="0"/>
-		</Action>
-		<Action sr="act5" ve="7">
-			<code>377</code>
-			<Bundle sr="arg0">
-				<Vals sr="val">
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%td_button
-Button
-The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
-				</Vals>
-			</Bundle>
-			<Str sr="arg1" ve="3">Preferred resolution for individual video downloads.</Str>
-			<Str sr="arg2" ve="3">Auto-Resolution: Set a default resolution for individual video downloads.
-Ask: Ask resolution before downloading.</Str>
-			<Str sr="arg3" ve="3">Auto-Resolution(recommend)</Str>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3">Ask every time</Str>
-			<Int sr="arg6" val="30"/>
-			<Int sr="arg7" val="0"/>
-		</Action>
-		<Action sr="act6" ve="7">
-			<code>37</code>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%td_button</lhs>
-					<op>2</op>
-					<rhs>*Ask*</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act7" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%Prefferedreso_ytdl</Str>
-			<Str sr="arg1" ve="3">Ask</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-		</Action>
-		<Action sr="act8" ve="7">
-			<code>43</code>
-		</Action>
-		<Action sr="act9" ve="7">
-			<code>378</code>
-			<Bundle sr="arg0">
-				<Vals sr="val">
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%ld_button
-Button
-The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%ld_selected
-Selected
-&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%ld_selected_index
-Selected Index
-&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;%ld_long
-Long
-true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
-				</Vals>
-			</Bundle>
-			<Int sr="arg1" val="0"/>
-			<Int sr="arg10" val="0"/>
-			<Int sr="arg11" val="0"/>
-			<Int sr="arg12" val="1"/>
-			<Str sr="arg2" ve="3">Select resolution.</Str>
-			<Str sr="arg3" ve="3">144p,240p,360p,480p,720p,1080p,1440p,2160p</Str>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3"/>
-			<Str sr="arg6" ve="3"/>
-			<Str sr="arg7" ve="3"/>
-			<Str sr="arg8" ve="3"/>
-			<Int sr="arg9" val="30"/>
-		</Action>
-		<Img sr="icn" ve="2">
-			<nme>cust_star</nme>
-		</Img>
-	</Task>
-	<Task sr="task63">
-		<cdate>1616121798577</cdate>
-		<edate>1616170232824</edate>
-		<id>63</id>
-		<nme>Grant clipboard access</nme>
-		<pri>100</pri>
-		<Action sr="act0" ve="7">
-			<code>319</code>
-			<Str sr="arg0" ve="3">android.permission.WRITE_SECURE_SETTINGS</Str>
-		</Action>
-		<Img sr="icn" ve="2">
-			<nme>mw_card_text_outline</nme>
-		</Img>
-	</Task>
-	<Task sr="task64">
+	<Task sr="task121">
 		<cdate>1615912488849</cdate>
 		<edate>1616170229109</edate>
-		<id>64</id>
+		<id>121</id>
 		<nme>ytdl_cleanup_temporary_files</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -1016,10 +126,10 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<nme>mw_content_delete_sweep</nme>
 		</Img>
 	</Task>
-	<Task sr="task65">
+	<Task sr="task122">
 		<cdate>1615928580510</cdate>
-		<edate>1616170226876</edate>
-		<id>65</id>
+		<edate>1616170689162</edate>
+		<id>122</id>
 		<nme>ytdl_intent_handler</nme>
 		<pri>6</pri>
 		<rty>2</rty>
@@ -1209,10 +319,10 @@ Link: %returnurl</Str>
 			</ListElementItem>
 		</Action>
 	</Task>
-	<Task sr="task67">
+	<Task sr="task123">
 		<cdate>1615947227099</cdate>
-		<edate>1616170224739</edate>
-		<id>67</id>
+		<edate>1616170663207</edate>
+		<id>123</id>
 		<nme>ytdl_open_link_notify_cancel</nme>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
@@ -1229,10 +339,10 @@ Link: %returnurl</Str>
 			<Str sr="arg0" ve="3">%par2</Str>
 		</Action>
 	</Task>
-	<Task sr="task69">
+	<Task sr="task124">
 		<cdate>1615928798250</cdate>
-		<edate>1616112559096</edate>
-		<id>69</id>
+		<edate>1616170670975</edate>
+		<id>124</id>
 		<nme>ytdl_info</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -1290,10 +400,92 @@ Link: %returnurl</Str>
 			<Str sr="arg1" ve="3">TermuxCommand(/data/data/com.termux/files/home/ytdl/ytdl_info,%url,,true)</Str>
 		</Action>
 	</Task>
-	<Task sr="task71">
+	<Task sr="task125">
+		<cdate>1615918845957</cdate>
+		<edate>1616170221629</edate>
+		<id>125</id>
+		<nme>ytdl_kill_termux_ytdl</nme>
+		<pri>100</pri>
+		<rty>2</rty>
+		<Action sr="act0" ve="7">
+			<code>512</code>
+			<Int sr="arg0" val="1"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>377</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%td_button
+Button
+The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">Warning!!</Str>
+			<Str sr="arg2" ve="3">This will kill Termux app, and any other ytdl downloads going on will also be terminated.</Str>
+			<Str sr="arg3" ve="3">Force kill and stop downloading</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3">Cancel</Str>
+			<Int sr="arg6" val="30"/>
+			<Int sr="arg7" val="0"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0"/>
+			<Str sr="arg1" ve="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%td_button</lhs>
+					<op>3</op>
+					<rhs>*kill*</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>779</code>
+			<Str sr="arg0" ve="3">%par1</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>365</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""/&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">TermuxCommand(/data/data/com.termux/files/home/ytdl/kill_termux,,,true)</Str>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0"/>
+			<Str sr="arg1" ve="3">ytdl_downloader</Str>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0"/>
+			<Str sr="arg1" ve="3">ytdl_intent_handler</Str>
+		</Action>
+		<Action sr="act7" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">ytdl_cleanup_temporary_files</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Str sr="arg2" ve="3">suppress toast</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+			<Int sr="arg6" val="0"/>
+			<Str sr="arg7" ve="3"/>
+			<Int sr="arg8" val="0"/>
+			<Int sr="arg9" val="0"/>
+		</Action>
+	</Task>
+	<Task sr="task126">
 		<cdate>1615929094045</cdate>
 		<edate>1616112556516</edate>
-		<id>71</id>
+		<id>126</id>
 		<nme>ytdl_downloader</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -1963,10 +1155,10 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<code>40</code>
 		</Action>
 	</Task>
-	<Task sr="task72">
+	<Task sr="task127">
 		<cdate>1615796080362</cdate>
-		<edate>1616136501635</edate>
-		<id>72</id>
+		<edate>1616170702198</edate>
+		<id>127</id>
 		<nme>ytdl_check_url</nme>
 		<pri>6</pri>
 		<rty>2</rty>
@@ -1998,6 +1190,840 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 		</Action>
 		<Action sr="act2" ve="7">
 			<code>38</code>
+		</Action>
+	</Task>
+	<Task sr="task128">
+		<cdate>1616100669935</cdate>
+		<edate>1616170253983</edate>
+		<id>128</id>
+		<nme>ytdl_retry</nme>
+		<rty>2</rty>
+		<Action sr="act0" ve="7">
+			<code>512</code>
+			<Int sr="arg0" val="1"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>779</code>
+			<Str sr="arg0" ve="3">Download failed - %startname</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%info</Str>
+			<Str sr="arg1" ve="3">%startids
+%startname-%startids.extension</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">ytdl_downloader</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+			<Int sr="arg6" val="1"/>
+			<Str sr="arg7" ve="3"/>
+			<Int sr="arg8" val="0"/>
+			<Int sr="arg9" val="0"/>
+		</Action>
+	</Task>
+	<Task sr="task129">
+		<cdate>1616109319759</cdate>
+		<edate>1616170250424</edate>
+		<id>129</id>
+		<nme>ytdl_open_file_notify_cancel</nme>
+		<rty>2</rty>
+		<Action sr="act0" ve="7">
+			<code>512</code>
+			<Int sr="arg0" val="1"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>779</code>
+			<Str sr="arg0" ve="3">%par1</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>590</code>
+			<Str sr="arg0" ve="3">%par2</Str>
+			<Str sr="arg1" ve="3">,</Str>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>102</code>
+			<Str sr="arg0" ve="3">%par21</Str>
+			<Str sr="arg1" ve="3">%par22</Str>
+		</Action>
+	</Task>
+	<Task sr="task130">
+		<cdate>1616112674679</cdate>
+		<edate>1616170245911</edate>
+		<id>130</id>
+		<nme>ytdl_delete_file_notify_cancel</nme>
+		<rty>2</rty>
+		<Action sr="act0" ve="7">
+			<code>512</code>
+			<Int sr="arg0" val="1"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>779</code>
+			<Str sr="arg0" ve="3">%par1</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>406</code>
+			<Str sr="arg0" ve="3">%par2</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>548</code>
+			<Str sr="arg0" ve="3">Video deleted.</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+	</Task>
+	<Task sr="task131">
+		<cdate>1616136472683</cdate>
+		<edate>1616136493283</edate>
+		<id>131</id>
+		<Action sr="act0" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%url</Str>
+			<Str sr="arg1" ve="3">%CLIP</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">ytdl_check_url</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+			<Int sr="arg6" val="1"/>
+			<Str sr="arg7" ve="3"/>
+			<Int sr="arg8" val="0"/>
+			<Int sr="arg9" val="0"/>
+		</Action>
+	</Task>
+	<Task sr="task132">
+		<cdate>1615972225558</cdate>
+		<edate>1616170679232</edate>
+		<id>132</id>
+		<nme>ytdl_download_progress</nme>
+		<pri>100</pri>
+		<rty>2</rty>
+		<Action sr="act0" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%extension</Str>
+			<Str sr="arg1" ve="3">mp4</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%mode</lhs>
+					<op>2</op>
+					<rhs>video</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%extension</Str>
+			<Str sr="arg1" ve="3">m4a</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%mode</lhs>
+					<op>2</op>
+					<rhs>audio</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act10" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0"/>
+			<Str sr="arg1" ve="3"/>
+		</Action>
+		<Action sr="act11" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act12" ve="7">
+			<code>342</code>
+			<Int sr="arg0" val="1"/>
+			<Str sr="arg1" ve="3">/sdcard/Tasker/ytdl/%startids</Str>
+			<Str sr="arg2" ve="3">%lastmodified</Str>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act13" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%diff</Str>
+			<Str sr="arg1" ve="3">%TIMES-%lastmodified</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="1"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act14" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%diff</lhs>
+					<op>7</op>
+					<rhs>30</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act15" ve="7">
+			<code>406</code>
+			<Str sr="arg0" ve="3">/sdcard/Tasker/ytdl/%startids</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act16" ve="7">
+			<code>779</code>
+			<Str sr="arg0" ve="3">Downloading - %startname</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act17" ve="7">
+			<code>523</code>
+			<Str sr="arg0" ve="3">Download timeout - %startname</Str>
+			<Str sr="arg1" ve="3">Download timed out for some reason.</Str>
+			<Str sr="arg10" ve="3"/>
+			<Str sr="arg11" ve="3">ytdl</Str>
+			<Img sr="arg2" ve="2">
+				<nme>mw_image_timer_off</nme>
+			</Img>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="0"/>
+			<Int sr="arg7" val="0"/>
+			<Int sr="arg8" val="0"/>
+			<Str sr="arg9" ve="3"/>
+			<ListElementItem sr="item0">
+				<label>Dismiss</label>
+				<Action sr="action" ve="7">
+					<code>779</code>
+					<Str sr="arg0" ve="3">Download timeout - %startname</Str>
+					<Int sr="arg1" val="0"/>
+				</Action>
+			</ListElementItem>
+			<ListElementItem sr="item1">
+				<label>Retry</label>
+				<Action sr="action" ve="7">
+					<code>130</code>
+					<Str sr="arg0" ve="3">ytdl_retry</Str>
+					<Int sr="arg1">
+						<var>%priority</var>
+					</Int>
+					<Str sr="arg2" ve="3"/>
+					<Str sr="arg3" ve="3"/>
+					<Str sr="arg4" ve="3"/>
+					<Int sr="arg5" val="0"/>
+					<Int sr="arg6" val="0"/>
+					<Str sr="arg7" ve="3"/>
+					<Int sr="arg8" val="0"/>
+					<Int sr="arg9" val="0"/>
+				</Action>
+			</ListElementItem>
+			<ListElementItem sr="item2">
+				<label>Open url</label>
+				<Action sr="action" ve="7">
+					<code>130</code>
+					<Str sr="arg0" ve="3">ytdl_open_link_notify_cancel</Str>
+					<Int sr="arg1">
+						<var>%priority</var>
+					</Int>
+					<Str sr="arg2" ve="3">Download timeout - %startname</Str>
+					<Str sr="arg3" ve="3">https://youtu.be/%startids</Str>
+					<Str sr="arg4" ve="3"/>
+					<Int sr="arg5" val="0"/>
+					<Int sr="arg6" val="0"/>
+					<Str sr="arg7" ve="3"/>
+					<Int sr="arg8" val="0"/>
+					<Int sr="arg9" val="0"/>
+				</Action>
+			</ListElementItem>
+		</Action>
+		<Action sr="act18" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0"/>
+			<Str sr="arg1" ve="3"/>
+		</Action>
+		<Action sr="act19" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>300</code>
+			<label>start</label>
+		</Action>
+		<Action sr="act20" ve="7">
+			<code>523</code>
+			<Str sr="arg0" ve="3">Downloading - %startname</Str>
+			<Str sr="arg1" ve="3">%lastline</Str>
+			<Str sr="arg10" ve="3"/>
+			<Str sr="arg11" ve="3">ytdl</Str>
+			<Img sr="arg2" ve="2">
+				<nme>mw_navigation_arrow_downward</nme>
+			</Img>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="0"/>
+			<Int sr="arg7" val="0"/>
+			<Int sr="arg8" val="0"/>
+			<Str sr="arg9" ve="3"/>
+			<ListElementItem sr="item0">
+				<label>Stop downloading</label>
+				<Action sr="action" ve="7">
+					<code>130</code>
+					<Str sr="arg0" ve="3">ytdl_kill_termux_ytdl</Str>
+					<Int sr="arg1">
+						<var>%priority</var>
+					</Int>
+					<Str sr="arg2" ve="3">Downloading - %startname</Str>
+					<Str sr="arg3" ve="3"/>
+					<Str sr="arg4" ve="3"/>
+					<Int sr="arg5" val="0"/>
+					<Int sr="arg6" val="1"/>
+					<Str sr="arg7" ve="3"/>
+					<Int sr="arg8" val="0"/>
+					<Int sr="arg9" val="0"/>
+				</Action>
+			</ListElementItem>
+		</Action>
+		<Action sr="act21" ve="7">
+			<code>30</code>
+			<Int sr="arg0">
+				<var>200</var>
+			</Int>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+		</Action>
+		<Action sr="act22" ve="7">
+			<code>135</code>
+			<Int sr="arg0" val="1"/>
+			<Int sr="arg1" val="1"/>
+			<Str sr="arg2" ve="3">start</Str>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>123</code>
+			<Str sr="arg0" ve="3">tail -n 1 "/sdcard/Tasker/ytdl/%startids"</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Str sr="arg3" ve="3">%lastline</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>598</code>
+			<se>false</se>
+			<Str sr="arg0" ve="3">%lastline</Str>
+			<Str sr="arg1" ve="3">[K[download]   </Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Str sr="arg5" ve="3"/>
+			<Int sr="arg6" val="1"/>
+			<Str sr="arg7" ve="3">Progress : </Str>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<bool0>Or</bool0>
+				<Condition sr="c0" ve="3">
+					<lhs>%lastline</lhs>
+					<op>2</op>
+					<rhs>Download failed</rhs>
+				</Condition>
+				<Condition sr="c1" ve="3">
+					<lhs>%lastline</lhs>
+					<op>2</op>
+					<rhs>Download complete</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>406</code>
+			<Str sr="arg0" ve="3">/sdcard/Tasker/ytdl/%startids</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act7" ve="7">
+			<code>779</code>
+			<Str sr="arg0" ve="3">Downloading - %startname</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act8" ve="7">
+			<code>523</code>
+			<Str sr="arg0" ve="3">Download failed - %startname</Str>
+			<Str sr="arg1" ve="3">Media download failed. Try to retry download, or check your network connection.</Str>
+			<Str sr="arg10" ve="3"/>
+			<Str sr="arg11" ve="3">ytdl</Str>
+			<Img sr="arg2" ve="2">
+				<nme>mw_alert_error</nme>
+			</Img>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="0"/>
+			<Int sr="arg7" val="0"/>
+			<Int sr="arg8" val="0"/>
+			<Str sr="arg9" ve="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%lastline</lhs>
+					<op>2</op>
+					<rhs>Download failed</rhs>
+				</Condition>
+			</ConditionList>
+			<ListElementItem sr="item0">
+				<label>Dismiss</label>
+				<Action sr="action" ve="7">
+					<code>779</code>
+					<Str sr="arg0" ve="3">Download failed - %startname</Str>
+					<Int sr="arg1" val="0"/>
+				</Action>
+			</ListElementItem>
+			<ListElementItem sr="item1">
+				<label>Retry</label>
+				<Action sr="action" ve="7">
+					<code>130</code>
+					<Str sr="arg0" ve="3">ytdl_retry</Str>
+					<Int sr="arg1">
+						<var>%priority</var>
+					</Int>
+					<Str sr="arg2" ve="3"/>
+					<Str sr="arg3" ve="3"/>
+					<Str sr="arg4" ve="3"/>
+					<Int sr="arg5" val="0"/>
+					<Int sr="arg6" val="1"/>
+					<Str sr="arg7" ve="3"/>
+					<Int sr="arg8" val="0"/>
+					<Int sr="arg9" val="0"/>
+				</Action>
+			</ListElementItem>
+			<ListElementItem sr="item2">
+				<label>Open link</label>
+				<Action sr="action" ve="7">
+					<code>130</code>
+					<Str sr="arg0" ve="3">ytdl_open_link_notify_cancel</Str>
+					<Int sr="arg1">
+						<var>%priority</var>
+					</Int>
+					<Str sr="arg2" ve="3">Download failed - %startname</Str>
+					<Str sr="arg3" ve="3">https://youtu.be/%startids</Str>
+					<Str sr="arg4" ve="3"/>
+					<Int sr="arg5" val="0"/>
+					<Int sr="arg6" val="1"/>
+					<Str sr="arg7" ve="3"/>
+					<Int sr="arg8" val="0"/>
+					<Int sr="arg9" val="0"/>
+				</Action>
+			</ListElementItem>
+		</Action>
+		<Action sr="act9" ve="7">
+			<code>523</code>
+			<Str sr="arg0" ve="3">Download complete - %startname</Str>
+			<Str sr="arg1" ve="3"/>
+			<Str sr="arg10" ve="3"/>
+			<Str sr="arg11" ve="3">ytdl</Str>
+			<Img sr="arg2" ve="2">
+				<nme>mw_action_done</nme>
+			</Img>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="0"/>
+			<Int sr="arg7" val="0"/>
+			<Int sr="arg8" val="0"/>
+			<Str sr="arg9" ve="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%lastline</lhs>
+					<op>2</op>
+					<rhs>Download complete</rhs>
+				</Condition>
+			</ConditionList>
+			<ListElementItem sr="item0">
+				<label>Dismiss</label>
+				<Action sr="action" ve="7">
+					<code>779</code>
+					<Str sr="arg0" ve="3">Download complete - %startname</Str>
+					<Int sr="arg1" val="0"/>
+				</Action>
+			</ListElementItem>
+			<ListElementItem sr="item1">
+				<label>Delete file</label>
+				<Action sr="action" ve="7">
+					<code>130</code>
+					<Str sr="arg0" ve="3">ytdl_delete_file_notify_cancel</Str>
+					<Int sr="arg1">
+						<var>%priority</var>
+					</Int>
+					<Str sr="arg2" ve="3">Download complete - %startname</Str>
+					<Str sr="arg3" ve="3">%Directory_ytdl/%startname.%extension</Str>
+					<Str sr="arg4" ve="3"/>
+					<Int sr="arg5" val="0"/>
+					<Int sr="arg6" val="0"/>
+					<Str sr="arg7" ve="3"/>
+					<Int sr="arg8" val="0"/>
+					<Int sr="arg9" val="0"/>
+				</Action>
+			</ListElementItem>
+			<ListElementItem sr="item2">
+				<label>Open file</label>
+				<Action sr="action" ve="7">
+					<code>130</code>
+					<Str sr="arg0" ve="3">ytdl_open_file_notify_cancel</Str>
+					<Int sr="arg1">
+						<var>%priority</var>
+					</Int>
+					<Str sr="arg2" ve="3">Download complete - %startname</Str>
+					<Str sr="arg3" ve="3">%Directory_ytdl/%startname.%extension,%mode/*</Str>
+					<Str sr="arg4" ve="3"/>
+					<Int sr="arg5" val="0"/>
+					<Int sr="arg6" val="1"/>
+					<Str sr="arg7" ve="3"/>
+					<Int sr="arg8" val="0"/>
+					<Int sr="arg9" val="0"/>
+				</Action>
+			</ListElementItem>
+		</Action>
+	</Task>
+	<Task sr="task133">
+		<cdate>1615878126177</cdate>
+		<edate>1616170523679</edate>
+		<id>133</id>
+		<nme>ytdl_initial_setup(run this)</nme>
+		<pri>100</pri>
+		<Action sr="act0" ve="7">
+			<code>365</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""/&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">TermuxCommand(/data/data/com.termux/files/home/ytdl/kill_termux,,,true)</Str>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%Prefferedreso_ytdl/%Directory_ytdl/%Tutorial_ytdl</Str>
+			<Int sr="arg1" val="1"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act10" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%Prefferedreso_ytdl</Str>
+			<Str sr="arg1" ve="3">%ld_selected</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act11" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act12" ve="7">
+			<code>377</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%td_button
+Button
+The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">Download mode for individual video downloads?</Str>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3">Video (recommended)</Str>
+			<Str sr="arg4" ve="3">Audio</Str>
+			<Str sr="arg5" ve="3">Ask everytime</Str>
+			<Int sr="arg6" val="30"/>
+			<Int sr="arg7" val="0"/>
+		</Action>
+		<Action sr="act13" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%Mode_ytdl</Str>
+			<Str sr="arg1" ve="3">Ask</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%td_button</lhs>
+					<op>2</op>
+					<rhs>*Ask*</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act14" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%Mode_ytdl</Str>
+			<Str sr="arg1" ve="3">audio</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%td_button</lhs>
+					<op>2</op>
+					<rhs>*Audio*</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act15" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%Mode_ytdl</Str>
+			<Str sr="arg1" ve="3">video</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%td_button</lhs>
+					<op>2</op>
+					<rhs>*Video*</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act16" ve="7">
+			<code>159</code>
+			<Str sr="arg0" ve="3">ytdl_Clipboard_set</Str>
+			<Int sr="arg1" val="1"/>
+		</Action>
+		<Action sr="act17" ve="7">
+			<code>159</code>
+			<Str sr="arg0" ve="3">ytdl_Intent_recieved</Str>
+			<Int sr="arg1" val="1"/>
+		</Action>
+		<Action sr="act18" ve="7">
+			<code>377</code>
+			<se>false</se>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%td_button
+Button
+The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">Setup complete</Str>
+			<Str sr="arg2" ve="3">You can re-run this anytime if you want to change setting.
+
+
+Usage : 
+
+Method 1: Share YouTube video, playlist, channel link, or in fact any YouTube link to termux app. 
+
+Method 2: Just copy any YouTube link (This will work only on &lt;=android 9 users, or &gt;=android 10 users with tasker having WRITE_SECURE_SETTINGS permission. Visit Tasker website to learn how to grant it.)
+
+
+Individual video download preferences
+Default resolution: %Prefferedreso_ytdl
+Download mode: %Mode_ytdl
+
+Playlist download preferences
+Default resolution: Ask
+Download mode: Ask
+
+
+Output Directory : %Directory_ytdl</Str>
+			<Str sr="arg3" ve="3">Ok understood</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3">Video Tutorial</Str>
+			<Int sr="arg6" val="60"/>
+			<Int sr="arg7" val="0"/>
+		</Action>
+		<Action sr="act19" ve="7">
+			<code>548</code>
+			<label>!!!!</label>
+			<Str sr="arg0" ve="3">Video coming soon!</Str>
+			<Int sr="arg1" val="0"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%td_button</lhs>
+					<op>2</op>
+					<rhs>*Video*</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>390</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%input
+Input
+The text that was retrieved from the dialog&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">Directory</Str>
+			<Str sr="arg2" ve="3">Set the download folder for ytdl videos.</Str>
+			<Str sr="arg3" ve="3">Press back button when in desired folder to select it.</Str>
+			<Str sr="arg4" ve="3"/>
+		</Action>
+		<Action sr="act20" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%Tutorial_ytdl</Str>
+			<Str sr="arg1" ve="3">completed</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%Directory_ytdl</Str>
+			<Str sr="arg1" ve="3">%input</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>548</code>
+			<Str sr="arg0" ve="3">Output directory: %Directory_ytdl</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>377</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%td_button
+Button
+The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">Preferred resolution for individual video downloads.</Str>
+			<Str sr="arg2" ve="3">Auto-Resolution: Set a default resolution for individual video downloads.
+Ask: Ask resolution before downloading.</Str>
+			<Str sr="arg3" ve="3">Auto-Resolution(recommend)</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3">Ask every time</Str>
+			<Int sr="arg6" val="30"/>
+			<Int sr="arg7" val="0"/>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%td_button</lhs>
+					<op>2</op>
+					<rhs>*Ask*</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act7" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%Prefferedreso_ytdl</Str>
+			<Str sr="arg1" ve="3">Ask</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act8" ve="7">
+			<code>43</code>
+		</Action>
+		<Action sr="act9" ve="7">
+			<code>378</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%ld_button
+Button
+The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%ld_selected
+Selected
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%ld_selected_index
+Selected Index
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;%ld_long
+Long
+true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg10" val="0"/>
+			<Int sr="arg11" val="0"/>
+			<Int sr="arg12" val="1"/>
+			<Str sr="arg2" ve="3">Select resolution.</Str>
+			<Str sr="arg3" ve="3">144p,240p,360p,480p,720p,1080p,1440p,2160p</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Int sr="arg9" val="30"/>
+		</Action>
+		<Img sr="icn" ve="2">
+			<nme>cust_star</nme>
+		</Img>
+	</Task>
+	<Task sr="task134">
+		<cdate>1616121798577</cdate>
+		<edate>1616170686681</edate>
+		<id>134</id>
+		<nme>Grant clipboard access</nme>
+		<pri>100</pri>
+		<Action sr="act0" ve="7">
+			<code>319</code>
+			<Str sr="arg0" ve="3">android.permission.WRITE_SECURE_SETTINGS</Str>
+		</Action>
+		<Img sr="icn" ve="2">
+			<nme>mw_card_text_outline</nme>
+		</Img>
+	</Task>
+	<Task sr="task137">
+		<cdate>1616170710774</cdate>
+		<edate>1616170727036</edate>
+		<id>137</id>
+		<Action sr="act0" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%url</Str>
+			<Str sr="arg1" ve="3">%CLIP</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">ytdl_check_url</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+			<Int sr="arg6" val="1"/>
+			<Str sr="arg7" ve="3"/>
+			<Int sr="arg8" val="0"/>
+			<Int sr="arg9" val="0"/>
 		</Action>
 	</Task>
 </TaskerData>
