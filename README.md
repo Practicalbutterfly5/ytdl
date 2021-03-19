@@ -24,8 +24,6 @@
 ![Giving tasker permission to execute in termux environment](tasker_setting_tutorial.gif)
 
 2. Copy and paste the following command in termux and press Enter key.
-      
-<<<<<<< HEAD
       ```curl https://raw.githubusercontent.com/Practicalbutterfly5/Ytdl/main/installytdl > installytdl && chmod +x installytdl && bash installytdl```
 
 3. Tasker will open automatically and ask to import ytdl profile. If it doesn't do so automatically, you can import xml from [this TaskerNet share.](https://taskernet.com/shares/?user=AS35m8nYO2KrDhtHnG3NNyeEpC1I3aBlL349HB7KHCBcBdz7DgYGq9nCOtOP%2BuTRApmJuA0UCGgl&id=Project%3Aytdl)
