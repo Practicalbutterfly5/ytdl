@@ -22,6 +22,5 @@ cp ytdl/ytdl.prj.xml /sdcard/Tasker/ytdl/
 
 echo -e "\n\n------------------------------Starting to import Tasker project.\n------------------------------\n\n"
 
-read -n 1 -s -r -p "Press any key to import project."
 
 am start -n net.dinglisch.android.taskerm/com.joaomgcd.taskerm.datashare.import.ActivityImportTaskerDataFromXml -d "file:///sdcard/Tasker/ytdl/ytdl.prj.xml"
