@@ -21,11 +21,7 @@
 
 1. Goto your android settings>Apps and notifications>Tasker. In Tasker permissions scroll all the way down to "Additiona Permissions" and enable the permission "Run commands in Termux environment"
 <<<<<<< HEAD
-![Giving tasker permission to execute in termux environment](tasker_setting_tutorial)
-=======
-![setting_tasker_permission](tasker_setting_tutorial.gif)
->>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl.git
-
+![Giving tasker permission to execute in termux environment](tasker_setting_tutorial.gif)
 2. Copy and paste the following command in termux and press Enter key.
       
       ```curl https://raw.githubusercontent.com/Practicalbutterfly5/Ytdl/work/installytdl > installytdl && chmod +x installytdl && bash installytdl```  
