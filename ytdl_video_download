@@ -20,3 +20,4 @@ then
  echo "Download failed">>/sdcard/Tasker/ytdl/"${array2[i]}"
  fi
 done
+.
