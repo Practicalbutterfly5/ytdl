@@ -36,7 +36,7 @@
 		<cdate>1615345930714</cdate>
 		<name>ytdl</name>
 		<pids>154,153</pids>
-		<tids>140,147,143,151,144,146,138,152,145,141,150,142,148,149,139</tids>
+		<tids>142,151,150,146,141,138,152,144,143,140,148,147,139,145</tids>
 		<Share sr="Share">
 			<d>YTDL is tasker+termux project to download YouTube videos on android very easily and seamlessly.</d>
 			<p>false</p>
@@ -45,10 +45,11 @@
 	</Project>
 	<Task sr="task138">
 		<cdate>1615878126177</cdate>
-		<edate>1616179417891</edate>
+		<edate>1616181046278</edate>
 		<id>138</id>
 		<nme>ytdl_initial_setup(run this)</nme>
 		<pri>100</pri>
+		<rty>2</rty>
 		<Action sr="act0" ve="7">
 			<code>365</code>
 			<Bundle sr="arg0">
@@ -319,10 +320,11 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 	</Task>
 	<Task sr="task139">
 		<cdate>1616121798577</cdate>
-		<edate>1616179593653</edate>
+		<edate>1616181043141</edate>
 		<id>139</id>
 		<nme>Grant clipboard access</nme>
 		<pri>100</pri>
+		<rty>2</rty>
 		<Action sr="act0" ve="7">
 			<code>319</code>
 			<Str sr="arg0" ve="3">android.permission.WRITE_SECURE_SETTINGS</Str>
@@ -363,7 +365,7 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 	</Task>
 	<Task sr="task141">
 		<cdate>1615912488849</cdate>
-		<edate>1616170229109</edate>
+		<edate>1616181039626</edate>
 		<id>141</id>
 		<nme>ytdl_cleanup_temporary_files</nme>
 		<pri>100</pri>
@@ -447,7 +449,7 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 	</Task>
 	<Task sr="task142">
 		<cdate>1615928580510</cdate>
-		<edate>1616177045142</edate>
+		<edate>1616181036623</edate>
 		<id>142</id>
 		<nme>ytdl_intent_handler</nme>
 		<pri>6</pri>
@@ -640,7 +642,7 @@ Link: %returnurl</Str>
 	</Task>
 	<Task sr="task143">
 		<cdate>1615947227099</cdate>
-		<edate>1616170663207</edate>
+		<edate>1616181032743</edate>
 		<id>143</id>
 		<nme>ytdl_open_link_notify_cancel</nme>
 		<rty>2</rty>
@@ -660,7 +662,7 @@ Link: %returnurl</Str>
 	</Task>
 	<Task sr="task144">
 		<cdate>1615928798250</cdate>
-		<edate>1616179601945</edate>
+		<edate>1616181029721</edate>
 		<id>144</id>
 		<nme>ytdl_info</nme>
 		<pri>100</pri>
@@ -721,7 +723,7 @@ Link: %returnurl</Str>
 	</Task>
 	<Task sr="task145">
 		<cdate>1615918845957</cdate>
-		<edate>1616177459216</edate>
+		<edate>1616181022510</edate>
 		<id>145</id>
 		<nme>ytdl_kill_termux_ytdl</nme>
 		<pri>100</pri>
@@ -748,6 +750,117 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 			<Int sr="arg6" val="30"/>
 			<Int sr="arg7" val="0"/>
 		</Action>
+		<Action sr="act10" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">notes</Str>
+			<Str sr="arg1" ve="3">nm</Str>
+			<Str sr="arg2" ve="3">getActiveNotifications
+{StatusBarNotification[]} ()</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act11" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">%num</Str>
+			<Str sr="arg1" ve="3">Integer</Str>
+			<Str sr="arg2" ve="3">new
+{Integer} (int)</Str>
+			<Str sr="arg3" ve="3">notes.length</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act12" ve="7">
+			<code>39</code>
+			<Str sr="arg0" ve="3">%ind</Str>
+			<Str sr="arg1" ve="3">1:%num</Str>
+		</Action>
+		<Action sr="act13" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%jind</Str>
+			<Str sr="arg1" ve="3">%ind-1</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="1"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act14" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">noti</Str>
+			<Str sr="arg1" ve="3">notes[%jind]</Str>
+			<Str sr="arg2" ve="3">getNotification
+{Notification} ()</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act15" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">%title</Str>
+			<Str sr="arg1" ve="3">noti.extras</Str>
+			<Str sr="arg2" ve="3">getString
+{String} (String)</Str>
+			<Str sr="arg3" ve="3">"android.title"</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act16" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%title</lhs>
+					<op>4</op>
+					<rhs>%title_regex</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act17" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">%noti_id</Str>
+			<Str sr="arg1" ve="3">notes[%jind]</Str>
+			<Str sr="arg2" ve="3">getId
+{int} ()</Str>
+			<Str sr="arg3" ve="3">"android.title"</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act18" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">nm</Str>
+			<Str sr="arg2" ve="3">cancel
+{} (int)</Str>
+			<Str sr="arg3" ve="3">%noti_id</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act19" ve="7">
+			<code>38</code>
+		</Action>
 		<Action sr="act2" ve="7">
 			<code>137</code>
 			<Int sr="arg0" val="0"/>
@@ -760,12 +873,10 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act3" ve="7">
-			<code>779</code>
-			<Str sr="arg0" ve="3">%par1</Str>
-			<Int sr="arg1" val="0"/>
+		<Action sr="act20" ve="7">
+			<code>40</code>
 		</Action>
-		<Action sr="act4" ve="7">
+		<Action sr="act3" ve="7">
 			<code>365</code>
 			<Bundle sr="arg0">
 				<Vals sr="val">
@@ -774,6 +885,11 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 				</Vals>
 			</Bundle>
 			<Str sr="arg1" ve="3">TermuxCommand(/data/data/com.termux/files/home/ytdl/kill_termux,,,true)</Str>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>779</code>
+			<Str sr="arg0" ve="3">%par1</Str>
+			<Int sr="arg1" val="0"/>
 		</Action>
 		<Action sr="act5" ve="7">
 			<code>137</code>
@@ -800,10 +916,33 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 			<Int sr="arg8" val="0"/>
 			<Int sr="arg9" val="0"/>
 		</Action>
+		<Action sr="act8" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%title_regex</Str>
+			<Str sr="arg1" ve="3">Getting link info|Download timeout \-|Downloading \-</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act9" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">(NotificationManager) nm</Str>
+			<Str sr="arg1" ve="3">CONTEXT</Str>
+			<Str sr="arg2" ve="3">getSystemService
+{Object} (String)</Str>
+			<Str sr="arg3" ve="3">"notification"</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
 	</Task>
 	<Task sr="task146">
 		<cdate>1615929094045</cdate>
-		<edate>1616180026222</edate>
+		<edate>1616181020540</edate>
 		<id>146</id>
 		<nme>ytdl_downloader</nme>
 		<pri>100</pri>
@@ -1486,7 +1625,7 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 	</Task>
 	<Task sr="task147">
 		<cdate>1615796080362</cdate>
-		<edate>1616170702198</edate>
+		<edate>1616181003989</edate>
 		<id>147</id>
 		<nme>ytdl_check_url</nme>
 		<pri>6</pri>
@@ -1523,7 +1662,7 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 	</Task>
 	<Task sr="task148">
 		<cdate>1616100669935</cdate>
-		<edate>1616179981820</edate>
+		<edate>1616180997825</edate>
 		<id>148</id>
 		<nme>ytdl_retry</nme>
 		<rty>2</rty>
@@ -1562,20 +1701,9 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<Int sr="arg9" val="0"/>
 		</Action>
 	</Task>
-	<Task sr="task149">
-		<cdate>1590535606330</cdate>
-		<edate>1590535978953</edate>
-		<id>149</id>
-		<nme>Help</nme>
-		<pri>6</pri>
-		<Action sr="act0" ve="7">
-			<code>104</code>
-			<Str sr="arg0" ve="3">http://www.google.com/search?q=%CLIP</Str>
-		</Action>
-	</Task>
 	<Task sr="task150">
 		<cdate>1616109319759</cdate>
-		<edate>1616170250424</edate>
+		<edate>1616180994536</edate>
 		<id>150</id>
 		<nme>ytdl_open_file_notify_cancel</nme>
 		<rty>2</rty>
@@ -1602,7 +1730,7 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 	</Task>
 	<Task sr="task151">
 		<cdate>1616112674679</cdate>
-		<edate>1616170245911</edate>
+		<edate>1616180991394</edate>
 		<id>151</id>
 		<nme>ytdl_delete_file_notify_cancel</nme>
 		<rty>2</rty>
@@ -1629,7 +1757,7 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 	</Task>
 	<Task sr="task152">
 		<cdate>1615972225558</cdate>
-		<edate>1616180020652</edate>
+		<edate>1616180986984</edate>
 		<id>152</id>
 		<nme>ytdl_download_progress</nme>
 		<pri>100</pri>
