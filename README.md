@@ -20,6 +20,7 @@
 #### Installation
 
 1. Goto your android settings>Apps and notifications>Tasker. In Tasker permissions scroll all the way down to "Additiona Permissions" and enable the permission "Run commands in Termux environment"
+![Giving tasker permission to execute in termux environment](tasker_setting_tutorial)
 
 2. Copy and paste the following command in termux and press Enter key.
       
