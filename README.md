@@ -37,7 +37,6 @@ After ytdl is installed and setup task is run, you are ready to download using a
 
 
 * Method 2  
-  For **android version<=9**, they will be able to copy YouTube link to clipboard and trigger ytdl.
-
-
-   *For **android version>=10**, will need to give tasker ```android.permission.WRITE_SECURE_SETTINGS```. [This can be done using adb for non-root users](https://tasker.joaoapps.com/userguide/en/help/ah_secure_setting_grant.html), rooted users can simply execute ```pm grant net.dinglisch.android.taskerm android.permission.WRITE_SECURE_SETTINGS``` in rooted shell.
+  For **android version<=9**, they will be able to copy YouTube link to clipboard and trigger ytdl.  
+  
+  For **android version>=10**, will need to give tasker ```android.permission.WRITE_SECURE_SETTINGS```. [This can be done using adb for non-root users](https://tasker.joaoapps.com/userguide/en/help/ah_secure_setting_grant.html), rooted users can simply execute ```pm grant net.dinglisch.android.taskerm android.permission.WRITE_SECURE_SETTINGS``` in rooted shell.
