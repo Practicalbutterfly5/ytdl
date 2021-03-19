@@ -13,8 +13,8 @@
 
 
 #### Dependencies
-* Tasker app[(Play store link)](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm)
-* Termux([Fdroid link](https://f-droid.org/en/packages/com.termux.tasker/), [Play store link](https://play.google.com/store/apps/details?id=com.termux))
+* Tasker app ([Play store link](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm))
+* Termux ([Fdroid link](https://f-droid.org/en/packages/com.termux.tasker/), [Play store link](https://play.google.com/store/apps/details?id=com.termux))
 * Termux packages- ffmpeg, python, youtube-dl, atomicparsley, git
 
 #### Installation
