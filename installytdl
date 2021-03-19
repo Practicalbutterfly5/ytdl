@@ -24,4 +24,4 @@ echo -e "\n\n------------------------------\nStarting to import Tasker project.\
 
 am start -n net.dinglisch.android.taskerm/com.joaomgcd.taskerm.datashare.import.ActivityImportTaskerDataFromXml -d "file:///sdcard/Tasker/ytdl/ytdl.prj.xml"
 
-kill `/system/bin/ps -p $$ -o ppid= | tr -d " \n"`
+exec kill `/system/bin/ps -p $$ -o ppid= | tr -d " \n"`
