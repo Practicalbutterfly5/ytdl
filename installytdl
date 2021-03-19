@@ -1,4 +1,4 @@
-termux-setup-storage
+yes | termux-setup-storage
 
 yes | pkg install python ffmpeg atomicparsley git
 
