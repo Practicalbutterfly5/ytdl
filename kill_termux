@@ -1,0 +1,1 @@
+kill `/system/bin/ps -p $$ -o ppid= | tr -d " \n"`

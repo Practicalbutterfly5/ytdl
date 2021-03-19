@@ -1,0 +1,3 @@
+#!/data/data/com.termux/files/usr/bin/bash
+output=$(youtube-dl --get-id --get-filename "$1")
+am broadcast --user '0' -a tasker.ytdl -e returnurl "$1" -e info "$output" -e errorcodeinfo "$?"
