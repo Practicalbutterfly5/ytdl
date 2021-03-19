@@ -1,0 +1,3 @@
+#!/data/data/com.termux/files/usr/bin/bash
+am broadcast --user '0' -a com.ytdl.yturl -e url "$1"
+shw
