@@ -1,4 +1,4 @@
-yes n | termux-setup-storage
+termux-setup-storage
 
 yes | pkg install python ffmpeg atomicparsley git
 
@@ -23,5 +23,3 @@ cp ytdl/ytdl.prj.xml /sdcard/Tasker/ytdl/
 echo -e "\n\n------------------------------\nStarting to import Tasker project.\n------------------------------\n\n"
 
 am start -n net.dinglisch.android.taskerm/com.joaomgcd.taskerm.datashare.import.ActivityImportTaskerDataFromXml -d "file:///sdcard/Tasker/ytdl/ytdl.prj.xml"
-
-exec "ytdl/kill_termux"
