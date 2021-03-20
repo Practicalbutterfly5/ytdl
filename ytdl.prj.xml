@@ -1,11 +1,25 @@
 <TaskerData sr="" dvi="1" tv="5.11.14">
-	<Profile sr="prof153" ve="2">
-		<cdate>1616177332082</cdate>
+	<Profile sr="prof138" ve="2">
+		<cdate>1616198780889</cdate>
 		<clp>true</clp>
-		<edate>1616177045142</edate>
+		<edate>1616171049414</edate>
+		<id>138</id>
+		<mid0>126</mid0>
+		<nme>ytdl_Clipboard_set</nme>
+		<Event sr="con0" ve="2">
+			<code>3050</code>
+			<pri>0</pri>
+			<Str sr="arg0" ve="3">%CLIP</Str>
+			<Str sr="arg1" ve="3"/>
+			<Int sr="arg2" val="0"/>
+		</Event>
+	</Profile>
+	<Profile sr="prof139" ve="2">
+		<cdate>1616198780894</cdate>
+		<edate>1616198797914</edate>
 		<flags>8</flags>
-		<id>153</id>
-		<mid0>142</mid0>
+		<id>139</id>
+		<mid0>128</mid0>
 		<nme>ytdl_Intent_recieved</nme>
 		<Event sr="con0" ve="2">
 			<code>599</code>
@@ -17,36 +31,21 @@
 			<Str sr="arg4" ve="3"/>
 		</Event>
 	</Profile>
-	<Profile sr="prof154" ve="2">
-		<cdate>1616177332082</cdate>
-		<clp>true</clp>
-		<edate>1616171049414</edate>
-		<id>154</id>
-		<mid0>140</mid0>
-		<nme>ytdl_Clipboard_set</nme>
-		<Event sr="con0" ve="2">
-			<code>3050</code>
-			<pri>0</pri>
-			<Str sr="arg0" ve="3">%CLIP</Str>
-			<Str sr="arg1" ve="3"/>
-			<Int sr="arg2" val="0"/>
-		</Event>
-	</Profile>
 	<Project sr="proj0" ve="2">
 		<cdate>1615345930714</cdate>
 		<name>ytdl</name>
-		<pids>153,154</pids>
-		<tids>143,145,138,152,147,142,151,146,141,140,148,144,150,139</tids>
+		<pids>138,139</pids>
+		<tids>127,133,130,131,136,129,134,128,124,126,137,132,135,125</tids>
 		<Share sr="Share">
 			<d>YTDL is tasker+termux project to download YouTube videos on android very easily and seamlessly.</d>
 			<p>false</p>
 			<t>ytdl_initial_setup(run this)</t>
 		</Share>
 	</Project>
-	<Task sr="task138">
+	<Task sr="task124">
 		<cdate>1615878126177</cdate>
 		<edate>1616181046278</edate>
-		<id>138</id>
+		<id>124</id>
 		<nme>ytdl_initial_setup(run this)</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -318,10 +317,10 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<nme>cust_star</nme>
 		</Img>
 	</Task>
-	<Task sr="task139">
+	<Task sr="task125">
 		<cdate>1616121798577</cdate>
 		<edate>1616181043141</edate>
-		<id>139</id>
+		<id>125</id>
 		<nme>Grant clipboard access</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -333,10 +332,10 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<nme>mw_card_text_outline</nme>
 		</Img>
 	</Task>
-	<Task sr="task140">
+	<Task sr="task126">
 		<cdate>1616170710774</cdate>
 		<edate>1616170922047</edate>
-		<id>140</id>
+		<id>126</id>
 		<pri>6</pri>
 		<Action sr="act0" ve="7">
 			<code>547</code>
@@ -363,10 +362,10 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<Int sr="arg9" val="0"/>
 		</Action>
 	</Task>
-	<Task sr="task141">
+	<Task sr="task127">
 		<cdate>1615912488849</cdate>
-		<edate>1616190095867</edate>
-		<id>141</id>
+		<edate>1616194724528</edate>
+		<id>127</id>
 		<nme>ytdl_cleanup_temporary_files</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -447,10 +446,10 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<nme>mw_content_delete_sweep</nme>
 		</Img>
 	</Task>
-	<Task sr="task142">
+	<Task sr="task128">
 		<cdate>1615928580510</cdate>
-		<edate>1616181036623</edate>
-		<id>142</id>
+		<edate>1616198797914</edate>
+		<id>128</id>
 		<nme>ytdl_intent_handler</nme>
 		<pri>6</pri>
 		<rty>2</rty>
@@ -621,6 +620,24 @@ Link: %returnurl</Str>
 				</Action>
 			</ListElementItem>
 			<ListElementItem sr="item1">
+				<label>Retry</label>
+				<Action sr="action" ve="7">
+					<code>130</code>
+					<Str sr="arg0" ve="3">ytdl_info</Str>
+					<Int sr="arg1">
+						<var>%priority</var>
+					</Int>
+					<Str sr="arg2" ve="3">%returnurl</Str>
+					<Str sr="arg3" ve="3"/>
+					<Str sr="arg4" ve="3"/>
+					<Int sr="arg5" val="0"/>
+					<Int sr="arg6" val="0"/>
+					<Str sr="arg7" ve="3"/>
+					<Int sr="arg8" val="0"/>
+					<Int sr="arg9" val="0"/>
+				</Action>
+			</ListElementItem>
+			<ListElementItem sr="item2">
 				<label>Open URL</label>
 				<Action sr="action" ve="7">
 					<code>130</code>
@@ -640,10 +657,10 @@ Link: %returnurl</Str>
 			</ListElementItem>
 		</Action>
 	</Task>
-	<Task sr="task143">
+	<Task sr="task129">
 		<cdate>1615947227099</cdate>
-		<edate>1616181032743</edate>
-		<id>143</id>
+		<edate>1616190227963</edate>
+		<id>129</id>
 		<nme>ytdl_open_link_notify_cancel</nme>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
@@ -660,19 +677,45 @@ Link: %returnurl</Str>
 			<Str sr="arg0" ve="3">%par2</Str>
 		</Action>
 	</Task>
-	<Task sr="task144">
+	<Task sr="task130">
 		<cdate>1615928798250</cdate>
-		<edate>1616181029721</edate>
-		<id>144</id>
+		<edate>1616198786876</edate>
+		<id>130</id>
 		<nme>ytdl_info</nme>
 		<pri>100</pri>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%par1</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%url</Str>
+			<Str sr="arg1" ve="3">%par1</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>512</code>
+			<Int sr="arg0" val="1"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act4" ve="7">
 			<code>548</code>
 			<Str sr="arg0" ve="3">Getting link info, download will start shortly.</Str>
 			<Int sr="arg1" val="0"/>
 		</Action>
-		<Action sr="act1" ve="7">
+		<Action sr="act5" ve="7">
 			<code>523</code>
 			<Str sr="arg0" ve="3">Getting link info (%url)</Str>
 			<Str sr="arg1" ve="3"/>
@@ -710,7 +753,7 @@ Link: %returnurl</Str>
 				</Img>
 			</ListElementItem>
 		</Action>
-		<Action sr="act2" ve="7">
+		<Action sr="act6" ve="7">
 			<code>365</code>
 			<Bundle sr="arg0">
 				<Vals sr="val">
@@ -721,10 +764,10 @@ Link: %returnurl</Str>
 			<Str sr="arg1" ve="3">TermuxCommand(/data/data/com.termux/files/home/ytdl/ytdl_info,%url,,true)</Str>
 		</Action>
 	</Task>
-	<Task sr="task145">
+	<Task sr="task131">
 		<cdate>1615918845957</cdate>
-		<edate>1616190101723</edate>
-		<id>145</id>
+		<edate>1616194503698</edate>
+		<id>131</id>
 		<nme>ytdl_kill_termux_ytdl</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -950,10 +993,10 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
  https://taskernet.com/shares/?user=AS35m8m%2BFga%2BPKETEENtyWu3IGqX35bmTIK3QzSMBeDWmVIVfQqyiHL%2FJjwHE%2FYoZuYG0oNb60waOn0%2Few%3D%3D&amp;id=Task%3ACancel+Notification+By+Title+Match</label>
 		</Action>
 	</Task>
-	<Task sr="task146">
+	<Task sr="task132">
 		<cdate>1615929094045</cdate>
-		<edate>1616181020540</edate>
-		<id>146</id>
+		<edate>1616194398534</edate>
+		<id>132</id>
 		<nme>ytdl_downloader</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -1633,10 +1676,10 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<Int sr="arg3" val="0"/>
 		</Action>
 	</Task>
-	<Task sr="task147">
+	<Task sr="task133">
 		<cdate>1615796080362</cdate>
-		<edate>1616181003989</edate>
-		<id>147</id>
+		<edate>1616194999576</edate>
+		<id>133</id>
 		<nme>ytdl_check_url</nme>
 		<pri>6</pri>
 		<rty>2</rty>
@@ -1670,10 +1713,10 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<code>38</code>
 		</Action>
 	</Task>
-	<Task sr="task148">
+	<Task sr="task134">
 		<cdate>1616100669935</cdate>
-		<edate>1616180997825</edate>
-		<id>148</id>
+		<edate>1616194877747</edate>
+		<id>134</id>
 		<nme>ytdl_retry</nme>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
@@ -1711,10 +1754,10 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<Int sr="arg9" val="0"/>
 		</Action>
 	</Task>
-	<Task sr="task150">
+	<Task sr="task135">
 		<cdate>1616109319759</cdate>
-		<edate>1616180994536</edate>
-		<id>150</id>
+		<edate>1616194735836</edate>
+		<id>135</id>
 		<nme>ytdl_open_file_notify_cancel</nme>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
@@ -1738,10 +1781,10 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<Str sr="arg1" ve="3">%par22</Str>
 		</Action>
 	</Task>
-	<Task sr="task151">
+	<Task sr="task136">
 		<cdate>1616112674679</cdate>
 		<edate>1616180991394</edate>
-		<id>151</id>
+		<id>136</id>
 		<nme>ytdl_delete_file_notify_cancel</nme>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
@@ -1765,10 +1808,10 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<Int sr="arg1" val="0"/>
 		</Action>
 	</Task>
-	<Task sr="task152">
+	<Task sr="task137">
 		<cdate>1615972225558</cdate>
-		<edate>1616180986984</edate>
-		<id>152</id>
+		<edate>1616194749418</edate>
+		<id>137</id>
 		<nme>ytdl_download_progress</nme>
 		<pri>100</pri>
 		<rty>2</rty>
