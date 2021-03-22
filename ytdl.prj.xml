@@ -1,10 +1,36 @@
 <TaskerData sr="" dvi="1" tv="5.11.14">
+<<<<<<< HEAD
 	<Profile sr="prof153" ve="2">
 		<cdate>1616220435285</cdate>
 		<edate>1616432876519</edate>
+=======
+	<Profile sr="prof138" ve="2">
+		<cdate>1616198780889</cdate>
+		<clp>true</clp>
+		<edate>1616171049414</edate>
+		<id>138</id>
+		<mid0>126</mid0>
+		<nme>ytdl_Clipboard_set</nme>
+		<Event sr="con0" ve="2">
+			<code>3050</code>
+			<pri>0</pri>
+			<Str sr="arg0" ve="3">%CLIP</Str>
+			<Str sr="arg1" ve="3"/>
+			<Int sr="arg2" val="0"/>
+		</Event>
+	</Profile>
+	<Profile sr="prof139" ve="2">
+		<cdate>1616198780894</cdate>
+		<edate>1616198797914</edate>
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
 		<flags>8</flags>
+<<<<<<< HEAD
 		<id>153</id>
 		<mid0>150</mid0>
+=======
+		<id>139</id>
+		<mid0>128</mid0>
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
 		<nme>ytdl_Intent_recieved</nme>
 		<Event sr="con0" ve="2">
 			<code>599</code>
@@ -16,6 +42,7 @@
 			<Str sr="arg4" ve="3"/>
 		</Event>
 	</Profile>
+<<<<<<< HEAD
 	<Profile sr="prof154" ve="2">
 		<cdate>1616220435285</cdate>
 		<clp>true</clp>
@@ -31,22 +58,37 @@
 			<Int sr="arg2" val="0"/>
 		</Event>
 	</Profile>
+=======
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
 	<Project sr="proj0" ve="2">
 		<cdate>1615345930714</cdate>
 		<name>ytdl</name>
+<<<<<<< HEAD
 		<pids>153,154</pids>
 		<tids>27,145,151,143,141,150,41,139,152,140,144,146,142,147,148,149</tids>
+=======
+		<pids>138,139</pids>
+		<tids>127,133,130,131,136,129,134,128,124,126,137,132,135,125</tids>
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
 		<Share sr="Share">
 			<d>YTDL is tasker+termux project to download YouTube videos on android very easily and seamlessly.</d>
 			<p>false</p>
 			<t>ytdl_initial_setup(run this)</t>
 		</Share>
 	</Project>
+<<<<<<< HEAD
 	<Task sr="task139">
 		<cdate>1615918845957</cdate>
 		<edate>1616430108701</edate>
 		<id>139</id>
 		<nme>ytdl_PANIC_TASK</nme>
+=======
+	<Task sr="task124">
+		<cdate>1615878126177</cdate>
+		<edate>1616181046278</edate>
+		<id>124</id>
+		<nme>ytdl_initial_setup(run this)</nme>
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
 		<pri>100</pri>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
@@ -2133,10 +2175,19 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<nme>cust_star</nme>
 		</Img>
 	</Task>
+<<<<<<< HEAD
 	<Task sr="task147">
+=======
+	<Task sr="task125">
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
 		<cdate>1616121798577</cdate>
+<<<<<<< HEAD
 		<edate>1616429664510</edate>
 		<id>147</id>
+=======
+		<edate>1616181043141</edate>
+		<id>125</id>
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
 		<nme>Grant clipboard access</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -2169,10 +2220,19 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<nme>mw_card_text_outline</nme>
 		</Img>
 	</Task>
+<<<<<<< HEAD
 	<Task sr="task148">
+=======
+	<Task sr="task126">
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
 		<cdate>1616170710774</cdate>
+<<<<<<< HEAD
 		<edate>1616425507425</edate>
 		<id>148</id>
+=======
+		<edate>1616170922047</edate>
+		<id>126</id>
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
 		<pri>6</pri>
 		<Action sr="act0" ve="7">
 			<code>547</code>
@@ -2199,10 +2259,19 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<Int sr="arg9" val="0"/>
 		</Action>
 	</Task>
+<<<<<<< HEAD
 	<Task sr="task149">
+=======
+	<Task sr="task127">
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
 		<cdate>1615912488849</cdate>
+<<<<<<< HEAD
 		<edate>1616429924811</edate>
 		<id>149</id>
+=======
+		<edate>1616194724528</edate>
+		<id>127</id>
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
 		<nme>ytdl_cleanup_temporary_files</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -2273,10 +2342,19 @@ This step will delete the following directory:  /sdcard/Tasker/ytdl/*</Str>
 			<nme>mw_content_delete_sweep</nme>
 		</Img>
 	</Task>
+<<<<<<< HEAD
 	<Task sr="task150">
+=======
+	<Task sr="task128">
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
 		<cdate>1615928580510</cdate>
+<<<<<<< HEAD
 		<edate>1616432876519</edate>
 		<id>150</id>
+=======
+		<edate>1616198797914</edate>
+		<id>128</id>
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
 		<nme>ytdl_intent_handler</nme>
 		<pri>6</pri>
 		<rty>2</rty>
@@ -2474,13 +2552,84 @@ Link: %returnurl</Str>
 		<Action sr="act9" ve="7">
 			<code>779</code>
 			<Str sr="arg0" ve="3">Getting link info (%returnurl)</Str>
+<<<<<<< HEAD
 			<Int sr="arg1" val="0"/>
+=======
+			<Str sr="arg1" ve="3">There was an error retrieving video information.
+Error: Couldn't connect to Internet
+Link: %returnurl</Str>
+			<Str sr="arg10" ve="3"/>
+			<Str sr="arg11" ve="3">ytdl</Str>
+			<Img sr="arg2" ve="2">
+				<nme>mw_alert_error</nme>
+			</Img>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="0"/>
+			<Int sr="arg7" val="0"/>
+			<Int sr="arg8" val="0"/>
+			<Str sr="arg9" ve="3"/>
+			<ListElementItem sr="item0">
+				<label>Dismiss</label>
+				<Action sr="action" ve="7">
+					<code>779</code>
+					<Str sr="arg0" ve="3">Getting link info (%returnurl)</Str>
+					<Int sr="arg1" val="0"/>
+				</Action>
+			</ListElementItem>
+			<ListElementItem sr="item1">
+				<label>Retry</label>
+				<Action sr="action" ve="7">
+					<code>130</code>
+					<Str sr="arg0" ve="3">ytdl_info</Str>
+					<Int sr="arg1">
+						<var>%priority</var>
+					</Int>
+					<Str sr="arg2" ve="3">%returnurl</Str>
+					<Str sr="arg3" ve="3"/>
+					<Str sr="arg4" ve="3"/>
+					<Int sr="arg5" val="0"/>
+					<Int sr="arg6" val="0"/>
+					<Str sr="arg7" ve="3"/>
+					<Int sr="arg8" val="0"/>
+					<Int sr="arg9" val="0"/>
+				</Action>
+			</ListElementItem>
+			<ListElementItem sr="item2">
+				<label>Open URL</label>
+				<Action sr="action" ve="7">
+					<code>130</code>
+					<Str sr="arg0" ve="3">ytdl_open_link_notify_cancel</Str>
+					<Int sr="arg1">
+						<var>%priority</var>
+					</Int>
+					<Str sr="arg2" ve="3">Getting link info (%returnurl)</Str>
+					<Str sr="arg3" ve="3">%returnurl</Str>
+					<Str sr="arg4" ve="3"/>
+					<Int sr="arg5" val="0"/>
+					<Int sr="arg6" val="0"/>
+					<Str sr="arg7" ve="3"/>
+					<Int sr="arg8" val="0"/>
+					<Int sr="arg9" val="0"/>
+				</Action>
+			</ListElementItem>
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
 		</Action>
 	</Task>
+<<<<<<< HEAD
 	<Task sr="task151">
+=======
+	<Task sr="task129">
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
 		<cdate>1615947227099</cdate>
+<<<<<<< HEAD
 		<edate>1616428893448</edate>
 		<id>151</id>
+=======
+		<edate>1616190227963</edate>
+		<id>129</id>
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
 		<nme>ytdl_open_link_notify_cancel</nme>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
@@ -2492,16 +2641,26 @@ Link: %returnurl</Str>
 			<Str sr="arg0" ve="3">%par2</Str>
 		</Action>
 	</Task>
+<<<<<<< HEAD
 	<Task sr="task152">
+=======
+	<Task sr="task130">
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
 		<cdate>1615928798250</cdate>
+<<<<<<< HEAD
 		<edate>1616432333491</edate>
 		<id>152</id>
+=======
+		<edate>1616198786876</edate>
+		<id>130</id>
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
 		<nme>ytdl_info</nme>
 		<pri>100</pri>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
 			<code>37</code>
 			<ConditionList sr="if">
+<<<<<<< HEAD
 				<bool0>Or</bool0>
 				<bool1>Or</bool1>
 				<bool2>Or</bool2>
@@ -2526,7 +2685,37 @@ Link: %returnurl</Str>
 					<rhs>\%Tutorial_ytdl</rhs>
 				</Condition>
 			</ConditionList>
+=======
+				<Condition sr="c0" ve="3">
+					<lhs>%par1</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
 		</Action>
+		<Action sr="act1" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%url</Str>
+			<Str sr="arg1" ve="3">%par1</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>512</code>
+			<Int sr="arg0" val="1"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>548</code>
+			<Str sr="arg0" ve="3">Getting link info, download will start shortly.</Str>
+			<Int sr="arg1" val="0"/>
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
+		</Action>
+<<<<<<< HEAD
 		<Action sr="act1" ve="7">
 			<code>548</code>
 			<Str sr="arg0" ve="3">You need to complete setup first.
@@ -2579,6 +2768,9 @@ Run the ytdl_Intitial_Setup Task</Str>
 			<code>38</code>
 		</Action>
 		<Action sr="act8" ve="7">
+=======
+		<Action sr="act5" ve="7">
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
 			<code>523</code>
 			<Str sr="arg0" ve="3">Getting link info (%url)</Str>
 			<Str sr="arg1" ve="3"/>
@@ -2594,8 +2786,390 @@ Run the ytdl_Intitial_Setup Task</Str>
 			<Int sr="arg7" val="0"/>
 			<Int sr="arg8" val="0"/>
 			<Str sr="arg9" ve="3"/>
+<<<<<<< HEAD
+=======
+			<ListElementItem sr="item0">
+				<label>Stop downloading</label>
+				<Action sr="action" ve="7">
+					<code>130</code>
+					<Str sr="arg0" ve="3">ytdl_kill_termux_ytdl</Str>
+					<Int sr="arg1">
+						<var>%priority</var>
+					</Int>
+					<Str sr="arg2" ve="3">Getting link info (%url)</Str>
+					<Str sr="arg3" ve="3"/>
+					<Str sr="arg4" ve="3"/>
+					<Int sr="arg5" val="0"/>
+					<Int sr="arg6" val="0"/>
+					<Str sr="arg7" ve="3"/>
+					<Int sr="arg8" val="0"/>
+					<Int sr="arg9" val="0"/>
+				</Action>
+				<Img sr="icon" ve="2">
+					<nme>mw_action_3d_rotation</nme>
+				</Img>
+			</ListElementItem>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>365</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""/&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">TermuxCommand(/data/data/com.termux/files/home/ytdl/ytdl_info,%url,,true)</Str>
+		</Action>
+	</Task>
+	<Task sr="task131">
+		<cdate>1615918845957</cdate>
+		<edate>1616194503698</edate>
+		<id>131</id>
+		<nme>ytdl_kill_termux_ytdl</nme>
+		<pri>100</pri>
+		<rty>2</rty>
+		<Action sr="act0" ve="7">
+			<code>300</code>
+			<label>This action when executed will immediately stop all ongoing downloads by killing termux app, and removing notifications made by this ytdl. Tasker notifications created by other projects will not be removed.</label>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>512</code>
+			<Int sr="arg0" val="1"/>
+		</Action>
+		<Action sr="act10" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%title_regex</Str>
+			<Str sr="arg1" ve="3">Getting link info|Download timeout \-|Downloading \-|Download complete \-</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act11" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">(NotificationManager) nm</Str>
+			<Str sr="arg1" ve="3">CONTEXT</Str>
+			<Str sr="arg2" ve="3">getSystemService
+{Object} (String)</Str>
+			<Str sr="arg3" ve="3">"notification"</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act12" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">notes</Str>
+			<Str sr="arg1" ve="3">nm</Str>
+			<Str sr="arg2" ve="3">getActiveNotifications
+{StatusBarNotification[]} ()</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act13" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">%num</Str>
+			<Str sr="arg1" ve="3">Integer</Str>
+			<Str sr="arg2" ve="3">new
+{Integer} (int)</Str>
+			<Str sr="arg3" ve="3">notes.length</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act14" ve="7">
+			<code>39</code>
+			<Str sr="arg0" ve="3">%ind</Str>
+			<Str sr="arg1" ve="3">1:%num</Str>
+		</Action>
+		<Action sr="act15" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%jind</Str>
+			<Str sr="arg1" ve="3">%ind-1</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="1"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act16" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">noti</Str>
+			<Str sr="arg1" ve="3">notes[%jind]</Str>
+			<Str sr="arg2" ve="3">getNotification
+{Notification} ()</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act17" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">%title</Str>
+			<Str sr="arg1" ve="3">noti.extras</Str>
+			<Str sr="arg2" ve="3">getString
+{String} (String)</Str>
+			<Str sr="arg3" ve="3">"android.title"</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act18" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%title</lhs>
+					<op>4</op>
+					<rhs>%title_regex</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act19" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">%noti_id</Str>
+			<Str sr="arg1" ve="3">notes[%jind]</Str>
+			<Str sr="arg2" ve="3">getId
+{int} ()</Str>
+			<Str sr="arg3" ve="3">"android.title"</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>377</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%td_button
+Button
+The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">Warning!!</Str>
+			<Str sr="arg2" ve="3">This will kill Termux app, and any other ytdl downloads going on will also be terminated.</Str>
+			<Str sr="arg3" ve="3">Force kill and stop downloading</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3">Cancel</Str>
+			<Int sr="arg6" val="30"/>
+			<Int sr="arg7" val="0"/>
+		</Action>
+		<Action sr="act20" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">nm</Str>
+			<Str sr="arg2" ve="3">cancel
+{} (int)</Str>
+			<Str sr="arg3" ve="3">%noti_id</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act21" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act22" ve="7">
+			<code>40</code>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0"/>
+			<Str sr="arg1" ve="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%td_button</lhs>
+					<op>3</op>
+					<rhs>*kill*</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>365</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""/&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">TermuxCommand(/data/data/com.termux/files/home/ytdl/kill_termux,,,true)</Str>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>779</code>
+			<Str sr="arg0" ve="3">%par1</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0"/>
+			<Str sr="arg1" ve="3">ytdl_downloader</Str>
+		</Action>
+		<Action sr="act7" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0"/>
+			<Str sr="arg1" ve="3">ytdl_intent_handler</Str>
+		</Action>
+		<Action sr="act8" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">ytdl_cleanup_temporary_files</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Str sr="arg2" ve="3">suppress toast</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+			<Int sr="arg6" val="0"/>
+			<Str sr="arg7" ve="3"/>
+			<Int sr="arg8" val="0"/>
+			<Int sr="arg9" val="0"/>
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
 		</Action>
 		<Action sr="act9" ve="7">
+<<<<<<< HEAD
+=======
+			<code>300</code>
+			<label>Tasks below will remove tasker notifications that match a regex. Credits to
+
+ https://taskernet.com/shares/?user=AS35m8m%2BFga%2BPKETEENtyWu3IGqX35bmTIK3QzSMBeDWmVIVfQqyiHL%2FJjwHE%2FYoZuYG0oNb60waOn0%2Few%3D%3D&amp;id=Task%3ACancel+Notification+By+Title+Match</label>
+		</Action>
+	</Task>
+	<Task sr="task132">
+		<cdate>1615929094045</cdate>
+		<edate>1616194398534</edate>
+		<id>132</id>
+		<nme>ytdl_downloader</nme>
+		<pri>100</pri>
+		<rty>2</rty>
+		<Action sr="act0" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">ytdl_initial_setup(run this)</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+			<Int sr="arg6" val="0"/>
+			<Str sr="arg7" ve="3"/>
+			<Int sr="arg8" val="0"/>
+			<Int sr="arg9" val="0"/>
+			<ConditionList sr="if">
+				<bool0>Or</bool0>
+				<bool1>Or</bool1>
+				<Condition sr="c0" ve="3">
+					<lhs>%Prefferedreso_ytdl</lhs>
+					<op>2</op>
+					<rhs>\%Prefferedreso_ytdl</rhs>
+				</Condition>
+				<Condition sr="c1" ve="3">
+					<lhs>%Directory_ytdl</lhs>
+					<op>2</op>
+					<rhs>\%Directory_ytdl</rhs>
+				</Condition>
+				<Condition sr="c2" ve="3">
+					<lhs>%Mode_ytdl</lhs>
+					<op>2</op>
+					<rhs>\%Mode_ytdl</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0"/>
+			<Str sr="arg1" ve="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%Tutorial_ytdl</lhs>
+					<op>3</op>
+					<rhs>completed</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act10" ve="7">
+			<code>40</code>
+		</Action>
+		<Action sr="act11" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%info(#)</lhs>
+					<op>7</op>
+					<rhs>2</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act12" ve="7">
+			<code>135</code>
+			<Int sr="arg0" val="1"/>
+			<Int sr="arg1" val="1"/>
+			<Str sr="arg2" ve="3">list video selected</Str>
+		</Action>
+		<Action sr="act13" ve="7">
+			<code>37</code>
+			<label>😉</label>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%TIMES</lhs>
+					<op>0</op>
+					<rhs>0</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act14" ve="7">
+			<code>357</code>
+			<label>list video selected</label>
+			<Str sr="arg0" ve="3">%ld_selected_index</Str>
+		</Action>
+		<Action sr="act15" ve="7">
+			<code>378</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%ld_button
+Button
+The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%ld_selected()
+Selected
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%ld_selected_index()
+Selected Index
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Int sr="arg1" val="1"/>
+			<Int sr="arg10" val="0"/>
+			<Int sr="arg11" val="0"/>
+			<Int sr="arg12" val="1"/>
+			<Str sr="arg2" ve="3">Select videos to download.</Str>
+			<Str sr="arg3" ve="3">%name</Str>
+			<Str sr="arg4" ve="3">%name</Str>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3">Download</Str>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3">Unselect all</Str>
+			<Int sr="arg9" val="30"/>
+		</Action>
+		<Action sr="act16" ve="7">
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
 			<code>548</code>
 			<Str sr="arg0" ve="3">Getting link info, download will start shortly.</Str>
 			<Int sr="arg1" val="0"/>
@@ -2642,17 +3216,75 @@ Run the ytdl_Intitial_Setup Task</Str>
 			<Int sr="arg3" val="0"/>
 			<Int sr="arg4" val="0"/>
 			<Int sr="arg5" val="3"/>
+<<<<<<< HEAD
 			<Int sr="arg6" val="0"/>
 			<Int sr="arg7" val="1"/>
+=======
+		</Action>
+		<Action sr="act8" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%ids</Str>
+			<Int sr="arg1" val="100000"/>
+			<Str sr="arg2" ve="3">%info(%iii)</Str>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act9" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%name</Str>
+			<Int sr="arg1" val="100000"/>
+			<Str sr="arg2" ve="3">%info(%jjj)</Str>
+			<Int sr="arg3" val="0"/>
+		</Action>
+	</Task>
+	<Task sr="task133">
+		<cdate>1615796080362</cdate>
+		<edate>1616194999576</edate>
+		<id>133</id>
+		<nme>ytdl_check_url</nme>
+		<pri>6</pri>
+		<rty>2</rty>
+		<Action sr="act0" ve="7">
+			<code>37</code>
+			<label>This regex matches any YouTube link</label>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%url</lhs>
+					<op>4</op>
+					<rhs>^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">ytdl_info</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+			<Int sr="arg6" val="1"/>
+			<Str sr="arg7" ve="3"/>
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
 			<Int sr="arg8" val="0"/>
 			<Str sr="arg9" ve="3"/>
 		</Action>
 	</Task>
+<<<<<<< HEAD
 	<Task sr="task41">
 		<cdate>1616432495501</cdate>
 		<edate>1616432586606</edate>
 		<id>41</id>
 		<nme>ytdl_show_list</nme>
+=======
+	<Task sr="task134">
+		<cdate>1616100669935</cdate>
+		<edate>1616194877747</edate>
+		<id>134</id>
+		<nme>ytdl_retry</nme>
+		<rty>2</rty>
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
 		<Action sr="act0" ve="7">
 			<code>512</code>
 			<Int sr="arg0" val="1"/>
@@ -2695,6 +3327,456 @@ Run the ytdl_Intitial_Setup Task</Str>
 			<Str sr="arg7" ve="3"/>
 			<Int sr="arg8" val="0"/>
 			<Int sr="arg9" val="0"/>
+<<<<<<< HEAD
+=======
+		</Action>
+	</Task>
+	<Task sr="task135">
+		<cdate>1616109319759</cdate>
+		<edate>1616194735836</edate>
+		<id>135</id>
+		<nme>ytdl_open_file_notify_cancel</nme>
+		<rty>2</rty>
+		<Action sr="act0" ve="7">
+			<code>512</code>
+			<Int sr="arg0" val="1"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>779</code>
+			<Str sr="arg0" ve="3">%par1</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>590</code>
+			<Str sr="arg0" ve="3">%par2</Str>
+			<Str sr="arg1" ve="3">,</Str>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>102</code>
+			<Str sr="arg0" ve="3">%par21</Str>
+			<Str sr="arg1" ve="3">%par22</Str>
+		</Action>
+	</Task>
+	<Task sr="task136">
+		<cdate>1616112674679</cdate>
+		<edate>1616180991394</edate>
+		<id>136</id>
+		<nme>ytdl_delete_file_notify_cancel</nme>
+		<rty>2</rty>
+		<Action sr="act0" ve="7">
+			<code>512</code>
+			<Int sr="arg0" val="1"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>779</code>
+			<Str sr="arg0" ve="3">%par1</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>406</code>
+			<Str sr="arg0" ve="3">%par2</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>548</code>
+			<Str sr="arg0" ve="3">Video deleted.</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+	</Task>
+	<Task sr="task137">
+		<cdate>1615972225558</cdate>
+		<edate>1616194749418</edate>
+		<id>137</id>
+		<nme>ytdl_download_progress</nme>
+		<pri>100</pri>
+		<rty>2</rty>
+		<Action sr="act0" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%extension</Str>
+			<Str sr="arg1" ve="3">mp4</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%mode</lhs>
+					<op>2</op>
+					<rhs>video</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%extension</Str>
+			<Str sr="arg1" ve="3">m4a</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%mode</lhs>
+					<op>2</op>
+					<rhs>audio</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act10" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0"/>
+			<Str sr="arg1" ve="3"/>
+		</Action>
+		<Action sr="act11" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act12" ve="7">
+			<code>342</code>
+			<Int sr="arg0" val="1"/>
+			<Str sr="arg1" ve="3">/sdcard/Tasker/ytdl/%startids</Str>
+			<Str sr="arg2" ve="3">%lastmodified</Str>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act13" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%diff</Str>
+			<Str sr="arg1" ve="3">%TIMES-%lastmodified</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="1"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act14" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%diff</lhs>
+					<op>7</op>
+					<rhs>30</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act15" ve="7">
+			<code>406</code>
+			<Str sr="arg0" ve="3">/sdcard/Tasker/ytdl/%startids</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act16" ve="7">
+			<code>779</code>
+			<Str sr="arg0" ve="3">Downloading - %startname</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act17" ve="7">
+			<code>523</code>
+			<Str sr="arg0" ve="3">Download timeout - %startname</Str>
+			<Str sr="arg1" ve="3">Download timed out for some reason.</Str>
+			<Str sr="arg10" ve="3"/>
+			<Str sr="arg11" ve="3">ytdl</Str>
+			<Img sr="arg2" ve="2">
+				<nme>mw_image_timer_off</nme>
+			</Img>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="0"/>
+			<Int sr="arg7" val="0"/>
+			<Int sr="arg8" val="0"/>
+			<Str sr="arg9" ve="3"/>
+			<ListElementItem sr="item0">
+				<label>Dismiss</label>
+				<Action sr="action" ve="7">
+					<code>779</code>
+					<Str sr="arg0" ve="3">Download timeout - %startname</Str>
+					<Int sr="arg1" val="0"/>
+				</Action>
+			</ListElementItem>
+			<ListElementItem sr="item1">
+				<label>Retry</label>
+				<Action sr="action" ve="7">
+					<code>130</code>
+					<Str sr="arg0" ve="3">ytdl_retry</Str>
+					<Int sr="arg1">
+						<var>%priority</var>
+					</Int>
+					<Str sr="arg2" ve="3"/>
+					<Str sr="arg3" ve="3"/>
+					<Str sr="arg4" ve="3"/>
+					<Int sr="arg5" val="0"/>
+					<Int sr="arg6" val="1"/>
+					<Str sr="arg7" ve="3"/>
+					<Int sr="arg8" val="0"/>
+					<Int sr="arg9" val="0"/>
+				</Action>
+			</ListElementItem>
+			<ListElementItem sr="item2">
+				<label>Open url</label>
+				<Action sr="action" ve="7">
+					<code>130</code>
+					<Str sr="arg0" ve="3">ytdl_open_link_notify_cancel</Str>
+					<Int sr="arg1">
+						<var>%priority</var>
+					</Int>
+					<Str sr="arg2" ve="3">Download timeout - %startname</Str>
+					<Str sr="arg3" ve="3">https://youtu.be/%startids</Str>
+					<Str sr="arg4" ve="3"/>
+					<Int sr="arg5" val="0"/>
+					<Int sr="arg6" val="0"/>
+					<Str sr="arg7" ve="3"/>
+					<Int sr="arg8" val="0"/>
+					<Int sr="arg9" val="0"/>
+				</Action>
+			</ListElementItem>
+		</Action>
+		<Action sr="act18" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0"/>
+			<Str sr="arg1" ve="3"/>
+		</Action>
+		<Action sr="act19" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>300</code>
+			<label>start</label>
+		</Action>
+		<Action sr="act20" ve="7">
+			<code>523</code>
+			<Str sr="arg0" ve="3">Downloading - %startname</Str>
+			<Str sr="arg1" ve="3">%lastline</Str>
+			<Str sr="arg10" ve="3"/>
+			<Str sr="arg11" ve="3">ytdl</Str>
+			<Img sr="arg2" ve="2">
+				<nme>mw_navigation_arrow_downward</nme>
+			</Img>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="0"/>
+			<Int sr="arg7" val="0"/>
+			<Int sr="arg8" val="0"/>
+			<Str sr="arg9" ve="3"/>
+			<ListElementItem sr="item0">
+				<label>Stop downloading</label>
+				<Action sr="action" ve="7">
+					<code>130</code>
+					<Str sr="arg0" ve="3">ytdl_kill_termux_ytdl</Str>
+					<Int sr="arg1">
+						<var>%priority</var>
+					</Int>
+					<Str sr="arg2" ve="3">Downloading - %startname</Str>
+					<Str sr="arg3" ve="3"/>
+					<Str sr="arg4" ve="3"/>
+					<Int sr="arg5" val="0"/>
+					<Int sr="arg6" val="1"/>
+					<Str sr="arg7" ve="3"/>
+					<Int sr="arg8" val="0"/>
+					<Int sr="arg9" val="0"/>
+				</Action>
+			</ListElementItem>
+		</Action>
+		<Action sr="act21" ve="7">
+			<code>30</code>
+			<Int sr="arg0">
+				<var>200</var>
+			</Int>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+		</Action>
+		<Action sr="act22" ve="7">
+			<code>135</code>
+			<Int sr="arg0" val="1"/>
+			<Int sr="arg1" val="1"/>
+			<Str sr="arg2" ve="3">start</Str>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>123</code>
+			<Str sr="arg0" ve="3">tail -n 1 "/sdcard/Tasker/ytdl/%startids"</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Str sr="arg3" ve="3">%lastline</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>598</code>
+			<se>false</se>
+			<Str sr="arg0" ve="3">%lastline</Str>
+			<Str sr="arg1" ve="3">[download]   </Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Str sr="arg5" ve="3"/>
+			<Int sr="arg6" val="1"/>
+			<Str sr="arg7" ve="3">Progress : </Str>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<bool0>Or</bool0>
+				<Condition sr="c0" ve="3">
+					<lhs>%lastline</lhs>
+					<op>2</op>
+					<rhs>Download failed</rhs>
+				</Condition>
+				<Condition sr="c1" ve="3">
+					<lhs>%lastline</lhs>
+					<op>2</op>
+					<rhs>Download complete</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>406</code>
+			<Str sr="arg0" ve="3">/sdcard/Tasker/ytdl/%startids</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act7" ve="7">
+			<code>779</code>
+			<Str sr="arg0" ve="3">Downloading - %startname</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act8" ve="7">
+			<code>523</code>
+			<Str sr="arg0" ve="3">Download failed - %startname</Str>
+			<Str sr="arg1" ve="3">Media download failed. Try to retry download, or check your network connection.</Str>
+			<Str sr="arg10" ve="3"/>
+			<Str sr="arg11" ve="3">ytdl</Str>
+			<Img sr="arg2" ve="2">
+				<nme>mw_alert_error</nme>
+			</Img>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="0"/>
+			<Int sr="arg7" val="0"/>
+			<Int sr="arg8" val="0"/>
+			<Str sr="arg9" ve="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%lastline</lhs>
+					<op>2</op>
+					<rhs>Download failed</rhs>
+				</Condition>
+			</ConditionList>
+			<ListElementItem sr="item0">
+				<label>Dismiss</label>
+				<Action sr="action" ve="7">
+					<code>779</code>
+					<Str sr="arg0" ve="3">Download failed - %startname</Str>
+					<Int sr="arg1" val="0"/>
+				</Action>
+			</ListElementItem>
+			<ListElementItem sr="item1">
+				<label>Retry</label>
+				<Action sr="action" ve="7">
+					<code>130</code>
+					<Str sr="arg0" ve="3">ytdl_retry</Str>
+					<Int sr="arg1">
+						<var>%priority</var>
+					</Int>
+					<Str sr="arg2" ve="3"/>
+					<Str sr="arg3" ve="3"/>
+					<Str sr="arg4" ve="3"/>
+					<Int sr="arg5" val="0"/>
+					<Int sr="arg6" val="1"/>
+					<Str sr="arg7" ve="3"/>
+					<Int sr="arg8" val="0"/>
+					<Int sr="arg9" val="0"/>
+				</Action>
+			</ListElementItem>
+			<ListElementItem sr="item2">
+				<label>Open link</label>
+				<Action sr="action" ve="7">
+					<code>130</code>
+					<Str sr="arg0" ve="3">ytdl_open_link_notify_cancel</Str>
+					<Int sr="arg1">
+						<var>%priority</var>
+					</Int>
+					<Str sr="arg2" ve="3">Download failed - %startname</Str>
+					<Str sr="arg3" ve="3">https://youtu.be/%startids</Str>
+					<Str sr="arg4" ve="3"/>
+					<Int sr="arg5" val="0"/>
+					<Int sr="arg6" val="1"/>
+					<Str sr="arg7" ve="3"/>
+					<Int sr="arg8" val="0"/>
+					<Int sr="arg9" val="0"/>
+				</Action>
+			</ListElementItem>
+		</Action>
+		<Action sr="act9" ve="7">
+			<code>523</code>
+			<Str sr="arg0" ve="3">Download complete - %startname</Str>
+			<Str sr="arg1" ve="3"/>
+			<Str sr="arg10" ve="3"/>
+			<Str sr="arg11" ve="3">ytdl</Str>
+			<Img sr="arg2" ve="2">
+				<nme>mw_action_done</nme>
+			</Img>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="0"/>
+			<Int sr="arg7" val="0"/>
+			<Int sr="arg8" val="0"/>
+			<Str sr="arg9" ve="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%lastline</lhs>
+					<op>2</op>
+					<rhs>Download complete</rhs>
+				</Condition>
+			</ConditionList>
+			<ListElementItem sr="item0">
+				<label>Dismiss</label>
+				<Action sr="action" ve="7">
+					<code>779</code>
+					<Str sr="arg0" ve="3">Download complete - %startname</Str>
+					<Int sr="arg1" val="0"/>
+				</Action>
+			</ListElementItem>
+			<ListElementItem sr="item1">
+				<label>Delete file</label>
+				<Action sr="action" ve="7">
+					<code>130</code>
+					<Str sr="arg0" ve="3">ytdl_delete_file_notify_cancel</Str>
+					<Int sr="arg1">
+						<var>%priority</var>
+					</Int>
+					<Str sr="arg2" ve="3">Download complete - %startname</Str>
+					<Str sr="arg3" ve="3">%Directory_ytdl/%startname.%extension</Str>
+					<Str sr="arg4" ve="3"/>
+					<Int sr="arg5" val="0"/>
+					<Int sr="arg6" val="0"/>
+					<Str sr="arg7" ve="3"/>
+					<Int sr="arg8" val="0"/>
+					<Int sr="arg9" val="0"/>
+				</Action>
+			</ListElementItem>
+			<ListElementItem sr="item2">
+				<label>Open file</label>
+				<Action sr="action" ve="7">
+					<code>130</code>
+					<Str sr="arg0" ve="3">ytdl_open_file_notify_cancel</Str>
+					<Int sr="arg1">
+						<var>%priority</var>
+					</Int>
+					<Str sr="arg2" ve="3">Download complete - %startname</Str>
+					<Str sr="arg3" ve="3">%Directory_ytdl/%startname.%extension,%mode/*</Str>
+					<Str sr="arg4" ve="3"/>
+					<Int sr="arg5" val="0"/>
+					<Int sr="arg6" val="1"/>
+					<Str sr="arg7" ve="3"/>
+					<Int sr="arg8" val="0"/>
+					<Int sr="arg9" val="0"/>
+				</Action>
+			</ListElementItem>
+>>>>>>> branch 'work' of https://github.com/Practicalbutterfly5/ytdl
 		</Action>
 	</Task>
 </TaskerData>
