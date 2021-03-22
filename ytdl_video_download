@@ -10,8 +10,8 @@ IFS="|" read -a array <<< $1
 IFS="|" read -a array2 <<< $2
 for i in "${!array[@]}"; do
 echo "$5">/sdcard/Tasker/ytdl/"${array2[i]}"
-echo "$2">>/sdcard/Tasker/ytdl/"${array2[i]}"
-echo "$1">>/sdcard/Tasker/ytdl/"${array2[i]}"
+echo "${array2[i]}">>/sdcard/Tasker/ytdl/"${array2[i]}"
+echo "${array[i]}">>/sdcard/Tasker/ytdl/"${array2[i]}"
 echo "$$">>/sdcard/Tasker/ytdl/"${array2[i]}"
 am broadcast --user '0' -a tasker.ytdl -e downloading "1"
 bash -c 'echo "$$" & exec youtube-dl --newline --embed-subs --embed-thumbnail -f "$0" "$1" -o "$2/%(title)s.%(ext)s"' "$4" "${array2[i]}" "$3">>/sdcard/Tasker/ytdl/"${array2[i]}"
