@@ -9,7 +9,8 @@
 * Supports all YouTube links, including channel links, playlist links, embedded vidoes links. Livestream downloading hasn't been tested yet.
 * Select or unselect videos in a playlist/channel that you want to download.
 * Get live update of download status in notification.
-* No need of any addon or plugin apps. Only Tasker and Termux are required.
+* Cancel any download from notification.
+* Does not require any Tasker Plugins.
 
 
 #### Dependencies
@@ -23,7 +24,7 @@
 1. Copy and paste the following command in termux and press Enter key.  
       ```curl https://raw.githubusercontent.com/Practicalbutterfly5/Ytdl/main/installytdl > installytdl && chmod +x installytdl && bash installytdl```
 
-2. Tasker will open automatically and ask to import ytdl profile. If it doesn't import profile from /sdcard/Tasker/ytdl/ytdl.prj.xml
+2. Tasker will open automatically and ask to import ytdl profile. If it doesn't, import profile manually from /sdcard/Tasker/ytdl/ytdl.prj.xml
 
 3. Launch the ytdl_Initial_Setup task and configure your preferences. Re-run this task if you want to change any setting in future.
 
@@ -32,11 +33,11 @@
 
 After ytdl is installed and setup task is run, you are ready to download using any of these method.
 
-* Method 1  
+* **Method 1  **
   Share any YouTube link to termux app. Termux app will open momentarily and then close, if it didn't have any active sessions.
 
 
-* Method 2  
-  For **android version<=9**, they will be able to copy YouTube link to clipboard and trigger ytdl.  
+* **Method 2  **
+  **Android version<=9**,  will be able to copy YouTube link to clipboard and trigger ytdl.  
   
-  For **android version>=10**, will need to give tasker ```android.permission.WRITE_SECURE_SETTINGS```. [This can be done using adb for non-root users](https://tasker.joaoapps.com/userguide/en/help/ah_secure_setting_grant.html), rooted users can simply execute ```pm grant net.dinglisch.android.taskerm android.permission.WRITE_SECURE_SETTINGS``` in rooted shell.
+  **Android version>=10**, will need to give tasker ```android.permission.WRITE_SECURE_SETTINGS```. [This can be done using adb for non-root users](https://tasker.joaoapps.com/userguide/en/help/ah_secure_setting_grant.html), rooted users can simply execute ```pm grant net.dinglisch.android.taskerm android.permission.WRITE_SECURE_SETTINGS``` in rooted shell.
