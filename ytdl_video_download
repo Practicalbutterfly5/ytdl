@@ -5,7 +5,7 @@
 # $3 is download directory 
 # $4 is options 
 # $5 is is mode
-
+n
 IFS="|" read -a array <<< $1
 IFS="|" read -a array2 <<< $2
 for i in "${!array[@]}"; do
