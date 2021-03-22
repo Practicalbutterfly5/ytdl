@@ -21,7 +21,7 @@
 #### Installation
 
 
-1. Copy and paste the following command in termux and press Enter key.  
+1. Copy and paste the following single line command in termux and press Enter key.  
       ```curl https://raw.githubusercontent.com/Practicalbutterfly5/ytdl/main/installytdl > installytdl && chmod +x installytdl && bash installytdl```
 
 2. Tasker will open automatically and ask to import ytdl profile. If it doesn't, import project manually from /sdcard/Tasker/ytdl/ytdl.prj.xml
