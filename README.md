@@ -19,16 +19,13 @@
 
 #### Installation
 
-1. Goto your android settings>Apps and notifications>Tasker. In Tasker permissions scroll all the way down to "Additional Permissions" and enable the permission "Run commands in Termux environment"
 
-![Giving tasker permission to execute in termux environment](tasker_setting_tutorial.gif)
-
-2. Copy and paste the following command in termux and press Enter key.  
+1. Copy and paste the following command in termux and press Enter key.  
       ```curl https://raw.githubusercontent.com/Practicalbutterfly5/Ytdl/main/installytdl > installytdl && chmod +x installytdl && bash installytdl```
 
-3. Tasker will open automatically and ask to import ytdl profile. If it doesn't do so automatically, you can import xml from [this TaskerNet share.](https://taskernet.com/shares/?user=AS35m8nYO2KrDhtHnG3NNyeEpC1I3aBlL349HB7KHCBcBdz7DgYGq9nCOtOP%2BuTRApmJuA0UCGgl&id=Project%3Aytdl)
+2. Tasker will open automatically and ask to import ytdl profile. If it doesn't import profile from /sdcard/Tasker/ytdl/ytdl.prj.xml
 
-4. Launch the ytdl_setup task and configure your preferences. Re-run this task if you want to change any setting in future.
+3. Launch the ytdl_Initial_Setup task and configure your preferences. Re-run this task if you want to change any setting in future.
 
 
 #### USAGE
