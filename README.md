@@ -24,7 +24,7 @@
 1. Copy and paste the following command in termux and press Enter key.  
       ```curl https://raw.githubusercontent.com/Practicalbutterfly5/Ytdl/main/installytdl > installytdl && chmod +x installytdl && bash installytdl```
 
-2. Tasker will open automatically and ask to import ytdl profile. If it doesn't, import profile manually from /sdcard/Tasker/ytdl/ytdl.prj.xml
+2. Tasker will open automatically and ask to import ytdl profile. If it doesn't, import project manually from /sdcard/Tasker/ytdl/ytdl.prj.xml
 
 3. Launch the ytdl_Initial_Setup task and configure your preferences. Re-run this task if you want to change any setting in future.
 
