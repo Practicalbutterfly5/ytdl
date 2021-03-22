@@ -1,5 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
-yes | termux-setup-storage > dev/null
+yes | termux-setup-storage > /dev/null
 
 yes | pkg install python ffmpeg atomicparsley git
 
