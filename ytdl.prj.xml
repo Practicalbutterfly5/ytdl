@@ -1,27 +1,12 @@
 <TaskerData sr="" dvi="1" tv="5.11.14">
-	<Profile sr="prof119" ve="2">
-		<cdate>1616448201538</cdate>
-		<edate>1616456648827</edate>
-		<id>119</id>
-		<limit>true</limit>
-		<mid0>110</mid0>
-		<nme>ytdl_Clipboard_set</nme>
-		<Event sr="con0" ve="2">
-			<code>3050</code>
-			<pri>0</pri>
-			<Str sr="arg0" ve="3">%CLIP</Str>
-			<Str sr="arg1" ve="3"/>
-			<Int sr="arg2" val="0"/>
-		</Event>
-	</Profile>
-	<Profile sr="prof120" ve="2">
-		<cdate>1616448201540</cdate>
+	<Profile sr="prof70" ve="2">
+		<cdate>1616456971615</cdate>
 		<clp>true</clp>
 		<edate>1616456648314</edate>
 		<flags>8</flags>
-		<id>120</id>
+		<id>70</id>
 		<limit>true</limit>
-		<mid0>114</mid0>
+		<mid0>65</mid0>
 		<nme>ytdl_Intent_recieved</nme>
 		<Event sr="con0" ve="2">
 			<code>599</code>
@@ -33,21 +18,37 @@
 			<Str sr="arg4" ve="3"/>
 		</Event>
 	</Profile>
+	<Profile sr="prof71" ve="2">
+		<cdate>1616456971621</cdate>
+		<clp>true</clp>
+		<edate>1616456648827</edate>
+		<id>71</id>
+		<limit>true</limit>
+		<mid0>63</mid0>
+		<nme>ytdl_Clipboard_set</nme>
+		<Event sr="con0" ve="2">
+			<code>3050</code>
+			<pri>0</pri>
+			<Str sr="arg0" ve="3">%CLIP</Str>
+			<Str sr="arg1" ve="3"/>
+			<Int sr="arg2" val="0"/>
+		</Event>
+	</Profile>
 	<Project sr="proj0" ve="2">
 		<cdate>1615345930714</cdate>
 		<name>ytdl</name>
-		<pids>120,119</pids>
-		<tids>107,111,103,104,106,109,116,114,118,115,110,105,102,108,117</tids>
+		<pids>71,70</pids>
+		<tids>67,64,51,53,56,55,66,63,69,59,41,62,65,27,68</tids>
 		<Share sr="Share">
 			<d>YTDL is tasker+termux project to download YouTube videos on android very easily and seamlessly.</d>
 			<p>false</p>
 			<t>ytdl_Initial_Setup(Run this)</t>
 		</Share>
 	</Project>
-	<Task sr="task102">
+	<Task sr="task27">
 		<cdate>1615918845957</cdate>
-		<edate>1616456680517</edate>
-		<id>102</id>
+		<edate>1616456989974</edate>
+		<id>27</id>
 		<nme>ytdl_PANIC_TASK</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -278,10 +279,10 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 			<nme>mw_places_golf_course</nme>
 		</Img>
 	</Task>
-	<Task sr="task103">
+	<Task sr="task41">
 		<cdate>1615929094045</cdate>
 		<edate>1616456679095</edate>
-		<id>103</id>
+		<id>41</id>
 		<nme>ytdl_downloader</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -958,10 +959,10 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<code>40</code>
 		</Action>
 	</Task>
-	<Task sr="task104">
+	<Task sr="task51">
 		<cdate>1615796080362</cdate>
 		<edate>1616456677772</edate>
-		<id>104</id>
+		<id>51</id>
 		<nme>ytdl_check_url</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -995,10 +996,10 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<code>38</code>
 		</Action>
 	</Task>
-	<Task sr="task105">
+	<Task sr="task53">
 		<cdate>1616100669935</cdate>
 		<edate>1616456676186</edate>
-		<id>105</id>
+		<id>53</id>
 		<nme>ytdl_retry</nme>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
@@ -1037,10 +1038,10 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<Int sr="arg9" val="0"/>
 		</Action>
 	</Task>
-	<Task sr="task106">
+	<Task sr="task55">
 		<cdate>1616109319759</cdate>
 		<edate>1616456674547</edate>
-		<id>106</id>
+		<id>55</id>
 		<nme>ytdl_open_file_notify_cancel</nme>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
@@ -1064,10 +1065,10 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<Str sr="arg1" ve="3">%par22</Str>
 		</Action>
 	</Task>
-	<Task sr="task107">
+	<Task sr="task56">
 		<cdate>1616112674679</cdate>
 		<edate>1616456672769</edate>
-		<id>107</id>
+		<id>56</id>
 		<nme>ytdl_delete_file_notify_cancel</nme>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
@@ -1091,10 +1092,10 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<Int sr="arg1" val="0"/>
 		</Action>
 	</Task>
-	<Task sr="task108">
+	<Task sr="task59">
 		<cdate>1615972225558</cdate>
 		<edate>1616456670505</edate>
-		<id>108</id>
+		<id>59</id>
 		<nme>ytdl_download_progress</nme>
 		<pri>100</pri>
 		<stayawake>true</stayawake>
@@ -1827,10 +1828,10 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<Str sr="arg2" ve="3">for end</Str>
 		</Action>
 	</Task>
-	<Task sr="task109">
+	<Task sr="task62">
 		<cdate>1616121798577</cdate>
 		<edate>1616456663713</edate>
-		<id>109</id>
+		<id>62</id>
 		<nme>Grant clipboard access</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -1863,10 +1864,10 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<nme>mw_card_text_outline</nme>
 		</Img>
 	</Task>
-	<Task sr="task110">
+	<Task sr="task63">
 		<cdate>1616170710774</cdate>
 		<edate>1616452083896</edate>
-		<id>110</id>
+		<id>63</id>
 		<pri>6</pri>
 		<Action sr="act0" ve="7">
 			<code>547</code>
@@ -1893,10 +1894,10 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<Int sr="arg9" val="0"/>
 		</Action>
 	</Task>
-	<Task sr="task111">
+	<Task sr="task64">
 		<cdate>1615912488849</cdate>
 		<edate>1616456661987</edate>
-		<id>111</id>
+		<id>64</id>
 		<nme>ytdl_cleanup_temporary_files</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -1967,10 +1968,10 @@ This step will delete the following directory:  /sdcard/Tasker/ytdl/*</Str>
 			<nme>mw_content_delete_sweep</nme>
 		</Img>
 	</Task>
-	<Task sr="task114">
+	<Task sr="task65">
 		<cdate>1615928580510</cdate>
-		<edate>1616456660184</edate>
-		<id>114</id>
+		<edate>1616456997365</edate>
+		<id>65</id>
 		<nme>ytdl_intent_handler</nme>
 		<pri>6</pri>
 		<rty>2</rty>
@@ -2171,10 +2172,10 @@ Link: %returnurl</Str>
 			<Int sr="arg1" val="0"/>
 		</Action>
 	</Task>
-	<Task sr="task115">
+	<Task sr="task66">
 		<cdate>1615947227099</cdate>
 		<edate>1616456656006</edate>
-		<id>115</id>
+		<id>66</id>
 		<nme>ytdl_open_link_notify_cancel</nme>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
@@ -2186,10 +2187,10 @@ Link: %returnurl</Str>
 			<Str sr="arg0" ve="3">%par2</Str>
 		</Action>
 	</Task>
-	<Task sr="task116">
+	<Task sr="task67">
 		<cdate>1615928798250</cdate>
 		<edate>1616456718693</edate>
-		<id>116</id>
+		<id>67</id>
 		<nme>ytdl_info</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -2295,10 +2296,10 @@ Run the ytdl_Intitial_Setup Task</Str>
 			<Int sr="arg1" val="0"/>
 		</Action>
 	</Task>
-	<Task sr="task117">
+	<Task sr="task68">
 		<cdate>1615878126177</cdate>
-		<edate>1616456373902</edate>
-		<id>117</id>
+		<edate>1616457002597</edate>
+		<id>68</id>
 		<nme>ytdl_Initial_Setup(Run this)</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -2307,13 +2308,45 @@ Run the ytdl_Intitial_Setup Task</Str>
 			<Str sr="arg0" ve="3">com.termux.permission.RUN_COMMAND</Str>
 		</Action>
 		<Action sr="act1" ve="7">
-			<code>549</code>
-			<Str sr="arg0" ve="3">%Prefferedreso_ytdl/%Directory_ytdl/%Tutorial_ytdl</Str>
-			<Int sr="arg1" val="1"/>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
+			<code>365</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""/&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">TermuxCommand(/data/data/com.termux/files/home/ytdl/kill_termux,,,true)</Str>
 		</Action>
 		<Action sr="act10" ve="7">
+			<code>378</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%ld_button
+Button
+The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%ld_selected
+Selected
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%ld_selected_index
+Selected Index
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;%ld_long
+Long
+true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg10" val="0"/>
+			<Int sr="arg11" val="0"/>
+			<Int sr="arg12" val="1"/>
+			<Str sr="arg2" ve="3">Select resolution.</Str>
+			<Str sr="arg3" ve="3">144p,240p,360p,480p,720p,1080p,1440p,2160p</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Int sr="arg9" val="30"/>
+		</Action>
+		<Action sr="act11" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%Prefferedreso_ytdl</Str>
 			<Str sr="arg1" ve="3">%ld_selected</Str>
@@ -2322,10 +2355,10 @@ Run the ytdl_Intitial_Setup Task</Str>
 			<Int sr="arg4" val="0"/>
 			<Int sr="arg5" val="3"/>
 		</Action>
-		<Action sr="act11" ve="7">
+		<Action sr="act12" ve="7">
 			<code>38</code>
 		</Action>
-		<Action sr="act12" ve="7">
+		<Action sr="act13" ve="7">
 			<code>377</code>
 			<Bundle sr="arg0">
 				<Vals sr="val">
@@ -2343,7 +2376,7 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 			<Int sr="arg6" val="30"/>
 			<Int sr="arg7" val="0"/>
 		</Action>
-		<Action sr="act13" ve="7">
+		<Action sr="act14" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%Mode_ytdl</Str>
 			<Str sr="arg1" ve="3">Ask</Str>
@@ -2359,7 +2392,7 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act14" ve="7">
+		<Action sr="act15" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%Mode_ytdl</Str>
 			<Str sr="arg1" ve="3">audio</Str>
@@ -2375,7 +2408,7 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act15" ve="7">
+		<Action sr="act16" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%Mode_ytdl</Str>
 			<Str sr="arg1" ve="3">video</Str>
@@ -2391,17 +2424,17 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act16" ve="7">
+		<Action sr="act17" ve="7">
 			<code>159</code>
 			<Str sr="arg0" ve="3">ytdl_Clipboard_set</Str>
 			<Int sr="arg1" val="1"/>
 		</Action>
-		<Action sr="act17" ve="7">
+		<Action sr="act18" ve="7">
 			<code>159</code>
 			<Str sr="arg0" ve="3">ytdl_Intent_recieved</Str>
 			<Int sr="arg1" val="1"/>
 		</Action>
-		<Action sr="act18" ve="7">
+		<Action sr="act19" ve="7">
 			<code>377</code>
 			<se>false</se>
 			<Bundle sr="arg0">
@@ -2439,7 +2472,14 @@ Output Directory : %Download_directory_ytdl</Str>
 			<Int sr="arg6" val="60"/>
 			<Int sr="arg7" val="0"/>
 		</Action>
-		<Action sr="act19" ve="7">
+		<Action sr="act2" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%Prefferedreso_ytdl/%Directory_ytdl/%Tutorial_ytdl</Str>
+			<Int sr="arg1" val="1"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act20" ve="7">
 			<code>104</code>
 			<label>Needs change</label>
 			<Str sr="arg0" ve="3">Video link</Str>
@@ -2451,7 +2491,16 @@ Output Directory : %Download_directory_ytdl</Str>
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act2" ve="7">
+		<Action sr="act21" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%Tutorial_ytdl</Str>
+			<Str sr="arg1" ve="3">completed</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act3" ve="7">
 			<code>390</code>
 			<Bundle sr="arg0">
 				<Vals sr="val">
@@ -2466,16 +2515,7 @@ The text that was retrieved from the dialog&lt;/_array_net.dinglisch.android.tas
 			<Str sr="arg3" ve="3">Press back button when in desired folder to select it.</Str>
 			<Str sr="arg4" ve="3"/>
 		</Action>
-		<Action sr="act20" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%Tutorial_ytdl</Str>
-			<Str sr="arg1" ve="3">completed</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-		</Action>
-		<Action sr="act3" ve="7">
+		<Action sr="act4" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%Download_directory_ytdl</Str>
 			<Str sr="arg1" ve="3">%input</Str>
@@ -2484,12 +2524,12 @@ The text that was retrieved from the dialog&lt;/_array_net.dinglisch.android.tas
 			<Int sr="arg4" val="0"/>
 			<Int sr="arg5" val="3"/>
 		</Action>
-		<Action sr="act4" ve="7">
+		<Action sr="act5" ve="7">
 			<code>548</code>
 			<Str sr="arg0" ve="3">Output directory: %Download_directory_ytdl</Str>
 			<Int sr="arg1" val="1"/>
 		</Action>
-		<Action sr="act5" ve="7">
+		<Action sr="act6" ve="7">
 			<code>377</code>
 			<Bundle sr="arg0">
 				<Vals sr="val">
@@ -2510,7 +2550,7 @@ Note: Resolution settings for playlist will always be asked regardless of this s
 			<Int sr="arg6" val="30"/>
 			<Int sr="arg7" val="0"/>
 		</Action>
-		<Action sr="act6" ve="7">
+		<Action sr="act7" ve="7">
 			<code>37</code>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
@@ -2520,7 +2560,7 @@ Note: Resolution settings for playlist will always be asked regardless of this s
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act7" ve="7">
+		<Action sr="act8" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%Prefferedreso_ytdl</Str>
 			<Str sr="arg1" ve="3">Ask</Str>
@@ -2529,46 +2569,17 @@ Note: Resolution settings for playlist will always be asked regardless of this s
 			<Int sr="arg4" val="0"/>
 			<Int sr="arg5" val="3"/>
 		</Action>
-		<Action sr="act8" ve="7">
-			<code>43</code>
-		</Action>
 		<Action sr="act9" ve="7">
-			<code>378</code>
-			<Bundle sr="arg0">
-				<Vals sr="val">
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%ld_button
-Button
-The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%ld_selected
-Selected
-&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%ld_selected_index
-Selected Index
-&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;%ld_long
-Long
-true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
-				</Vals>
-			</Bundle>
-			<Int sr="arg1" val="0"/>
-			<Int sr="arg10" val="0"/>
-			<Int sr="arg11" val="0"/>
-			<Int sr="arg12" val="1"/>
-			<Str sr="arg2" ve="3">Select resolution.</Str>
-			<Str sr="arg3" ve="3">144p,240p,360p,480p,720p,1080p,1440p,2160p</Str>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3"/>
-			<Str sr="arg6" ve="3"/>
-			<Str sr="arg7" ve="3"/>
-			<Str sr="arg8" ve="3"/>
-			<Int sr="arg9" val="30"/>
+			<code>43</code>
 		</Action>
 		<Img sr="icn" ve="2">
 			<nme>cust_star</nme>
 		</Img>
 	</Task>
-	<Task sr="task118">
+	<Task sr="task69">
 		<cdate>1616355906145</cdate>
 		<edate>1616456654425</edate>
-		<id>118</id>
+		<id>69</id>
 		<nme>ytdl_stop_download</nme>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
