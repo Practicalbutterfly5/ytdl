@@ -6,7 +6,7 @@
 #### Features
 * Download YouTube videos, playlists, and audios.
 * Supports downloading by copying YouTube link to clipboard, or sharing link to termux app.
-* Supports all YouTube links, including channel links, embedded vidoes links. Livestream downloading hasn't been tested yet.
+* Supports all YouTube links, including channel links, playlist links, embedded vidoes links. Livestream downloading hasn't been tested yet.
 * Select or unselect videos in a playlist/channel that you want to download.
 * Get live update of download status in notification.
 * No need of any addon or plugin apps. Only Tasker and Termux are required.
@@ -23,10 +23,8 @@
 
 ![Giving tasker permission to execute in termux environment](tasker_setting_tutorial.gif)
 
-2. Copy and paste the following command in termux and press Enter key.
-      
-      ```curl https://raw.githubusercontent.com/Practicalbutterfly5/Ytdl/work/installytdl > installytdl && chmod +x installytdl && bash installytdl```  
-
+2. Copy and paste the following command in termux and press Enter key.  
+      ```curl https://raw.githubusercontent.com/Practicalbutterfly5/Ytdl/main/installytdl > installytdl && chmod +x installytdl && bash installytdl```
 
 3. Tasker will open automatically and ask to import ytdl profile. If it doesn't do so automatically, you can import xml from [this TaskerNet share.](https://taskernet.com/shares/?user=AS35m8nYO2KrDhtHnG3NNyeEpC1I3aBlL349HB7KHCBcBdz7DgYGq9nCOtOP%2BuTRApmJuA0UCGgl&id=Project%3Aytdl)
 

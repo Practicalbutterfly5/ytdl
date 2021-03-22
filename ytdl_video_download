@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-# $1 is name of video, delimiter /
-# $2 is ids of video, delimiter /
+# $1 is name of video, delimiter |
+# $2 is ids of video, delimiter |
 # $3 is download directory 
 # $4 is options 
 # $5 is is mode
@@ -9,9 +9,13 @@
 IFS="|" read -a array <<< $1
 IFS="|" read -a array2 <<< $2
 for i in "${!array[@]}"; do
-echo "Starting download">/sdcard/Tasker/ytdl/"${array2[i]}"
-am broadcast --user '0' -a tasker.ytdl -e startids "${array2[i]}" -e startname     "${array[i]}" -e mode "$5"
-youtube-dl --newline --embed-subs --embed-thumbnail -f "$4" "${array2[i]}" -o "$3">>/sdcard/Tasker/ytdl/"${array2[i]}"
+echo "$5">/sdcard/Tasker/ytdl/"${array2[i]}"
+echo "$2">>/sdcard/Tasker/ytdl/"${array2[i]}"
+echo "$1">>/sdcard/Tasker/ytdl/"${array2[i]}"
+echo "$$">>/sdcard/Tasker/ytdl/"${array2[i]}"
+am broadcast --user '0' -a tasker.ytdl -e downloading "1"
+
+bash -c 'echo "$$" & exec youtube-dl --newline --embed-subs --embed-thumbnail -f "$0" "$1" -o "$2/%(title)s.%(ext)s"' "$4" "${array2[i]}" "$3">>/sdcard/Tasker/ytdl/"${array2[i]}"
 errorcode="$?"
 if [ $errorcode == 0 ]
 then
