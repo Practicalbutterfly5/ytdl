@@ -1,3 +1,9 @@
 #!/data/data/com.termux/files/usr/bin/bash
-output=$(youtube-dl --get-id --get-filename "$1")
-am broadcast --user '0' -a tasker.ytdl -e returnurl "$1" -e info "$output" -e errorcodeinfo "$?"
+# $1 is url, $2 is download directory,$3  mode, $4 is resolution
+output=$(youtube-dl -i -o '"+"|"+"%(playlist_title)s"+"|"+"%(title)s"+"|"+"%(id)s"+"|"+"' --get-filename --skip-download "$1")
+errorcodeinfo="$?"
+output=$(echo "$output" | sed 's/\"+\"|\"+\"/|/g')
+playlistname=$(echo "$output" | head -1 | awk -F'\\|' '{print $2}' )
+name=$(echo "$output"| awk -F'\\|' '{print $3}' )
+ids=$(echo "$output"| awk -F'\\|' '{print $4}' )
+am broadcast --user '0' -a tasker.ytdl -e returnurl "$1" -e name "$name" -e ids "$ids" -e errorcodeinfo "$errorcodeinfo" -e downloaddirectory "$2" -e mode "$3" -e resolution "$4" -e playlistname "$playlistname"

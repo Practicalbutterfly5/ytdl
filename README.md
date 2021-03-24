@@ -6,7 +6,7 @@
 #### Features
 * Download YouTube videos, playlists, and audios.
 * Supports downloading by copying YouTube link to clipboard, or sharing link to termux app.
-* Supports all YouTube links, including channel links, playlist links, embedded videos links. Livestream downloading hasn't been tested yet.
+* Supports all YouTube links, including channel links, playlist links, embedded vidoes links. Livestream downloading hasn't been tested yet.
 * Select or unselect videos in a playlist/channel that you want to download.
 * Get live update of download status in notification.
 * Cancel any download from notification.
@@ -22,7 +22,7 @@
 
 
 1. Copy and paste the following single line command in termux and press Enter key.  
-      ```curl https://raw.githubusercontent.com/Practicalbutterfly5/ytdl/main/installytdl > installytdl && chmod +x installytdl && bash installytdl```
+      ```curl https://raw.githubusercontent.com/Practicalbutterfly5/ytdl/main/installytdl > installytdl & chmod +x installytdl & bash installytdl```
 
 2. Tasker will open automatically and ask to import ytdl profile. If it doesn't, import project manually from /sdcard/Tasker/ytdl/ytdl.prj.xml
 
@@ -41,9 +41,3 @@ After ytdl is installed and setup task is run, you are ready to download using a
   **Android version<=9**,  will be able to copy YouTube link to clipboard and trigger ytdl.  
   
   **Android version>=10**, will need to give tasker ```android.permission.WRITE_SECURE_SETTINGS```. [This can be done using adb for non-root users](https://tasker.joaoapps.com/userguide/en/help/ah_secure_setting_grant.html), rooted users can simply execute ```pm grant net.dinglisch.android.taskerm android.permission.WRITE_SECURE_SETTINGS``` in rooted shell.
-
-
-#### Currently planned features for upcoming releases.
-* Individual videos are downloaded in parallel, playlist videos in series. There is currently no option to switch between download in parallel or series.
-
-* Videos(including playlist videos) are downloaded to a common directory instead of seperate folders having name of the playlist.
