@@ -11,7 +11,7 @@ cd
 
 rm -rf ytdl
 
-git clone https://github.com/Practicalbutterfly5/ytdl.git
+git clone -b work https://github.com/Practicalbutterfly5/ytdl.git
 
 chmod -R +x ytdl
 
