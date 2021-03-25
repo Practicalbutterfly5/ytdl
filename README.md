@@ -11,7 +11,7 @@
 * Get live update of download status in notification.
 * Cancel any download from notification.
 * Does not require any Tasker Plugins.
-
+* Option to enable cataloging of playlists, by downloading playlist to a seperate folder of its name.
 
 #### Dependencies
 * Tasker app ([Play store link](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm))
