@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 # $1 is url, $2 is download directory,$3  mode, $4 is resolution
-output=$(youtube-dl --ignore-config -i -o '"+"|"+"%(playlist_title)s"+"|"+"%(title)s"+"|"+"%(id)s"+"|"+"' --get-filename --skip-download "$1")
+output=$(youtube-dl --socket-timeout 30 --ignore-config -i -o '"+"|"+"%(playlist_title)s"+"|"+"%(title)s"+"|"+"%(id)s"+"|"+"' --get-filename --skip-download "$1")
 errorcodeinfo="$?"
 output=$(echo "$output" | sed 's/\"+\"|\"+\"/|/g')
 playlistname=$(echo "$output" | head -1 | awk -F'\\|' '{print $2}' )
