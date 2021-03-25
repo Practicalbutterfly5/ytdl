@@ -33,11 +33,11 @@
 
 After ytdl is installed and setup task is run, you are ready to download using any of these method.
 
-* **Method 1  **
+* **Method 1**  
   Share any YouTube link to termux app. Termux app will open momentarily and then close, if it didn't have any active sessions.
 
 
-* **Method 2  **
+* **Method 2**  
   **Android version<=9**,  will be able to copy YouTube link to clipboard and trigger ytdl.  
   
   **Android version>=10**, will need to give tasker ```android.permission.WRITE_SECURE_SETTINGS```. [This can be done using adb for non-root users](https://tasker.joaoapps.com/userguide/en/help/ah_secure_setting_grant.html), rooted users can simply execute ```pm grant net.dinglisch.android.taskerm android.permission.WRITE_SECURE_SETTINGS``` in rooted shell.
