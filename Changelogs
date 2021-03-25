@@ -1,0 +1,8 @@
+v1.1
++Fixed a bug where video titles with special characters like ( ` ' [ ] ) where not downloaded correctly.
++Added option to download playlist to a seperate directory of its name.
++Added a prompt if video has been already downloaded.
+
+
+v1.0
++First Release
