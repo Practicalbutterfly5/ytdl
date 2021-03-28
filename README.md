@@ -22,6 +22,7 @@
 
 1. Copy and paste the following single line command in termux and press Enter key.  
       ```curl https://raw.githubusercontent.com/Practicalbutterfly5/ytdl/main/installytdl > installytdl && chmod +x installytdl && bash installytdl```
+      
       It will automatically download these Termux packages- ffmpeg, python, youtube-dl, atomicparsley, git (Approx. download size 80 Mb), and clone ytdl repo.
 
 2. Tasker will open automatically and prompt to import ytdl profile. If it doesn't, import project manually from /sdcard/Tasker/ytdl/ytdl.prj.xml
