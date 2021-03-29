@@ -44,4 +44,4 @@ After ytdl is installed and setup task is run, you are ready to download using a
   **Android version>=10**, will need to give tasker ```android.permission.WRITE_SECURE_SETTINGS```. [This can be done using adb for non-root users](https://tasker.joaoapps.com/userguide/en/help/ah_secure_setting_grant.html), rooted users can simply execute ```pm grant net.dinglisch.android.taskerm android.permission.WRITE_SECURE_SETTINGS``` in rooted shell.
 
 
-#### [Changelogs](https://github.com/Practicalbutterfly5/ytdl/blob/work/Changelogs)
+#### [Changelogs](https://github.com/Practicalbutterfly5/ytdl/blob/main/Changelogs)
