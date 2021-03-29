@@ -1,6 +1,6 @@
 v1.2
 20210329
-+[Added YT music support](https://github.com/Practicalbutterfly5/ytdl/pull/11/commits/297dc61f7a246790f09164c698086964cabed150)
++Added YT music support
 +Added music format selected - mp3 or m4a
 +Added silent mode (suppress playlist dialog and file exist confirmation. See ytdl_download task for more info)
 +Pass yt link to ytdl_check_url as %par1 to download any link.
