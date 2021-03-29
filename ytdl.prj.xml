@@ -2200,7 +2200,7 @@ This step will delete the following directory:  /sdcard/Tasker/ytdl/*</Str>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
 			<code>37</code>
-			<label>&lt;font color="green"&gt;This regex matches any YouTube link</label>
+			<label>&lt;font color="green"&gt;This regex matches any YT or YT music link</label>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
 					<lhs>%url</lhs>
