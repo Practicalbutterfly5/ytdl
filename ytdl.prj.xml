@@ -1,28 +1,10 @@
 <TaskerData sr="" dvi="1" tv="5.11.14">
-	<Profile sr="prof164" ve="2">
-		<cdate>1616631745110</cdate>
-		<clp>true</clp>
-		<edate>1616636759673</edate>
-		<id>164</id>
-		<limit>true</limit>
-		<mid0>162</mid0>
-		<nme>ytdl_Clipboard_set</nme>
-		<Event sr="con0" ve="2">
-			<code>3050</code>
-			<pri>0</pri>
-			<Str sr="arg0" ve="3">%CLIP</Str>
-			<Str sr="arg1" ve="3"/>
-			<Int sr="arg2" val="0"/>
-		</Event>
-	</Profile>
-	<Profile sr="prof165" ve="2">
-		<cdate>1616631745162</cdate>
-		<clp>true</clp>
-		<edate>1616649171105</edate>
+	<Profile sr="prof508" ve="2">
+		<cdate>1617033228095</cdate>
+		<edate>1617036341719</edate>
 		<flags>8</flags>
-		<id>165</id>
-		<limit>true</limit>
-		<mid0>147</mid0>
+		<id>508</id>
+		<mid0>496</mid0>
 		<nme>ytdl_Intent_recieved</nme>
 		<Event sr="con0" ve="2">
 			<code>599</code>
@@ -34,21 +16,558 @@
 			<Str sr="arg4" ve="3"/>
 		</Event>
 	</Profile>
+	<Profile sr="prof509" ve="2">
+		<cdate>1617033228098</cdate>
+		<clp>true</clp>
+		<edate>1617036319775</edate>
+		<id>509</id>
+		<mid0>494</mid0>
+		<nme>ytdl_Clipboard_set</nme>
+		<Event sr="con0" ve="2">
+			<code>3050</code>
+			<pri>0</pri>
+			<Str sr="arg0" ve="3">%CLIP</Str>
+			<Str sr="arg1" ve="3"/>
+			<Int sr="arg2" val="0"/>
+		</Event>
+	</Profile>
 	<Project sr="proj0" ve="2">
 		<cdate>1615345930714</cdate>
 		<name>ytdl</name>
-		<pids>164,165</pids>
-		<tids>150,152,148,155,151,149,147,161,159,154,162,157,163,156,153,160</tids>
+		<pids>508,509</pids>
+		<tids>506,504,500,501,505,499,496,498,495,497,503,507,493,494,502,492</tids>
 		<Share sr="Share">
 			<d>YTDL is tasker+termux project to download YouTube videos on android very easily and seamlessly.</d>
 			<p>false</p>
 			<t>ytdl_Initial_Setup(Run this)</t>
 		</Share>
 	</Project>
-	<Task sr="task147">
+	<Task sr="task492">
+		<cdate>1615918845957</cdate>
+		<edate>1616649196510</edate>
+		<id>492</id>
+		<nme>ytdl_PANIC_TASK</nme>
+		<pri>100</pri>
+		<rty>2</rty>
+		<Action sr="act0" ve="7">
+			<code>300</code>
+			<label>&lt;font color="green"&gt;This task to be executed only in case things go out of hand, and you want to stop all ongoing downloads.
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+This task will &lt;br/&gt;
+* Kill Termux app&lt;br/&gt;
+* Stop all ongoing downloads&lt;br/&gt;
+* Remove all notifications made by this project.&lt;br/&gt;
+* Stop all tasks associated with this project.&lt;br/&gt;
+* Directory /sdcard/Tasker/ytdl will be cleared.
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+This task will NOT&lt;br/&gt;
+* Delete your personal files&lt;br/&gt;
+* Delete already downloaded videos&lt;br/&gt;
+* Kill Tasker or other profiles &lt;br/&gt;
+* Remove Tasker notifications created by other profiles.&lt;br/&gt;</label>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>512</code>
+			<Int sr="arg0" val="1"/>
+		</Action>
+		<Action sr="act10" ve="7">
+			<code>39</code>
+			<Str sr="arg0" ve="3">%iii</Str>
+			<Str sr="arg1" ve="3">%files()</Str>
+		</Action>
+		<Action sr="act11" ve="7">
+			<code>123</code>
+			<se>false</se>
+			<Str sr="arg0" ve="3">rm -f "%iii"</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3">%error</Str>
+			<Str sr="arg5" ve="3"/>
+		</Action>
+		<Action sr="act12" ve="7">
+			<code>40</code>
+		</Action>
+		<Action sr="act13" ve="7">
+			<code>300</code>
+			<label>Tasks below will remove tasker notifications that match a regex. Credits to
+
+ https://taskernet.com/shares/?user=AS35m8m%2BFga%2BPKETEENtyWu3IGqX35bmTIK3QzSMBeDWmVIVfQqyiHL%2FJjwHE%2FYoZuYG0oNb60waOn0%2Few%3D%3D&amp;id=Task%3ACancel+Notification+By+Title+Match</label>
+		</Action>
+		<Action sr="act14" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%title_regex</Str>
+			<Str sr="arg1" ve="3">Getting link info|Download timeout \-|Downloading \-|Download complete \-|Error getting info \(</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act15" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">(NotificationManager) nm</Str>
+			<Str sr="arg1" ve="3">CONTEXT</Str>
+			<Str sr="arg2" ve="3">getSystemService
+{Object} (String)</Str>
+			<Str sr="arg3" ve="3">"notification"</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act16" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">notes</Str>
+			<Str sr="arg1" ve="3">nm</Str>
+			<Str sr="arg2" ve="3">getActiveNotifications
+{StatusBarNotification[]} ()</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act17" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">%num</Str>
+			<Str sr="arg1" ve="3">Integer</Str>
+			<Str sr="arg2" ve="3">new
+{Integer} (int)</Str>
+			<Str sr="arg3" ve="3">notes.length</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act18" ve="7">
+			<code>39</code>
+			<Str sr="arg0" ve="3">%ind</Str>
+			<Str sr="arg1" ve="3">1:%num</Str>
+		</Action>
+		<Action sr="act19" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%jind</Str>
+			<Str sr="arg1" ve="3">%ind-1</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="1"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>377</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%td_button
+Button
+The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">Warning!!</Str>
+			<Str sr="arg2" ve="3">This will kill Termux app, and any other ytdl downloads going on will also be terminated.</Str>
+			<Str sr="arg3" ve="3">Force kill termux and stop downloading</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3">Cancel</Str>
+			<Int sr="arg6" val="30"/>
+			<Int sr="arg7" val="0"/>
+		</Action>
+		<Action sr="act20" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">noti</Str>
+			<Str sr="arg1" ve="3">notes[%jind]</Str>
+			<Str sr="arg2" ve="3">getNotification
+{Notification} ()</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act21" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">%title</Str>
+			<Str sr="arg1" ve="3">noti.extras</Str>
+			<Str sr="arg2" ve="3">getString
+{String} (String)</Str>
+			<Str sr="arg3" ve="3">"android.title"</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act22" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%title</lhs>
+					<op>4</op>
+					<rhs>%title_regex</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act23" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">%noti_id</Str>
+			<Str sr="arg1" ve="3">notes[%jind]</Str>
+			<Str sr="arg2" ve="3">getId
+{int} ()</Str>
+			<Str sr="arg3" ve="3">"android.title"</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act24" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">nm</Str>
+			<Str sr="arg2" ve="3">cancel
+{} (int)</Str>
+			<Str sr="arg3" ve="3">%noti_id</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act25" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act26" ve="7">
+			<code>40</code>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0"/>
+			<Str sr="arg1" ve="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%td_button</lhs>
+					<op>3</op>
+					<rhs>*kill*</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>365</code>
+			<label>kill termux</label>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""/&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">TermuxCommand(/data/data/com.termux/files/home/ytdl/kill_termux,,,true)</Str>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>300</code>
+			<label>Stopping possibly running tasks</label>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0"/>
+			<Str sr="arg1" ve="3">ytdl_downloader</Str>
+		</Action>
+		<Action sr="act7" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0"/>
+			<Str sr="arg1" ve="3">ytdl_intent_handler</Str>
+		</Action>
+		<Action sr="act8" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0"/>
+			<Str sr="arg1" ve="3">ytdl_download_progress</Str>
+		</Action>
+		<Action sr="act9" ve="7">
+			<code>412</code>
+			<Str sr="arg0" ve="3">/sdcard/Tasker/ytdl</Str>
+			<Str sr="arg1" ve="3">~R(^[A-Za-z0-9_\-]{11}$)</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Str sr="arg5" ve="3">%files</Str>
+		</Action>
+		<Img sr="icn" ve="2">
+			<nme>mw_places_golf_course</nme>
+		</Img>
+	</Task>
+	<Task sr="task493">
+		<cdate>1616121798577</cdate>
+		<edate>1617041860063</edate>
+		<id>493</id>
+		<nme>Grant clipboard access</nme>
+		<pri>100</pri>
+		<rty>2</rty>
+		<Action sr="act0" ve="7">
+			<code>300</code>
+			<label>&lt;font color="green"&gt;Simply run this task to be sure that your tasker has clipboard access.
+&lt;br/&gt;
+&lt;br/&gt;
+If it asks you for write secure settings permission, follow Tasker guide for it.
+&lt;br/&gt;
+&lt;br/&gt;
+Other if you are lazy like me, to not open your computer, simply share links to termux app instead, it works everytime 👍</label>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%SDK</lhs>
+					<op>7</op>
+					<rhs>28</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>319</code>
+			<Str sr="arg0" ve="3">android.permission.WRITE_SECURE_SETTINGS</Str>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>43</code>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>548</code>
+			<Str sr="arg0" ve="3">Android 9 and below don't need to do this step, tasker already has clipboard access.</Str>
+			<Int sr="arg1" val="1"/>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>38</code>
+		</Action>
+		<Img sr="icn" ve="2">
+			<nme>mw_card_text_outline</nme>
+		</Img>
+	</Task>
+	<Task sr="task494">
+		<cdate>1616170710774</cdate>
+		<edate>1617036319775</edate>
+		<id>494</id>
+		<pri>6</pri>
+		<Action sr="act0" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">ytdl_check_url</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Str sr="arg2" ve="3">%CLIP</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+			<Int sr="arg6" val="0"/>
+			<Str sr="arg7" ve="3"/>
+			<Int sr="arg8" val="0"/>
+			<Int sr="arg9" val="0"/>
+		</Action>
+	</Task>
+	<Task sr="task495">
+		<cdate>1616459694147</cdate>
+		<edate>1617037882996</edate>
+		<id>495</id>
+		<nme>ytdl_check_for_update</nme>
+		<pri>100</pri>
+		<Action sr="act0" ve="7">
+			<code>300</code>
+			<label>&lt;font color="green"&gt;This task will check for project update from GitHub.
+&lt;br/&gt;
+&lt;br/&gt;
+It is important to keep it updated because this project is new and can still have bugs
+&lt;br/&gt;
+&lt;br/&gt;
+If there is an update you can copy the link and paste it in termux to update.
+&lt;br/&gt;
+&lt;br/&gt; Remember to overwrite project while importing.</label>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%currversion</Str>
+			<Str sr="arg1" ve="3">1.2</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act10" ve="7">
+			<code>105</code>
+			<Str sr="arg0" ve="3">curl https://raw.githubusercontent.com/Practicalbutterfly5/ytdl/main/installytdl &gt; installytdl &amp;&amp; chmod +x installytdl &amp;&amp; bash installytdl</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act11" ve="7">
+			<code>548</code>
+			<Str sr="arg0" ve="3">Termux command copied to clipboard.</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act12" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act13" ve="7">
+			<code>43</code>
+		</Action>
+		<Action sr="act14" ve="7">
+			<code>548</code>
+			<Str sr="arg0" ve="3">ytdl is up to date.
+Current version : %currversion
+Latest version : %http_data</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act15" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>339</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%http_data
+Data
+Data that the server responded from the HTTP request.&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%http_file_output
+File Output
+Will always contain the file's full path even if you specified a directory as the File to save.&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%http_response_code
+Response Code
+The HTTP Code the server responded&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;%http_cookies
+Cookies
+The cookies the server sent in the response in the Cookie:COOKIE_VALUE format. You can use this directly in the 'Headers' field of the HTTP Request action&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES4&gt;%http_headers()
+Response Headers
+The HTTP Headers the server sent in the response. Each header is in the 'key:value' format&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES4&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES5&gt;%http_response_length
+Response Length
+The size of the response in bytes&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES5&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg10" val="0"/>
+			<Int sr="arg11" val="0"/>
+			<Str sr="arg2" ve="3">https://raw.githubusercontent.com/Practicalbutterfly5/ytdl/main/versioninfo</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Int sr="arg8" val="30"/>
+			<Int sr="arg9" val="0"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%http_data</lhs>
+					<op>7</op>
+					<rhs>%currversion</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>377</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%td_button
+Button
+The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">New version available</Str>
+			<Str sr="arg2" ve="3">Current version : %currversion
+Latest version : %http_data
+
+To update simply paste the command in Termux.</Str>
+			<Str sr="arg3" ve="3">View Changelogs</Str>
+			<Str sr="arg4" ve="3">Copy termux command</Str>
+			<Str sr="arg5" ve="3">Cancel</Str>
+			<Int sr="arg6" val="30"/>
+			<Int sr="arg7" val="0"/>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%td_button</lhs>
+					<op>2</op>
+					<rhs>*Changelogs*</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>339</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%http_data
+Data
+Data that the server responded from the HTTP request.&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%http_file_output
+File Output
+Will always contain the file's full path even if you specified a directory as the File to save.&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%http_response_code
+Response Code
+The HTTP Code the server responded&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;%http_cookies
+Cookies
+The cookies the server sent in the response in the Cookie:COOKIE_VALUE format. You can use this directly in the 'Headers' field of the HTTP Request action&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES4&gt;%http_headers()
+Response Headers
+The HTTP Headers the server sent in the response. Each header is in the 'key:value' format&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES4&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES5&gt;%http_response_length
+Response Length
+The size of the response in bytes&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES5&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg10" val="0"/>
+			<Int sr="arg11" val="0"/>
+			<Str sr="arg2" ve="3">https://raw.githubusercontent.com/Practicalbutterfly5/ytdl/main/Changelogs</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Int sr="arg8" val="30"/>
+			<Int sr="arg9" val="0"/>
+		</Action>
+		<Action sr="act7" ve="7">
+			<code>377</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%td_button
+Button
+The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">Changelogs</Str>
+			<Str sr="arg2" ve="3">%http_data</Str>
+			<Str sr="arg3" ve="3">Copy termux command</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3">Cancel</Str>
+			<Int sr="arg6" val="30"/>
+			<Int sr="arg7" val="0"/>
+		</Action>
+		<Action sr="act8" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act9" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%td_button</lhs>
+					<op>2</op>
+					<rhs>*Copy*</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Img sr="icn" ve="2">
+			<nme>mw_notification_system_update</nme>
+		</Img>
+	</Task>
+	<Task sr="task496">
 		<cdate>1615928580510</cdate>
-		<edate>1616649218879</edate>
-		<id>147</id>
+		<edate>1617036341719</edate>
+		<id>496</id>
 		<nme>ytdl_intent_handler</nme>
 		<pri>6</pri>
 		<rty>2</rty>
@@ -186,11 +705,11 @@ Link: %returnurl</Str>
 			<Int sr="arg1">
 				<var>%priority-1</var>
 			</Int>
-			<Str sr="arg2" ve="3"/>
+			<Str sr="arg2" ve="3">%url</Str>
 			<Str sr="arg3" ve="3"/>
 			<Str sr="arg4" ve="3"/>
 			<Int sr="arg5" val="0"/>
-			<Int sr="arg6" val="1"/>
+			<Int sr="arg6" val="0"/>
 			<Str sr="arg7" ve="3"/>
 			<Int sr="arg8" val="0"/>
 			<Int sr="arg9" val="0"/>
@@ -288,10 +807,10 @@ Link: %returnurl</Str>
 			<Int sr="arg9" val="0"/>
 		</Action>
 	</Task>
-	<Task sr="task148">
+	<Task sr="task497">
 		<cdate>1615947227099</cdate>
 		<edate>1616649216561</edate>
-		<id>148</id>
+		<id>497</id>
 		<nme>ytdl_open_link_notify_cancel</nme>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
@@ -303,10 +822,10 @@ Link: %returnurl</Str>
 			<Str sr="arg0" ve="3">%par2</Str>
 		</Action>
 	</Task>
-	<Task sr="task149">
+	<Task sr="task498">
 		<cdate>1615928798250</cdate>
-		<edate>1616649214262</edate>
-		<id>149</id>
+		<edate>1617041998345</edate>
+		<id>498</id>
 		<nme>ytdl_info</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -418,7 +937,7 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 			<Str sr="arg3" ve="3">Download video</Str>
 			<Str sr="arg4" ve="3"/>
 			<Str sr="arg5" ve="3">Download audio</Str>
-			<Int sr="arg6" val="30"/>
+			<Int sr="arg6" val="10"/>
 			<Int sr="arg7" val="0"/>
 		</Action>
 		<Action sr="act21" ve="7">
@@ -511,7 +1030,7 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<Str sr="arg6" ve="3"/>
 			<Str sr="arg7" ve="3"/>
 			<Str sr="arg8" ve="3"/>
-			<Int sr="arg9" val="30"/>
+			<Int sr="arg9" val="10"/>
 		</Action>
 		<Action sr="act28" ve="7">
 			<code>547</code>
@@ -674,10 +1193,10 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<Str sr="arg2" ve="3">settings complete</Str>
 		</Action>
 	</Task>
-	<Task sr="task150">
+	<Task sr="task499">
 		<cdate>1615878126177</cdate>
-		<edate>1616640001852</edate>
-		<id>150</id>
+		<edate>1617040493210</edate>
+		<id>499</id>
 		<nme>ytdl_Initial_Setup(Run this)</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -817,6 +1336,65 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 			<Str sr="arg0" ve="3">com.termux.permission.RUN_COMMAND</Str>
 		</Action>
 		<Action sr="act20" ve="7">
+			<code>377</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%td_button
+Button
+The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">Format to download audio - mp3 or m4a ?</Str>
+			<Str sr="arg2" ve="3">m4a formats are faster to download and better in quality.
+
+mp3 formats would require conversion. Extra time taken for conversion.</Str>
+			<Str sr="arg3" ve="3">m4a</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3">mp3</Str>
+			<Int sr="arg6" val="30"/>
+			<Int sr="arg7" val="0"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%Mode_ytdl</lhs>
+					<op>3</op>
+					<rhs>video</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act21" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%Extension_audio</Str>
+			<Str sr="arg1" ve="3">%td_button</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%Mode_ytdl</lhs>
+					<op>3</op>
+					<rhs>video</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act22" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%Extension_audio</Str>
+			<Str sr="arg1" ve="3">Not applicable</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%Mode_ytdl</lhs>
+					<op>2</op>
+					<rhs>video</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act23" ve="7">
 			<code>135</code>
 			<Int sr="arg0" val="1"/>
 			<Int sr="arg1" val="1"/>
@@ -829,11 +1407,11 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act21" ve="7">
+		<Action sr="act24" ve="7">
 			<code>300</code>
 			<label>Video resolution</label>
 		</Action>
-		<Action sr="act22" ve="7">
+		<Action sr="act25" ve="7">
 			<code>377</code>
 			<Bundle sr="arg0">
 				<Vals sr="val">
@@ -852,7 +1430,7 @@ Ask: Ask resolution everytime before downloading.</Str>
 			<Int sr="arg6" val="30"/>
 			<Int sr="arg7" val="0"/>
 		</Action>
-		<Action sr="act23" ve="7">
+		<Action sr="act26" ve="7">
 			<code>37</code>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
@@ -862,7 +1440,7 @@ Ask: Ask resolution everytime before downloading.</Str>
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act24" ve="7">
+		<Action sr="act27" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%Prefferedreso_ytdl</Str>
 			<Str sr="arg1" ve="3">0</Str>
@@ -871,10 +1449,10 @@ Ask: Ask resolution everytime before downloading.</Str>
 			<Int sr="arg4" val="0"/>
 			<Int sr="arg5" val="3"/>
 		</Action>
-		<Action sr="act25" ve="7">
+		<Action sr="act28" ve="7">
 			<code>43</code>
 		</Action>
-		<Action sr="act26" ve="7">
+		<Action sr="act29" ve="7">
 			<code>378</code>
 			<Bundle sr="arg0">
 				<Vals sr="val">
@@ -903,22 +1481,6 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<Str sr="arg8" ve="3"/>
 			<Int sr="arg9" val="30"/>
 		</Action>
-		<Action sr="act27" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%Prefferedreso_ytdl</Str>
-			<Str sr="arg1" ve="3">%ld_selected</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-		</Action>
-		<Action sr="act28" ve="7">
-			<code>38</code>
-		</Action>
-		<Action sr="act29" ve="7">
-			<code>300</code>
-			<label>Seperate folder for playlists</label>
-		</Action>
 		<Action sr="act3" ve="7">
 			<code>365</code>
 			<Bundle sr="arg0">
@@ -930,6 +1492,22 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<Str sr="arg1" ve="3">TermuxCommand(/data/data/com.termux/files/home/ytdl/kill_termux,,,true)</Str>
 		</Action>
 		<Action sr="act30" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%Prefferedreso_ytdl</Str>
+			<Str sr="arg1" ve="3">%ld_selected</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act31" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act32" ve="7">
+			<code>300</code>
+			<label>Seperate folder for playlists</label>
+		</Action>
+		<Action sr="act33" ve="7">
 			<code>377</code>
 			<Bundle sr="arg0">
 				<Vals sr="val">
@@ -948,7 +1526,7 @@ Helps prevent clutter.</Str>
 			<Int sr="arg6" val="30"/>
 			<Int sr="arg7" val="0"/>
 		</Action>
-		<Action sr="act31" ve="7">
+		<Action sr="act34" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%Playlisttoseperatedirectory</Str>
 			<Str sr="arg1" ve="3">%td_button</Str>
@@ -957,25 +1535,25 @@ Helps prevent clutter.</Str>
 			<Int sr="arg4" val="0"/>
 			<Int sr="arg5" val="3"/>
 		</Action>
-		<Action sr="act32" ve="7">
+		<Action sr="act35" ve="7">
 			<code>300</code>
 			<label>Turning on profiles</label>
 		</Action>
-		<Action sr="act33" ve="7">
+		<Action sr="act36" ve="7">
 			<code>159</code>
 			<Str sr="arg0" ve="3">ytdl_Clipboard_set</Str>
 			<Int sr="arg1" val="1"/>
 		</Action>
-		<Action sr="act34" ve="7">
+		<Action sr="act37" ve="7">
 			<code>159</code>
 			<Str sr="arg0" ve="3">ytdl_Intent_recieved</Str>
 			<Int sr="arg1" val="1"/>
 		</Action>
-		<Action sr="act35" ve="7">
+		<Action sr="act38" ve="7">
 			<code>300</code>
 			<label>Showing summary.</label>
 		</Action>
-		<Action sr="act36" ve="7">
+		<Action sr="act39" ve="7">
 			<code>377</code>
 			<se>false</se>
 			<Bundle sr="arg0">
@@ -1000,14 +1578,22 @@ Download Preferences: (0 is Ask everytime)
 Download directory : %Folder_ytdl
 Download mode: %Mode_ytdl
 Preffered resolution : %Prefferedreso_ytdl
-Group playlist in seperate folder : %Playlisttoseperatedirectory</Str>
+Group playlist in seperate folder : %Playlisttoseperatedirectory
+Audio extension : %Extension_audio</Str>
 			<Str sr="arg3" ve="3">Ok Understood</Str>
 			<Str sr="arg4" ve="3"/>
 			<Str sr="arg5" ve="3">Video Tutorial</Str>
 			<Int sr="arg6" val="60"/>
 			<Int sr="arg7" val="0"/>
 		</Action>
-		<Action sr="act37" ve="7">
+		<Action sr="act4" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%Tutorial_ytdl</Str>
+			<Int sr="arg1" val="1"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act40" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%Tutorial_ytdl</Str>
 			<Str sr="arg1" ve="3">completed</Str>
@@ -1016,7 +1602,7 @@ Group playlist in seperate folder : %Playlisttoseperatedirectory</Str>
 			<Int sr="arg4" val="0"/>
 			<Int sr="arg5" val="3"/>
 		</Action>
-		<Action sr="act38" ve="7">
+		<Action sr="act41" ve="7">
 			<code>104</code>
 			<Str sr="arg0" ve="3">https://youtu.be/cfKFKW0yZYU</Str>
 			<ConditionList sr="if">
@@ -1026,13 +1612,6 @@ Group playlist in seperate folder : %Playlisttoseperatedirectory</Str>
 					<rhs>Video Tutorial</rhs>
 				</Condition>
 			</ConditionList>
-		</Action>
-		<Action sr="act4" ve="7">
-			<code>549</code>
-			<Str sr="arg0" ve="3">%Tutorial_ytdl</Str>
-			<Int sr="arg1" val="1"/>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
 		</Action>
 		<Action sr="act5" ve="7">
 			<code>300</code>
@@ -1082,10 +1661,10 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 			<nme>cust_star</nme>
 		</Img>
 	</Task>
-	<Task sr="task151">
+	<Task sr="task500">
 		<cdate>1616355906145</cdate>
-		<edate>1616649210719</edate>
-		<id>151</id>
+		<edate>1617041989186</edate>
+		<id>500</id>
 		<nme>ytdl_stop_download</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -1115,882 +1694,41 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 			<Str sr="arg1" ve="3">TermuxCommand(/data/data/com.termux/files/home/ytdl/ytdl_stop_download,%process_id1,%process_id2,,true)</Str>
 		</Action>
 	</Task>
-	<Task sr="task152">
+	<Task sr="task501">
 		<cdate>1615929094045</cdate>
-		<edate>1616649208777</edate>
-		<id>152</id>
+		<edate>1617041844200</edate>
+		<id>501</id>
 		<nme>ytdl_downloader</nme>
 		<pri>100</pri>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
 			<code>300</code>
-			<label>&lt;font color="green"&gt;Tip: If a video is stuck on downloading webpage, try to re-download after timeout, or restart your wifi/mobile data. It is youtube-dl issue, not a tasker/project issue.</label>
+			<label>&lt;font color="green"&gt;Tip: If a video is stuck on downloading webpage, try to re-download after timeout, or restart your wifi/mobile data. It is youtube-dl issue, not a tasker/project issue.&lt;br/&gt;&lt;br/&gt;
+
+Setting the variable %silent_mode to "yes" will&lt;br/&gt;
+* Suppress playlist list dialog, and download all video/audio of playlist.&lt;br/&gt;
+* Suppress file already exist dialog and instead re-download and replace the file.</label>
 		</Action>
 		<Action sr="act1" ve="7">
 			<code>547</code>
-			<Str sr="arg0" ve="3">%enter</Str>
-			<Str sr="arg1" ve="3">
-</Str>
+			<label>silent_mode</label>
+			<Str sr="arg0" ve="3">%silent_mode</Str>
+			<Str sr="arg1" ve="3">no</Str>
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="0"/>
 			<Int sr="arg4" val="0"/>
 			<Int sr="arg5" val="3"/>
 		</Action>
 		<Action sr="act10" ve="7">
-			<code>37</code>
-			<label>😉</label>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%TIMES</lhs>
-					<op>0</op>
-					<rhs>0</rhs>
-				</Condition>
-			</ConditionList>
+			<code>547</code>
+			<Str sr="arg0" ve="3">%idtodownload</Str>
+			<Str sr="arg1" ve="3">%ids</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
 		</Action>
 		<Action sr="act100" ve="7">
-			<code>598</code>
-			<Str sr="arg0" ve="3">%nametodownload</Str>
-			<Str sr="arg1" ve="3">\,</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Str sr="arg5" ve="3"/>
-			<Int sr="arg6" val="1"/>
-			<Str sr="arg7" ve="3">\\,</Str>
-		</Action>
-		<Action sr="act101" ve="7">
-			<code>547</code>
-			<label>%resolution will be not set when downloading audio</label>
-			<Str sr="arg0" ve="3">%args</Str>
-			<Str sr="arg1" ve="3">%nametodownload,%idtodownload,%downloaddirectory,%resolution,%mode</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-		</Action>
-		<Action sr="act102" ve="7">
-			<code>105</code>
-			<label>debugging</label>
-			<on>false</on>
-			<Str sr="arg0" ve="3">"%nametodownload" "%idtodownload" "%downloaddirectory" "%resolution" "%mode"</Str>
-			<Int sr="arg1" val="0"/>
-		</Action>
-		<Action sr="act103" ve="7">
-			<code>365</code>
-			<Bundle sr="arg0">
-				<Vals sr="val">
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""/&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
-				</Vals>
-			</Bundle>
-			<Str sr="arg1" ve="3">TermuxCommand(/data/data/com.termux/files/home/ytdl/ytdl_download,%args,,true)</Str>
-		</Action>
-		<Action sr="act11" ve="7">
-			<code>357</code>
-			<label>list video selected</label>
-			<Str sr="arg0" ve="3">%ld_selected_index</Str>
-		</Action>
-		<Action sr="act12" ve="7">
-			<code>549</code>
-			<Str sr="arg0" ve="3">%ld_button</Str>
-			<Int sr="arg1" val="0"/>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-		</Action>
-		<Action sr="act13" ve="7">
-			<code>549</code>
-			<Str sr="arg0" ve="3">%timeslist1shown</Str>
-			<Int sr="arg1" val="0"/>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-		</Action>
-		<Action sr="act14" ve="7">
-			<code>378</code>
-			<label>list1</label>
-			<se>false</se>
-			<Bundle sr="arg0">
-				<Vals sr="val">
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%ld_button
-Button
-The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%ld_selected()
-Selected
-&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%ld_selected_index()
-Selected Index
-&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
-				</Vals>
-			</Bundle>
-			<Int sr="arg1" val="1"/>
-			<Int sr="arg10" val="0"/>
-			<Int sr="arg11" val="0"/>
-			<Int sr="arg12" val="1"/>
-			<Str sr="arg2" ve="3">Select %mode to download.</Str>
-			<Str sr="arg3" ve="3">%name</Str>
-			<Str sr="arg4" ve="3">%name</Str>
-			<Str sr="arg5" ve="3"/>
-			<Str sr="arg6" ve="3">Download</Str>
-			<Str sr="arg7" ve="3">Cancel</Str>
-			<Str sr="arg8" ve="3">Unselect all</Str>
-			<Int sr="arg9">
-				<var>40</var>
-			</Int>
-		</Action>
-		<Action sr="act15" ve="7">
-			<code>389</code>
-			<Bundle sr="arg0">
-				<Vals sr="val">
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""/&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
-				</Vals>
-			</Bundle>
-			<Str sr="arg1" ve="3">%errorcodelist1,%errormsglist1</Str>
-			<Str sr="arg2" ve="3"/>
-			<Str sr="arg3" ve="3">%err,%errmsg</Str>
-			<Str sr="arg4" ve="3"/>
-			<Int sr="arg5" val="0"/>
-			<Int sr="arg6" val="3"/>
-			<Int sr="arg7" val="0"/>
-		</Action>
-		<Action sr="act16" ve="7">
-			<code>135</code>
-			<Int sr="arg0" val="1"/>
-			<Int sr="arg1" val="1"/>
-			<Str sr="arg2" ve="3">list video unselected</Str>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%ld_button</lhs>
-					<op>2</op>
-					<rhs>Unselect all</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act17" ve="7">
-			<code>137</code>
-			<Int sr="arg0" val="0"/>
-			<Str sr="arg1" ve="3"/>
-			<ConditionList sr="if">
-				<bool0>Or</bool0>
-				<bool1>Or</bool1>
-				<bool2>And2</bool2>
-				<Condition sr="c0" ve="3">
-					<lhs>%ld_button</lhs>
-					<op>2</op>
-					<rhs>Cancel</rhs>
-				</Condition>
-				<Condition sr="c1" ve="3">
-					<lhs>%errormsglist1</lhs>
-					<op>2</op>
-					<rhs>*timed*</rhs>
-				</Condition>
-				<Condition sr="c2" ve="3">
-					<lhs>%timeslist1shown</lhs>
-					<op>0</op>
-					<rhs>1</rhs>
-				</Condition>
-				<Condition sr="c3" ve="3">
-					<lhs>%errorcodelist1</lhs>
-					<op>7</op>
-					<rhs>0</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act18" ve="7">
-			<code>37</code>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%errorcodelist1</lhs>
-					<op>7</op>
-					<rhs>0</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act19" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%timeslist1shown</Str>
-			<Str sr="arg1" ve="3">1</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-		</Action>
-		<Action sr="act2" ve="7">
-			<code>590</code>
-			<Str sr="arg0" ve="3">%name</Str>
-			<Str sr="arg1" ve="3">%enter</Str>
-			<Int sr="arg2" val="0"/>
-		</Action>
-		<Action sr="act20" ve="7">
-			<code>135</code>
-			<Int sr="arg0" val="1"/>
-			<Int sr="arg1" val="1"/>
-			<Str sr="arg2" ve="3">list1</Str>
-		</Action>
-		<Action sr="act21" ve="7">
-			<code>38</code>
-		</Action>
-		<Action sr="act22" ve="7">
-			<code>38</code>
-		</Action>
-		<Action sr="act23" ve="7">
-			<code>37</code>
-			<label>😉</label>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%TIMES</lhs>
-					<op>0</op>
-					<rhs>0</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act24" ve="7">
-			<code>357</code>
-			<label>list video unselected</label>
-			<Str sr="arg0" ve="3">%ld_selected_index</Str>
-		</Action>
-		<Action sr="act25" ve="7">
-			<code>549</code>
-			<Str sr="arg0" ve="3">%ld_button</Str>
-			<Int sr="arg1" val="0"/>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-		</Action>
-		<Action sr="act26" ve="7">
-			<code>549</code>
-			<Str sr="arg0" ve="3">%timeslist2shown</Str>
-			<Int sr="arg1" val="0"/>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-		</Action>
-		<Action sr="act27" ve="7">
-			<code>378</code>
-			<label>list2</label>
-			<se>false</se>
-			<Bundle sr="arg0">
-				<Vals sr="val">
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%ld_button
-Button
-The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%ld_selected()
-Selected
-&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%ld_selected_index()
-Selected Index
-&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
-				</Vals>
-			</Bundle>
-			<Int sr="arg1" val="1"/>
-			<Int sr="arg10" val="0"/>
-			<Int sr="arg11" val="0"/>
-			<Int sr="arg12" val="1"/>
-			<Str sr="arg2" ve="3">Select %mode to download.</Str>
-			<Str sr="arg3" ve="3">%name</Str>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3"/>
-			<Str sr="arg6" ve="3">Download</Str>
-			<Str sr="arg7" ve="3">Cancel</Str>
-			<Str sr="arg8" ve="3">Select all</Str>
-			<Int sr="arg9">
-				<var>40</var>
-			</Int>
-		</Action>
-		<Action sr="act28" ve="7">
-			<code>389</code>
-			<Bundle sr="arg0">
-				<Vals sr="val">
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""/&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
-				</Vals>
-			</Bundle>
-			<Str sr="arg1" ve="3">%errorcodelist2,%errormsglist2</Str>
-			<Str sr="arg2" ve="3"/>
-			<Str sr="arg3" ve="3">%err,%errmsg</Str>
-			<Str sr="arg4" ve="3"/>
-			<Int sr="arg5" val="0"/>
-			<Int sr="arg6" val="3"/>
-			<Int sr="arg7" val="0"/>
-		</Action>
-		<Action sr="act29" ve="7">
-			<code>135</code>
-			<Int sr="arg0" val="1"/>
-			<Int sr="arg1" val="1"/>
-			<Str sr="arg2" ve="3">list video selected</Str>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%ld_button</lhs>
-					<op>2</op>
-					<rhs>Select all</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act3" ve="7">
-			<code>590</code>
-			<Str sr="arg0" ve="3">%ids</Str>
-			<Str sr="arg1" ve="3">%enter</Str>
-			<Int sr="arg2" val="0"/>
-		</Action>
-		<Action sr="act30" ve="7">
-			<code>137</code>
-			<Int sr="arg0" val="0"/>
-			<Str sr="arg1" ve="3"/>
-			<ConditionList sr="if">
-				<bool0>Or</bool0>
-				<bool1>Or</bool1>
-				<bool2>And2</bool2>
-				<Condition sr="c0" ve="3">
-					<lhs>%ld_button</lhs>
-					<op>2</op>
-					<rhs>Cancel</rhs>
-				</Condition>
-				<Condition sr="c1" ve="3">
-					<lhs>%errormsglist2</lhs>
-					<op>2</op>
-					<rhs>*timed*</rhs>
-				</Condition>
-				<Condition sr="c2" ve="3">
-					<lhs>%timeslist2shown</lhs>
-					<op>0</op>
-					<rhs>1</rhs>
-				</Condition>
-				<Condition sr="c3" ve="3">
-					<lhs>%errorcodelist2</lhs>
-					<op>7</op>
-					<rhs>0</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act31" ve="7">
-			<code>37</code>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%errorcodelist2</lhs>
-					<op>7</op>
-					<rhs>0</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act32" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%timeslist2shown</Str>
-			<Str sr="arg1" ve="3">1</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-		</Action>
-		<Action sr="act33" ve="7">
-			<code>135</code>
-			<Int sr="arg0" val="1"/>
-			<Int sr="arg1" val="1"/>
-			<Str sr="arg2" ve="3">list2</Str>
-		</Action>
-		<Action sr="act34" ve="7">
-			<code>38</code>
-		</Action>
-		<Action sr="act35" ve="7">
-			<code>38</code>
-		</Action>
-		<Action sr="act36" ve="7">
-			<code>37</code>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%ld_selected_index(#)</lhs>
-					<op>0</op>
-					<rhs>0</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act37" ve="7">
-			<code>548</code>
-			<Str sr="arg0" ve="3">No %mode selected. Press cancel if you want to cancel.</Str>
-			<Int sr="arg1" val="0"/>
-		</Action>
-		<Action sr="act38" ve="7">
-			<code>135</code>
-			<Int sr="arg0" val="1"/>
-			<Int sr="arg1" val="1"/>
-			<Str sr="arg2" ve="3">list video unselected</Str>
-		</Action>
-		<Action sr="act39" ve="7">
-			<code>38</code>
-		</Action>
-		<Action sr="act4" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%extension</Str>
-			<Str sr="arg1" ve="3">mp4</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%mode</lhs>
-					<op>2</op>
-					<rhs>video</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act40" ve="7">
-			<code>39</code>
-			<Str sr="arg0" ve="3">%iii</Str>
-			<Str sr="arg1" ve="3">1:%ld_selected_index(#)</Str>
-		</Action>
-		<Action sr="act41" ve="7">
-			<code>342</code>
-			<Int sr="arg0" val="5"/>
-			<Str sr="arg1" ve="3">%downloaddirectory/%name(%iii).%extension</Str>
-			<Str sr="arg2" ve="3">%exist</Str>
-			<Int sr="arg3" val="0"/>
-		</Action>
-		<Action sr="act42" ve="7">
-			<code>355</code>
-			<Str sr="arg0" ve="3">%existsalreadyposition</Str>
-			<Int sr="arg1" val="999999"/>
-			<Str sr="arg2" ve="3">%iii</Str>
-			<Int sr="arg3" val="0"/>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%exist</lhs>
-					<op>2</op>
-					<rhs>true</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act43" ve="7">
-			<code>355</code>
-			<Str sr="arg0" ve="3">%existsalreadyname</Str>
-			<Int sr="arg1" val="999999"/>
-			<Str sr="arg2" ve="3">%name(%iii)</Str>
-			<Int sr="arg3" val="0"/>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%exist</lhs>
-					<op>2</op>
-					<rhs>true</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act44" ve="7">
-			<code>355</code>
-			<Str sr="arg0" ve="3">%nametodownload</Str>
-			<Int sr="arg1">
-				<var>%iii</var>
-			</Int>
-			<Str sr="arg2" ve="3">%ld_selected(%iii)</Str>
-			<Int sr="arg3" val="0"/>
-		</Action>
-		<Action sr="act45" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%idposition</Str>
-			<Str sr="arg1" ve="3">%ld_selected_index(%iii)</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-		</Action>
-		<Action sr="act46" ve="7">
-			<code>355</code>
-			<Str sr="arg0" ve="3">%idtodownload</Str>
-			<Int sr="arg1">
-				<var>%iii</var>
-			</Int>
-			<Str sr="arg2" ve="3">%ids(%idposition)</Str>
-			<Int sr="arg3" val="0"/>
-		</Action>
-		<Action sr="act47" ve="7">
-			<code>40</code>
-		</Action>
-		<Action sr="act48" ve="7">
-			<code>37</code>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%existsalreadyname(#)</lhs>
-					<op>7</op>
-					<rhs>0</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act49" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%total</Str>
-			<Str sr="arg1" ve="3">%idtodownload(#)</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-		</Action>
-		<Action sr="act5" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%extension</Str>
-			<Str sr="arg1" ve="3">m4a</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%mode</lhs>
-					<op>2</op>
-					<rhs>audio</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act50" ve="7">
-			<code>357</code>
-			<Str sr="arg0" ve="3">%ld_selected_index</Str>
-		</Action>
-		<Action sr="act51" ve="7">
-			<code>357</code>
-			<Str sr="arg0" ve="3">%ld_selected</Str>
-		</Action>
-		<Action sr="act52" ve="7">
-			<code>549</code>
-			<Str sr="arg0" ve="3">%ld_button</Str>
-			<Int sr="arg1" val="0"/>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-		</Action>
-		<Action sr="act53" ve="7">
-			<code>378</code>
-			<Bundle sr="arg0">
-				<Vals sr="val">
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%ld_button
-Button
-The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%ld_selected()
-Selected
-&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%ld_selected_index()
-Selected Index
-&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
-				</Vals>
-			</Bundle>
-			<Int sr="arg1" val="1"/>
-			<Int sr="arg10" val="0"/>
-			<Int sr="arg11" val="0"/>
-			<Int sr="arg12" val="1"/>
-			<Str sr="arg2" ve="3">The following %mode are already downloaded.</Str>
-			<Str sr="arg3" ve="3">%existsalreadyname</Str>
-			<Str sr="arg4" ve="3">%existsalreadyname</Str>
-			<Str sr="arg5" ve="3"/>
-			<Str sr="arg6" ve="3">Skip selected %mode</Str>
-			<Str sr="arg7" ve="3"/>
-			<Str sr="arg8" ve="3">Re-download selected %mode</Str>
-			<Int sr="arg9" val="20"/>
-		</Action>
-		<Action sr="act54" ve="7">
-			<code>37</code>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%ld_button</lhs>
-					<op>2</op>
-					<rhs>*Skip*</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act55" ve="7">
-			<code>39</code>
-			<Str sr="arg0" ve="3">%iii</Str>
-			<Str sr="arg1" ve="3">%ld_selected_index()</Str>
-		</Action>
-		<Action sr="act56" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%pos</Str>
-			<Str sr="arg1" ve="3">%existsalreadyposition(%iii)</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-		</Action>
-		<Action sr="act57" ve="7">
-			<code>356</code>
-			<Str sr="arg0" ve="3">%idtodownload</Str>
-			<Int sr="arg1">
-				<var>%pos</var>
-			</Int>
-			<Str sr="arg2" ve="3"/>
-		</Action>
-		<Action sr="act58" ve="7">
-			<code>356</code>
-			<Str sr="arg0" ve="3">%nametodownload</Str>
-			<Int sr="arg1">
-				<var>%pos</var>
-			</Int>
-			<Str sr="arg2" ve="3"/>
-		</Action>
-		<Action sr="act59" ve="7">
-			<code>40</code>
-		</Action>
-		<Action sr="act6" ve="7">
-			<code>37</code>
-			<ConditionList sr="if">
-				<bool0>And</bool0>
-				<Condition sr="c0" ve="3">
-					<lhs>%playlistname</lhs>
-					<op>3</op>
-					<rhs>NA</rhs>
-				</Condition>
-				<Condition sr="c1" ve="3">
-					<lhs>%playlistname</lhs>
-					<op>3</op>
-					<rhs>\%playlistname</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act60" ve="7">
-			<code>38</code>
-		</Action>
-		<Action sr="act61" ve="7">
-			<code>37</code>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%ld_button</lhs>
-					<op>2</op>
-					<rhs>*Re-download*</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act62" ve="7">
-			<code>39</code>
-			<Str sr="arg0" ve="3">%iii</Str>
-			<Str sr="arg1" ve="3">%ld_selected_index()</Str>
-		</Action>
-		<Action sr="act63" ve="7">
-			<code>356</code>
-			<Str sr="arg0" ve="3">%existsalreadyposition</Str>
-			<Int sr="arg1">
-				<var>%iii</var>
-			</Int>
-			<Str sr="arg2" ve="3"/>
-		</Action>
-		<Action sr="act64" ve="7">
-			<code>40</code>
-		</Action>
-		<Action sr="act65" ve="7">
-			<code>39</code>
-			<Str sr="arg0" ve="3">%iii</Str>
-			<Str sr="arg1" ve="3">%existsalreadyposition()</Str>
-		</Action>
-		<Action sr="act66" ve="7">
-			<code>356</code>
-			<Str sr="arg0" ve="3">%idtodownload</Str>
-			<Int sr="arg1">
-				<var>%iii</var>
-			</Int>
-			<Str sr="arg2" ve="3"/>
-		</Action>
-		<Action sr="act67" ve="7">
-			<code>356</code>
-			<Str sr="arg0" ve="3">%nametodownload</Str>
-			<Int sr="arg1">
-				<var>%iii</var>
-			</Int>
-			<Str sr="arg2" ve="3"/>
-		</Action>
-		<Action sr="act68" ve="7">
-			<code>40</code>
-		</Action>
-		<Action sr="act69" ve="7">
-			<code>38</code>
-		</Action>
-		<Action sr="act7" ve="7">
-			<code>512</code>
-			<Int sr="arg0" val="1"/>
-		</Action>
-		<Action sr="act70" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%skipped</Str>
-			<Str sr="arg1" ve="3">%total-%idtodownload(#)</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="1"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-		</Action>
-		<Action sr="act71" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%red</Str>
-			<Str sr="arg1" ve="3">%existsalreadyname(#)-%skipped</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="1"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-		</Action>
-		<Action sr="act72" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%remaining</Str>
-			<Str sr="arg1" ve="3">%idtodownload(#)</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-		</Action>
-		<Action sr="act73" ve="7">
-			<code>357</code>
-			<Str sr="arg0" ve="3">%ld_selected_index</Str>
-		</Action>
-		<Action sr="act74" ve="7">
-			<code>357</code>
-			<Str sr="arg0" ve="3">%ld_selected</Str>
-		</Action>
-		<Action sr="act75" ve="7">
-			<code>549</code>
-			<Str sr="arg0" ve="3">%ld_button</Str>
-			<Int sr="arg1" val="0"/>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-		</Action>
-		<Action sr="act76" ve="7">
-			<code>38</code>
-		</Action>
-		<Action sr="act77" ve="7">
-			<code>548</code>
-			<Str sr="arg0" ve="3">Added %nametodownload(#) %mode to download queue.</Str>
-			<Int sr="arg1" val="0"/>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%red</lhs>
-					<op>13</op>
-					<rhs></rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act78" ve="7">
-			<code>548</code>
-			<Str sr="arg0" ve="3">Added %remaining %mode to queue, %skipped %mode skipped.</Str>
-			<Int sr="arg1" val="1"/>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%remaining</lhs>
-					<op>7</op>
-					<rhs>0</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act79" ve="7">
-			<code>548</code>
-			<Str sr="arg0" ve="3">No %mode to download ^_^ .</Str>
-			<Int sr="arg1" val="0"/>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%remaining</lhs>
-					<op>0</op>
-					<rhs>0</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act8" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%downloaddirectory</Str>
-			<Str sr="arg1" ve="3">%downloaddirectory/%playlistname</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%Playlisttoseperatedirectory</lhs>
-					<op>2</op>
-					<rhs>yes</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act80" ve="7">
-			<code>592</code>
-			<Str sr="arg0" ve="3">%idtodownload</Str>
-			<Str sr="arg1" ve="3">|</Str>
-			<Int sr="arg2" val="0"/>
-		</Action>
-		<Action sr="act81" ve="7">
-			<code>592</code>
-			<Str sr="arg0" ve="3">%nametodownload</Str>
-			<Str sr="arg1" ve="3">|</Str>
-			<Int sr="arg2" val="0"/>
-		</Action>
-		<Action sr="act82" ve="7">
-			<code>43</code>
-		</Action>
-		<Action sr="act83" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%idtodownload</Str>
-			<Str sr="arg1" ve="3">%ids1</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-		</Action>
-		<Action sr="act84" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%nametodownload</Str>
-			<Str sr="arg1" ve="3">%name1</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-		</Action>
-		<Action sr="act85" ve="7">
-			<code>342</code>
-			<Int sr="arg0" val="5"/>
-			<Str sr="arg1" ve="3">%downloaddirectory/%nametodownload.%extension</Str>
-			<Str sr="arg2" ve="3">%exist</Str>
-			<Int sr="arg3" val="0"/>
-		</Action>
-		<Action sr="act86" ve="7">
-			<code>37</code>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%exist</lhs>
-					<op>2</op>
-					<rhs>true</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act87" ve="7">
-			<code>549</code>
-			<Str sr="arg0" ve="3">%td_button</Str>
-			<Int sr="arg1" val="0"/>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-		</Action>
-		<Action sr="act88" ve="7">
-			<code>377</code>
-			<label>text1</label>
-			<se>false</se>
-			<Bundle sr="arg0">
-				<Vals sr="val">
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%td_button
-Button
-The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
-				</Vals>
-			</Bundle>
-			<Str sr="arg1" ve="3">The following %mode already exists.</Str>
-			<Str sr="arg2" ve="3">%nametodownload.%extension</Str>
-			<Str sr="arg3" ve="3">Re-download</Str>
-			<Str sr="arg4" ve="3">Open %mode</Str>
-			<Str sr="arg5" ve="3">Don't Re-download</Str>
-			<Int sr="arg6" val="10"/>
-			<Int sr="arg7" val="0"/>
-		</Action>
-		<Action sr="act89" ve="7">
-			<code>389</code>
-			<Bundle sr="arg0">
-				<Vals sr="val">
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""/&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
-				</Vals>
-			</Bundle>
-			<Str sr="arg1" ve="3">%errorcodetext1,%errormsgtext1</Str>
-			<Str sr="arg2" ve="3"/>
-			<Str sr="arg3" ve="3">%err,%errmsg</Str>
-			<Str sr="arg4" ve="3"/>
-			<Int sr="arg5" val="0"/>
-			<Int sr="arg6" val="3"/>
-			<Int sr="arg7" val="0"/>
-		</Action>
-		<Action sr="act9" ve="7">
-			<code>135</code>
-			<Int sr="arg0" val="1"/>
-			<Int sr="arg1" val="1"/>
-			<Str sr="arg2" ve="3">list video selected</Str>
-		</Action>
-		<Action sr="act90" ve="7">
 			<code>102</code>
 			<Str sr="arg0" ve="3">%downloaddirectory/%nametodownload.%extension</Str>
 			<Str sr="arg1" ve="3">%mode/*</Str>
@@ -2002,7 +1740,7 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act91" ve="7">
+		<Action sr="act101" ve="7">
 			<code>137</code>
 			<Int sr="arg0" val="0"/>
 			<Str sr="arg1" ve="3"/>
@@ -2038,7 +1776,7 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act92" ve="7">
+		<Action sr="act102" ve="7">
 			<code>37</code>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
@@ -2048,7 +1786,7 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act93" ve="7">
+		<Action sr="act103" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%timestext1shown</Str>
 			<Str sr="arg1" ve="3">1</Str>
@@ -2057,22 +1795,26 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 			<Int sr="arg4" val="0"/>
 			<Int sr="arg5" val="3"/>
 		</Action>
-		<Action sr="act94" ve="7">
+		<Action sr="act104" ve="7">
 			<code>135</code>
 			<Int sr="arg0" val="1"/>
 			<Int sr="arg1" val="1"/>
 			<Str sr="arg2" ve="3">text1</Str>
 		</Action>
-		<Action sr="act95" ve="7">
+		<Action sr="act105" ve="7">
 			<code>38</code>
 		</Action>
-		<Action sr="act96" ve="7">
+		<Action sr="act106" ve="7">
 			<code>38</code>
 		</Action>
-		<Action sr="act97" ve="7">
+		<Action sr="act107" ve="7">
 			<code>38</code>
 		</Action>
-		<Action sr="act98" ve="7">
+		<Action sr="act108" ve="7">
+			<code>300</code>
+			<label>silent_mode</label>
+		</Action>
+		<Action sr="act109" ve="7">
 			<code>598</code>
 			<Str sr="arg0" ve="3">%nametodownload</Str>
 			<Str sr="arg1" ve="3">\[</Str>
@@ -2083,7 +1825,16 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 			<Int sr="arg6" val="1"/>
 			<Str sr="arg7" ve="3">\\[</Str>
 		</Action>
-		<Action sr="act99" ve="7">
+		<Action sr="act11" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%nametodownload</Str>
+			<Str sr="arg1" ve="3">%name</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act110" ve="7">
 			<code>598</code>
 			<Str sr="arg0" ve="3">%nametodownload</Str>
 			<Str sr="arg1" ve="3">\]</Str>
@@ -2094,11 +1845,927 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 			<Int sr="arg6" val="1"/>
 			<Str sr="arg7" ve="3">\\]</Str>
 		</Action>
+		<Action sr="act111" ve="7">
+			<code>598</code>
+			<Str sr="arg0" ve="3">%nametodownload</Str>
+			<Str sr="arg1" ve="3">\,</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Str sr="arg5" ve="3"/>
+			<Int sr="arg6" val="1"/>
+			<Str sr="arg7" ve="3">\\,</Str>
+		</Action>
+		<Action sr="act112" ve="7">
+			<code>547</code>
+			<label>%resolution will be not set when downloading audio</label>
+			<Str sr="arg0" ve="3">%args</Str>
+			<Str sr="arg1" ve="3">%nametodownload,%idtodownload,%downloaddirectory,%resolution,%mode,%extension</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act113" ve="7">
+			<code>105</code>
+			<label>debugging</label>
+			<on>false</on>
+			<Str sr="arg0" ve="3">"%nametodownload" "%idtodownload" "%downloaddirectory" "%resolution" "%mode" "%extension"</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act114" ve="7">
+			<code>365</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""/&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">TermuxCommand(/data/data/com.termux/files/home/ytdl/ytdl_download,%args,,true)</Str>
+		</Action>
+		<Action sr="act12" ve="7">
+			<code>135</code>
+			<Int sr="arg0" val="1"/>
+			<Int sr="arg1" val="1"/>
+			<Str sr="arg2" ve="3">silent_mode</Str>
+		</Action>
+		<Action sr="act13" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act14" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<bool0>And</bool0>
+				<Condition sr="c0" ve="3">
+					<lhs>%playlistname</lhs>
+					<op>3</op>
+					<rhs>NA</rhs>
+				</Condition>
+				<Condition sr="c1" ve="3">
+					<lhs>%playlistname</lhs>
+					<op>3</op>
+					<rhs>\%playlistname</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act15" ve="7">
+			<code>512</code>
+			<Int sr="arg0" val="1"/>
+		</Action>
+		<Action sr="act16" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%downloaddirectory</Str>
+			<Str sr="arg1" ve="3">%downloaddirectory/%playlistname</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%Playlisttoseperatedirectory</lhs>
+					<op>2</op>
+					<rhs>yes</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act17" ve="7">
+			<code>135</code>
+			<Int sr="arg0" val="1"/>
+			<Int sr="arg1" val="1"/>
+			<Str sr="arg2" ve="3">list video selected</Str>
+		</Action>
+		<Action sr="act18" ve="7">
+			<code>37</code>
+			<label>😉</label>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%TIMES</lhs>
+					<op>0</op>
+					<rhs>0</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act19" ve="7">
+			<code>357</code>
+			<label>list video selected</label>
+			<Str sr="arg0" ve="3">%ld_selected_index</Str>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%enter</Str>
+			<Str sr="arg1" ve="3">
+</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act20" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%ld_button</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act21" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%timeslist1shown</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act22" ve="7">
+			<code>378</code>
+			<label>list1</label>
+			<se>false</se>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%ld_button
+Button
+The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%ld_selected()
+Selected
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%ld_selected_index()
+Selected Index
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Int sr="arg1" val="1"/>
+			<Int sr="arg10" val="0"/>
+			<Int sr="arg11" val="0"/>
+			<Int sr="arg12" val="1"/>
+			<Str sr="arg2" ve="3">Select %mode to download.</Str>
+			<Str sr="arg3" ve="3">%name</Str>
+			<Str sr="arg4" ve="3">%name</Str>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3">Download</Str>
+			<Str sr="arg7" ve="3">Cancel</Str>
+			<Str sr="arg8" ve="3">Unselect all</Str>
+			<Int sr="arg9">
+				<var>40</var>
+			</Int>
+		</Action>
+		<Action sr="act23" ve="7">
+			<code>389</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""/&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">%errorcodelist1,%errormsglist1</Str>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3">%err,%errmsg</Str>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+			<Int sr="arg6" val="3"/>
+			<Int sr="arg7" val="0"/>
+		</Action>
+		<Action sr="act24" ve="7">
+			<code>135</code>
+			<Int sr="arg0" val="1"/>
+			<Int sr="arg1" val="1"/>
+			<Str sr="arg2" ve="3">list video unselected</Str>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%ld_button</lhs>
+					<op>2</op>
+					<rhs>Unselect all</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act25" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0"/>
+			<Str sr="arg1" ve="3"/>
+			<ConditionList sr="if">
+				<bool0>Or</bool0>
+				<bool1>Or</bool1>
+				<bool2>And2</bool2>
+				<Condition sr="c0" ve="3">
+					<lhs>%ld_button</lhs>
+					<op>2</op>
+					<rhs>Cancel</rhs>
+				</Condition>
+				<Condition sr="c1" ve="3">
+					<lhs>%errormsglist1</lhs>
+					<op>2</op>
+					<rhs>*timed*</rhs>
+				</Condition>
+				<Condition sr="c2" ve="3">
+					<lhs>%timeslist1shown</lhs>
+					<op>0</op>
+					<rhs>1</rhs>
+				</Condition>
+				<Condition sr="c3" ve="3">
+					<lhs>%errorcodelist1</lhs>
+					<op>7</op>
+					<rhs>0</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act26" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%errorcodelist1</lhs>
+					<op>7</op>
+					<rhs>0</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act27" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%timeslist1shown</Str>
+			<Str sr="arg1" ve="3">1</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act28" ve="7">
+			<code>135</code>
+			<Int sr="arg0" val="1"/>
+			<Int sr="arg1" val="1"/>
+			<Str sr="arg2" ve="3">list1</Str>
+		</Action>
+		<Action sr="act29" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>590</code>
+			<Str sr="arg0" ve="3">%name</Str>
+			<Str sr="arg1" ve="3">%enter</Str>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act30" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act31" ve="7">
+			<code>37</code>
+			<label>😉</label>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%TIMES</lhs>
+					<op>0</op>
+					<rhs>0</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act32" ve="7">
+			<code>357</code>
+			<label>list video unselected</label>
+			<Str sr="arg0" ve="3">%ld_selected_index</Str>
+		</Action>
+		<Action sr="act33" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%ld_button</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act34" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%timeslist2shown</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act35" ve="7">
+			<code>378</code>
+			<label>list2</label>
+			<se>false</se>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%ld_button
+Button
+The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%ld_selected()
+Selected
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%ld_selected_index()
+Selected Index
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Int sr="arg1" val="1"/>
+			<Int sr="arg10" val="0"/>
+			<Int sr="arg11" val="0"/>
+			<Int sr="arg12" val="1"/>
+			<Str sr="arg2" ve="3">Select %mode to download.</Str>
+			<Str sr="arg3" ve="3">%name</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3">Download</Str>
+			<Str sr="arg7" ve="3">Cancel</Str>
+			<Str sr="arg8" ve="3">Select all</Str>
+			<Int sr="arg9">
+				<var>40</var>
+			</Int>
+		</Action>
+		<Action sr="act36" ve="7">
+			<code>389</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""/&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">%errorcodelist2,%errormsglist2</Str>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3">%err,%errmsg</Str>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+			<Int sr="arg6" val="3"/>
+			<Int sr="arg7" val="0"/>
+		</Action>
+		<Action sr="act37" ve="7">
+			<code>135</code>
+			<Int sr="arg0" val="1"/>
+			<Int sr="arg1" val="1"/>
+			<Str sr="arg2" ve="3">list video selected</Str>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%ld_button</lhs>
+					<op>2</op>
+					<rhs>Select all</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act38" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0"/>
+			<Str sr="arg1" ve="3"/>
+			<ConditionList sr="if">
+				<bool0>Or</bool0>
+				<bool1>Or</bool1>
+				<bool2>And2</bool2>
+				<Condition sr="c0" ve="3">
+					<lhs>%ld_button</lhs>
+					<op>2</op>
+					<rhs>Cancel</rhs>
+				</Condition>
+				<Condition sr="c1" ve="3">
+					<lhs>%errormsglist2</lhs>
+					<op>2</op>
+					<rhs>*timed*</rhs>
+				</Condition>
+				<Condition sr="c2" ve="3">
+					<lhs>%timeslist2shown</lhs>
+					<op>0</op>
+					<rhs>1</rhs>
+				</Condition>
+				<Condition sr="c3" ve="3">
+					<lhs>%errorcodelist2</lhs>
+					<op>7</op>
+					<rhs>0</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act39" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%errorcodelist2</lhs>
+					<op>7</op>
+					<rhs>0</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>590</code>
+			<Str sr="arg0" ve="3">%ids</Str>
+			<Str sr="arg1" ve="3">%enter</Str>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act40" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%timeslist2shown</Str>
+			<Str sr="arg1" ve="3">1</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act41" ve="7">
+			<code>135</code>
+			<Int sr="arg0" val="1"/>
+			<Int sr="arg1" val="1"/>
+			<Str sr="arg2" ve="3">list2</Str>
+		</Action>
+		<Action sr="act42" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act43" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act44" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%ld_selected_index(#)</lhs>
+					<op>0</op>
+					<rhs>0</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act45" ve="7">
+			<code>548</code>
+			<Str sr="arg0" ve="3">No %mode selected. Press cancel if you want to cancel.</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act46" ve="7">
+			<code>135</code>
+			<Int sr="arg0" val="1"/>
+			<Int sr="arg1" val="1"/>
+			<Str sr="arg2" ve="3">list video unselected</Str>
+		</Action>
+		<Action sr="act47" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act48" ve="7">
+			<code>39</code>
+			<Str sr="arg0" ve="3">%iii</Str>
+			<Str sr="arg1" ve="3">1:%ld_selected_index(#)</Str>
+		</Action>
+		<Action sr="act49" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%name_position</Str>
+			<Str sr="arg1" ve="3">%ld_selected(%iii)</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%extension</Str>
+			<Str sr="arg1" ve="3">mp4</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%mode</lhs>
+					<op>2</op>
+					<rhs>video</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act50" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%idposition</Str>
+			<Str sr="arg1" ve="3">%ld_selected_index(%iii)</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act51" ve="7">
+			<code>342</code>
+			<Int sr="arg0" val="5"/>
+			<Str sr="arg1" ve="3">%downloaddirectory/%name(%idposition).%extension</Str>
+			<Str sr="arg2" ve="3">%exist</Str>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act52" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%existsalreadyposition</Str>
+			<Int sr="arg1" val="999999"/>
+			<Str sr="arg2" ve="3">%iii</Str>
+			<Int sr="arg3" val="0"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%exist</lhs>
+					<op>2</op>
+					<rhs>true</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act53" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%existsalreadyname</Str>
+			<Int sr="arg1" val="999999"/>
+			<Str sr="arg2" ve="3">%name(%idposition)</Str>
+			<Int sr="arg3" val="0"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%exist</lhs>
+					<op>2</op>
+					<rhs>true</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act54" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%nametodownload</Str>
+			<Int sr="arg1">
+				<var>%iii</var>
+			</Int>
+			<Str sr="arg2" ve="3">%name(%idposition)</Str>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act55" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%idtodownload</Str>
+			<Int sr="arg1">
+				<var>%iii</var>
+			</Int>
+			<Str sr="arg2" ve="3">%ids(%idposition)</Str>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act56" ve="7">
+			<code>40</code>
+		</Action>
+		<Action sr="act57" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%existsalreadyname(#)</lhs>
+					<op>7</op>
+					<rhs>0</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act58" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%total</Str>
+			<Str sr="arg1" ve="3">%idtodownload(#)</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act59" ve="7">
+			<code>357</code>
+			<Str sr="arg0" ve="3">%ld_selected_index</Str>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%extension</Str>
+			<Str sr="arg1" ve="3">%Extension_audio</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%mode</lhs>
+					<op>2</op>
+					<rhs>audio</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act60" ve="7">
+			<code>357</code>
+			<Str sr="arg0" ve="3">%ld_selected</Str>
+		</Action>
+		<Action sr="act61" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%ld_button</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act62" ve="7">
+			<code>378</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%ld_button
+Button
+The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%ld_selected()
+Selected
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%ld_selected_index()
+Selected Index
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Int sr="arg1" val="1"/>
+			<Int sr="arg10" val="0"/>
+			<Int sr="arg11" val="0"/>
+			<Int sr="arg12" val="1"/>
+			<Str sr="arg2" ve="3">The following %mode are already downloaded.</Str>
+			<Str sr="arg3" ve="3">%existsalreadyname</Str>
+			<Str sr="arg4" ve="3">%existsalreadyname</Str>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3">Skip selected %mode</Str>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3">Re-download selected %mode</Str>
+			<Int sr="arg9" val="20"/>
+		</Action>
+		<Action sr="act63" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%ld_button</lhs>
+					<op>2</op>
+					<rhs>*Skip*</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act64" ve="7">
+			<code>39</code>
+			<Str sr="arg0" ve="3">%iii</Str>
+			<Str sr="arg1" ve="3">%ld_selected_index()</Str>
+		</Action>
+		<Action sr="act65" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%pos</Str>
+			<Str sr="arg1" ve="3">%existsalreadyposition(%iii)</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act66" ve="7">
+			<code>356</code>
+			<Str sr="arg0" ve="3">%idtodownload</Str>
+			<Int sr="arg1">
+				<var>%pos</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+		</Action>
+		<Action sr="act67" ve="7">
+			<code>356</code>
+			<Str sr="arg0" ve="3">%nametodownload</Str>
+			<Int sr="arg1">
+				<var>%pos</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+		</Action>
+		<Action sr="act68" ve="7">
+			<code>40</code>
+		</Action>
+		<Action sr="act69" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act7" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%silent_mode</lhs>
+					<op>2</op>
+					<rhs>yes</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act70" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%ld_button</lhs>
+					<op>2</op>
+					<rhs>*Re-download*</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act71" ve="7">
+			<code>39</code>
+			<Str sr="arg0" ve="3">%iii</Str>
+			<Str sr="arg1" ve="3">%ld_selected_index()</Str>
+		</Action>
+		<Action sr="act72" ve="7">
+			<code>356</code>
+			<Str sr="arg0" ve="3">%existsalreadyposition</Str>
+			<Int sr="arg1">
+				<var>%iii</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+		</Action>
+		<Action sr="act73" ve="7">
+			<code>40</code>
+		</Action>
+		<Action sr="act74" ve="7">
+			<code>39</code>
+			<Str sr="arg0" ve="3">%iii</Str>
+			<Str sr="arg1" ve="3">%existsalreadyposition()</Str>
+		</Action>
+		<Action sr="act75" ve="7">
+			<code>356</code>
+			<Str sr="arg0" ve="3">%idtodownload</Str>
+			<Int sr="arg1">
+				<var>%iii</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+		</Action>
+		<Action sr="act76" ve="7">
+			<code>356</code>
+			<Str sr="arg0" ve="3">%nametodownload</Str>
+			<Int sr="arg1">
+				<var>%iii</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+		</Action>
+		<Action sr="act77" ve="7">
+			<code>40</code>
+		</Action>
+		<Action sr="act78" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act79" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%skipped</Str>
+			<Str sr="arg1" ve="3">%total-%idtodownload(#)</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="1"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act8" ve="7">
+			<code>592</code>
+			<Str sr="arg0" ve="3">%name</Str>
+			<Str sr="arg1" ve="3">|</Str>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act80" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%red</Str>
+			<Str sr="arg1" ve="3">%existsalreadyname(#)-%skipped</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="1"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act81" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%remaining</Str>
+			<Str sr="arg1" ve="3">%idtodownload(#)</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act82" ve="7">
+			<code>357</code>
+			<Str sr="arg0" ve="3">%ld_selected_index</Str>
+		</Action>
+		<Action sr="act83" ve="7">
+			<code>357</code>
+			<Str sr="arg0" ve="3">%ld_selected</Str>
+		</Action>
+		<Action sr="act84" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%ld_button</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act85" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act86" ve="7">
+			<code>548</code>
+			<Str sr="arg0" ve="3">Added %nametodownload(#) %mode to download queue.</Str>
+			<Int sr="arg1" val="0"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%red</lhs>
+					<op>13</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act87" ve="7">
+			<code>548</code>
+			<Str sr="arg0" ve="3">Added %remaining %mode to queue, %skipped %mode skipped.</Str>
+			<Int sr="arg1" val="1"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%remaining</lhs>
+					<op>7</op>
+					<rhs>0</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act88" ve="7">
+			<code>548</code>
+			<Str sr="arg0" ve="3">No %mode to download ^_^ .</Str>
+			<Int sr="arg1" val="0"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%remaining</lhs>
+					<op>0</op>
+					<rhs>0</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act89" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0"/>
+			<Str sr="arg1" ve="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%remaining</lhs>
+					<op>0</op>
+					<rhs>0</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act9" ve="7">
+			<code>592</code>
+			<Str sr="arg0" ve="3">%ids</Str>
+			<Str sr="arg1" ve="3">|</Str>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act90" ve="7">
+			<code>592</code>
+			<Str sr="arg0" ve="3">%idtodownload</Str>
+			<Str sr="arg1" ve="3">|</Str>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act91" ve="7">
+			<code>592</code>
+			<Str sr="arg0" ve="3">%nametodownload</Str>
+			<Str sr="arg1" ve="3">|</Str>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act92" ve="7">
+			<code>43</code>
+		</Action>
+		<Action sr="act93" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%idtodownload</Str>
+			<Str sr="arg1" ve="3">%ids1</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act94" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%nametodownload</Str>
+			<Str sr="arg1" ve="3">%name1</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act95" ve="7">
+			<code>342</code>
+			<Int sr="arg0" val="5"/>
+			<Str sr="arg1" ve="3">%downloaddirectory/%nametodownload.%extension</Str>
+			<Str sr="arg2" ve="3">%exist</Str>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act96" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%exist</lhs>
+					<op>2</op>
+					<rhs>true</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act97" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%td_button</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act98" ve="7">
+			<code>377</code>
+			<label>text1</label>
+			<se>false</se>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%td_button
+Button
+The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">The following %mode already exists.</Str>
+			<Str sr="arg2" ve="3">%nametodownload.%extension</Str>
+			<Str sr="arg3" ve="3">Re-download</Str>
+			<Str sr="arg4" ve="3">Open %mode</Str>
+			<Str sr="arg5" ve="3">Don't Re-download</Str>
+			<Int sr="arg6" val="10"/>
+			<Int sr="arg7" val="0"/>
+		</Action>
+		<Action sr="act99" ve="7">
+			<code>389</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""/&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">%errorcodetext1,%errormsgtext1</Str>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3">%err,%errmsg</Str>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+			<Int sr="arg6" val="3"/>
+			<Int sr="arg7" val="0"/>
+		</Action>
 	</Task>
-	<Task sr="task153">
+	<Task sr="task502">
 		<cdate>1615912488849</cdate>
 		<edate>1616636929466</edate>
-		<id>153</id>
+		<id>502</id>
 		<nme>ytdl_cleanup_temporary_files</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -2191,14 +2858,44 @@ This step will delete the following directory:  /sdcard/Tasker/ytdl/*</Str>
 			<nme>mw_content_delete_sweep</nme>
 		</Img>
 	</Task>
-	<Task sr="task154">
+	<Task sr="task503">
 		<cdate>1615796080362</cdate>
-		<edate>1616645863266</edate>
-		<id>154</id>
+		<edate>1617041850994</edate>
+		<id>503</id>
 		<nme>ytdl_check_url</nme>
 		<pri>100</pri>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
+			<code>37</code>
+			<label>&lt;font color="green"&gt; If you want to pass url to this project, call this task and set %par1 to your url.</label>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%par1</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%url</Str>
+			<Str sr="arg1" ve="3">%par1</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%par1</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act4" ve="7">
 			<code>37</code>
 			<label>&lt;font color="green"&gt;This regex matches any YT or YT music link</label>
 			<ConditionList sr="if">
@@ -2209,7 +2906,7 @@ This step will delete the following directory:  /sdcard/Tasker/ytdl/*</Str>
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act1" ve="7">
+		<Action sr="act5" ve="7">
 			<code>130</code>
 			<Str sr="arg0" ve="3">ytdl_info</Str>
 			<Int sr="arg1">
@@ -2224,14 +2921,14 @@ This step will delete the following directory:  /sdcard/Tasker/ytdl/*</Str>
 			<Int sr="arg8" val="0"/>
 			<Int sr="arg9" val="0"/>
 		</Action>
-		<Action sr="act2" ve="7">
+		<Action sr="act6" ve="7">
 			<code>38</code>
 		</Action>
 	</Task>
-	<Task sr="task155">
+	<Task sr="task504">
 		<cdate>1616100669935</cdate>
 		<edate>1616649204931</edate>
-		<id>155</id>
+		<id>504</id>
 		<nme>ytdl_retry</nme>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
@@ -2278,10 +2975,10 @@ This step will delete the following directory:  /sdcard/Tasker/ytdl/*</Str>
 			<Int sr="arg9" val="0"/>
 		</Action>
 	</Task>
-	<Task sr="task156">
+	<Task sr="task505">
 		<cdate>1616109319759</cdate>
-		<edate>1616649203706</edate>
-		<id>156</id>
+		<edate>1617037912569</edate>
+		<id>505</id>
 		<nme>ytdl_open_file_notify_cancel</nme>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
@@ -2305,10 +3002,10 @@ This step will delete the following directory:  /sdcard/Tasker/ytdl/*</Str>
 			<Str sr="arg1" ve="3">%par22</Str>
 		</Action>
 	</Task>
-	<Task sr="task157">
+	<Task sr="task506">
 		<cdate>1616112674679</cdate>
-		<edate>1616649202240</edate>
-		<id>157</id>
+		<edate>1617037917118</edate>
+		<id>506</id>
 		<nme>ytdl_delete_file_notify_cancel</nme>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
@@ -2332,10 +3029,10 @@ This step will delete the following directory:  /sdcard/Tasker/ytdl/*</Str>
 			<Int sr="arg1" val="0"/>
 		</Action>
 	</Task>
-	<Task sr="task159">
+	<Task sr="task507">
 		<cdate>1615972225558</cdate>
-		<edate>1616649200922</edate>
-		<id>159</id>
+		<edate>1617041995078</edate>
+		<id>507</id>
 		<nme>ytdl_download_progress</nme>
 		<pri>100</pri>
 		<stayawake>true</stayawake>
@@ -2354,44 +3051,35 @@ This step will delete the following directory:  /sdcard/Tasker/ytdl/*</Str>
 			<code>38</code>
 		</Action>
 		<Action sr="act11" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%extension</Str>
-			<Str sr="arg1" ve="3">mp4</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%mode</lhs>
-					<op>2</op>
-					<rhs>video</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act12" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%extension</Str>
-			<Str sr="arg1" ve="3">m4a</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%mode</lhs>
-					<op>2</op>
-					<rhs>audio</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act13" ve="7">
 			<code>123</code>
 			<se>false</se>
 			<Str sr="arg0" ve="3">sed '2q;d' %iii</Str>
 			<Int sr="arg1" val="0"/>
 			<Int sr="arg2" val="0"/>
 			<Str sr="arg3" ve="3">%startids</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+		</Action>
+		<Action sr="act12" ve="7">
+			<code>135</code>
+			<Int sr="arg0" val="1"/>
+			<Int sr="arg1" val="1"/>
+			<Str sr="arg2" ve="3">for end</Str>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%err</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act13" ve="7">
+			<code>123</code>
+			<se>false</se>
+			<Str sr="arg0" ve="3">sed '3q;d' %iii</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Str sr="arg3" ve="3">%startname</Str>
 			<Str sr="arg4" ve="3"/>
 			<Str sr="arg5" ve="3"/>
 		</Action>
@@ -2411,10 +3099,10 @@ This step will delete the following directory:  /sdcard/Tasker/ytdl/*</Str>
 		<Action sr="act15" ve="7">
 			<code>123</code>
 			<se>false</se>
-			<Str sr="arg0" ve="3">sed '3q;d' %iii</Str>
+			<Str sr="arg0" ve="3">sed '4q;d' %iii</Str>
 			<Int sr="arg1" val="0"/>
 			<Int sr="arg2" val="0"/>
-			<Str sr="arg3" ve="3">%startname</Str>
+			<Str sr="arg3" ve="3">%downloaddirectory</Str>
 			<Str sr="arg4" ve="3"/>
 			<Str sr="arg5" ve="3"/>
 		</Action>
@@ -2434,10 +3122,10 @@ This step will delete the following directory:  /sdcard/Tasker/ytdl/*</Str>
 		<Action sr="act17" ve="7">
 			<code>123</code>
 			<se>false</se>
-			<Str sr="arg0" ve="3">sed '4q;d' %iii</Str>
+			<Str sr="arg0" ve="3">sed '5q;d' %iii</Str>
 			<Int sr="arg1" val="0"/>
 			<Int sr="arg2" val="0"/>
-			<Str sr="arg3" ve="3">%downloaddirectory</Str>
+			<Str sr="arg3" ve="3">%resolution</Str>
 			<Str sr="arg4" ve="3"/>
 			<Str sr="arg5" ve="3"/>
 		</Action>
@@ -2457,10 +3145,10 @@ This step will delete the following directory:  /sdcard/Tasker/ytdl/*</Str>
 		<Action sr="act19" ve="7">
 			<code>123</code>
 			<se>false</se>
-			<Str sr="arg0" ve="3">sed '5q;d' %iii</Str>
+			<Str sr="arg0" ve="3">sed '6q;d' %iii</Str>
 			<Int sr="arg1" val="0"/>
 			<Int sr="arg2" val="0"/>
-			<Str sr="arg3" ve="3">%resolution</Str>
+			<Str sr="arg3" ve="3">%extension</Str>
 			<Str sr="arg4" ve="3"/>
 			<Str sr="arg5" ve="3"/>
 		</Action>
@@ -2489,7 +3177,7 @@ This step will delete the following directory:  /sdcard/Tasker/ytdl/*</Str>
 		<Action sr="act21" ve="7">
 			<code>123</code>
 			<se>false</se>
-			<Str sr="arg0" ve="3">sed '6q;d' %iii</Str>
+			<Str sr="arg0" ve="3">sed '7q;d' %iii</Str>
 			<Int sr="arg1" val="0"/>
 			<Int sr="arg2" val="0"/>
 			<Str sr="arg3" ve="3">%process_id1</Str>
@@ -2512,7 +3200,7 @@ This step will delete the following directory:  /sdcard/Tasker/ytdl/*</Str>
 		<Action sr="act23" ve="7">
 			<code>123</code>
 			<se>false</se>
-			<Str sr="arg0" ve="3">sed '7q;d' %iii</Str>
+			<Str sr="arg0" ve="3">sed '8q;d' %iii</Str>
 			<Int sr="arg1" val="0"/>
 			<Int sr="arg2" val="0"/>
 			<Str sr="arg3" ve="3">%process_id2</Str>
@@ -2834,7 +3522,7 @@ mv '/sdcard/Tasker/ytdl/tmp/%name.%extension' '%downloaddirectory/'</Str>
 		</Action>
 		<Action sr="act47" ve="7">
 			<code>548</code>
-			<Str sr="arg0" ve="3">Please send this clipboard content to PracticalButterfly5 for bug fixing.</Str>
+			<Str sr="arg0" ve="3">Please send the clipboard content to PracticalButterfly5 for bug fixing.</Str>
 			<Int sr="arg1" val="0"/>
 		</Action>
 		<Action sr="act48" ve="7">
@@ -3171,536 +3859,5 @@ mv '/sdcard/Tasker/ytdl/tmp/%name.%extension' '%downloaddirectory/'</Str>
 			<Int sr="arg1" val="1"/>
 			<Str sr="arg2" ve="3">for end</Str>
 		</Action>
-	</Task>
-	<Task sr="task160">
-		<cdate>1615918845957</cdate>
-		<edate>1616649196510</edate>
-		<id>160</id>
-		<nme>ytdl_PANIC_TASK</nme>
-		<pri>100</pri>
-		<rty>2</rty>
-		<Action sr="act0" ve="7">
-			<code>300</code>
-			<label>&lt;font color="green"&gt;This task to be executed only in case things go out of hand, and you want to stop all ongoing downloads.
-&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
-This task will &lt;br/&gt;
-* Kill Termux app&lt;br/&gt;
-* Stop all ongoing downloads&lt;br/&gt;
-* Remove all notifications made by this project.&lt;br/&gt;
-* Stop all tasks associated with this project.&lt;br/&gt;
-* Directory /sdcard/Tasker/ytdl will be cleared.
-&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
-This task will NOT&lt;br/&gt;
-* Delete your personal files&lt;br/&gt;
-* Delete already downloaded videos&lt;br/&gt;
-* Kill Tasker or other profiles &lt;br/&gt;
-* Remove Tasker notifications created by other profiles.&lt;br/&gt;</label>
-		</Action>
-		<Action sr="act1" ve="7">
-			<code>512</code>
-			<Int sr="arg0" val="1"/>
-		</Action>
-		<Action sr="act10" ve="7">
-			<code>39</code>
-			<Str sr="arg0" ve="3">%iii</Str>
-			<Str sr="arg1" ve="3">%files()</Str>
-		</Action>
-		<Action sr="act11" ve="7">
-			<code>123</code>
-			<se>false</se>
-			<Str sr="arg0" ve="3">rm -f "%iii"</Str>
-			<Int sr="arg1" val="0"/>
-			<Int sr="arg2" val="0"/>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3">%error</Str>
-			<Str sr="arg5" ve="3"/>
-		</Action>
-		<Action sr="act12" ve="7">
-			<code>40</code>
-		</Action>
-		<Action sr="act13" ve="7">
-			<code>300</code>
-			<label>Tasks below will remove tasker notifications that match a regex. Credits to
-
- https://taskernet.com/shares/?user=AS35m8m%2BFga%2BPKETEENtyWu3IGqX35bmTIK3QzSMBeDWmVIVfQqyiHL%2FJjwHE%2FYoZuYG0oNb60waOn0%2Few%3D%3D&amp;id=Task%3ACancel+Notification+By+Title+Match</label>
-		</Action>
-		<Action sr="act14" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%title_regex</Str>
-			<Str sr="arg1" ve="3">Getting link info|Download timeout \-|Downloading \-|Download complete \-|Error getting info \(</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-		</Action>
-		<Action sr="act15" ve="7">
-			<code>664</code>
-			<Str sr="arg0" ve="3">(NotificationManager) nm</Str>
-			<Str sr="arg1" ve="3">CONTEXT</Str>
-			<Str sr="arg2" ve="3">getSystemService
-{Object} (String)</Str>
-			<Str sr="arg3" ve="3">"notification"</Str>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3"/>
-			<Str sr="arg6" ve="3"/>
-			<Str sr="arg7" ve="3"/>
-			<Str sr="arg8" ve="3"/>
-			<Str sr="arg9" ve="3"/>
-		</Action>
-		<Action sr="act16" ve="7">
-			<code>664</code>
-			<Str sr="arg0" ve="3">notes</Str>
-			<Str sr="arg1" ve="3">nm</Str>
-			<Str sr="arg2" ve="3">getActiveNotifications
-{StatusBarNotification[]} ()</Str>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3"/>
-			<Str sr="arg6" ve="3"/>
-			<Str sr="arg7" ve="3"/>
-			<Str sr="arg8" ve="3"/>
-			<Str sr="arg9" ve="3"/>
-		</Action>
-		<Action sr="act17" ve="7">
-			<code>664</code>
-			<Str sr="arg0" ve="3">%num</Str>
-			<Str sr="arg1" ve="3">Integer</Str>
-			<Str sr="arg2" ve="3">new
-{Integer} (int)</Str>
-			<Str sr="arg3" ve="3">notes.length</Str>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3"/>
-			<Str sr="arg6" ve="3"/>
-			<Str sr="arg7" ve="3"/>
-			<Str sr="arg8" ve="3"/>
-			<Str sr="arg9" ve="3"/>
-		</Action>
-		<Action sr="act18" ve="7">
-			<code>39</code>
-			<Str sr="arg0" ve="3">%ind</Str>
-			<Str sr="arg1" ve="3">1:%num</Str>
-		</Action>
-		<Action sr="act19" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%jind</Str>
-			<Str sr="arg1" ve="3">%ind-1</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="1"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-		</Action>
-		<Action sr="act2" ve="7">
-			<code>377</code>
-			<Bundle sr="arg0">
-				<Vals sr="val">
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%td_button
-Button
-The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
-				</Vals>
-			</Bundle>
-			<Str sr="arg1" ve="3">Warning!!</Str>
-			<Str sr="arg2" ve="3">This will kill Termux app, and any other ytdl downloads going on will also be terminated.</Str>
-			<Str sr="arg3" ve="3">Force kill termux and stop downloading</Str>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3">Cancel</Str>
-			<Int sr="arg6" val="30"/>
-			<Int sr="arg7" val="0"/>
-		</Action>
-		<Action sr="act20" ve="7">
-			<code>664</code>
-			<Str sr="arg0" ve="3">noti</Str>
-			<Str sr="arg1" ve="3">notes[%jind]</Str>
-			<Str sr="arg2" ve="3">getNotification
-{Notification} ()</Str>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3"/>
-			<Str sr="arg6" ve="3"/>
-			<Str sr="arg7" ve="3"/>
-			<Str sr="arg8" ve="3"/>
-			<Str sr="arg9" ve="3"/>
-		</Action>
-		<Action sr="act21" ve="7">
-			<code>664</code>
-			<Str sr="arg0" ve="3">%title</Str>
-			<Str sr="arg1" ve="3">noti.extras</Str>
-			<Str sr="arg2" ve="3">getString
-{String} (String)</Str>
-			<Str sr="arg3" ve="3">"android.title"</Str>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3"/>
-			<Str sr="arg6" ve="3"/>
-			<Str sr="arg7" ve="3"/>
-			<Str sr="arg8" ve="3"/>
-			<Str sr="arg9" ve="3"/>
-		</Action>
-		<Action sr="act22" ve="7">
-			<code>37</code>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%title</lhs>
-					<op>4</op>
-					<rhs>%title_regex</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act23" ve="7">
-			<code>664</code>
-			<Str sr="arg0" ve="3">%noti_id</Str>
-			<Str sr="arg1" ve="3">notes[%jind]</Str>
-			<Str sr="arg2" ve="3">getId
-{int} ()</Str>
-			<Str sr="arg3" ve="3">"android.title"</Str>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3"/>
-			<Str sr="arg6" ve="3"/>
-			<Str sr="arg7" ve="3"/>
-			<Str sr="arg8" ve="3"/>
-			<Str sr="arg9" ve="3"/>
-		</Action>
-		<Action sr="act24" ve="7">
-			<code>664</code>
-			<Str sr="arg0" ve="3"/>
-			<Str sr="arg1" ve="3">nm</Str>
-			<Str sr="arg2" ve="3">cancel
-{} (int)</Str>
-			<Str sr="arg3" ve="3">%noti_id</Str>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3"/>
-			<Str sr="arg6" ve="3"/>
-			<Str sr="arg7" ve="3"/>
-			<Str sr="arg8" ve="3"/>
-			<Str sr="arg9" ve="3"/>
-		</Action>
-		<Action sr="act25" ve="7">
-			<code>38</code>
-		</Action>
-		<Action sr="act26" ve="7">
-			<code>40</code>
-		</Action>
-		<Action sr="act3" ve="7">
-			<code>137</code>
-			<Int sr="arg0" val="0"/>
-			<Str sr="arg1" ve="3"/>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%td_button</lhs>
-					<op>3</op>
-					<rhs>*kill*</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act4" ve="7">
-			<code>365</code>
-			<label>kill termux</label>
-			<Bundle sr="arg0">
-				<Vals sr="val">
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""/&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
-				</Vals>
-			</Bundle>
-			<Str sr="arg1" ve="3">TermuxCommand(/data/data/com.termux/files/home/ytdl/kill_termux,,,true)</Str>
-		</Action>
-		<Action sr="act5" ve="7">
-			<code>300</code>
-			<label>Stopping possibly running tasks</label>
-		</Action>
-		<Action sr="act6" ve="7">
-			<code>137</code>
-			<Int sr="arg0" val="0"/>
-			<Str sr="arg1" ve="3">ytdl_downloader</Str>
-		</Action>
-		<Action sr="act7" ve="7">
-			<code>137</code>
-			<Int sr="arg0" val="0"/>
-			<Str sr="arg1" ve="3">ytdl_intent_handler</Str>
-		</Action>
-		<Action sr="act8" ve="7">
-			<code>137</code>
-			<Int sr="arg0" val="0"/>
-			<Str sr="arg1" ve="3">ytdl_download_progress</Str>
-		</Action>
-		<Action sr="act9" ve="7">
-			<code>412</code>
-			<Str sr="arg0" ve="3">/sdcard/Tasker/ytdl</Str>
-			<Str sr="arg1" ve="3">~R(^[A-Za-z0-9_\-]{11}$)</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Str sr="arg5" ve="3">%files</Str>
-		</Action>
-		<Img sr="icn" ve="2">
-			<nme>mw_places_golf_course</nme>
-		</Img>
-	</Task>
-	<Task sr="task161">
-		<cdate>1616121798577</cdate>
-		<edate>1616649198207</edate>
-		<id>161</id>
-		<nme>Grant clipboard access</nme>
-		<pri>100</pri>
-		<rty>2</rty>
-		<Action sr="act0" ve="7">
-			<code>300</code>
-			<label>&lt;font color="green"&gt;Simply run this task to be sure that your tasker has clipboard access.
-&lt;br/&gt;
-&lt;br/&gt;
-If it asks you for write secure settings permission, follow Tasker guide for it.
-&lt;br/&gt;
-&lt;br/&gt;
-Other if you are lazy like me, to not open your computer, simply share links to termux app instead, it works everytime 👍</label>
-		</Action>
-		<Action sr="act1" ve="7">
-			<code>37</code>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%SDK</lhs>
-					<op>7</op>
-					<rhs>28</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act2" ve="7">
-			<code>319</code>
-			<Str sr="arg0" ve="3">android.permission.WRITE_SECURE_SETTINGS</Str>
-		</Action>
-		<Action sr="act3" ve="7">
-			<code>43</code>
-		</Action>
-		<Action sr="act4" ve="7">
-			<code>548</code>
-			<Str sr="arg0" ve="3">Android 9 and below don't need to do this step, tasker already has clipboard access.</Str>
-			<Int sr="arg1" val="1"/>
-		</Action>
-		<Action sr="act5" ve="7">
-			<code>38</code>
-		</Action>
-		<Img sr="icn" ve="2">
-			<nme>mw_card_text_outline</nme>
-		</Img>
-	</Task>
-	<Task sr="task162">
-		<cdate>1616170710774</cdate>
-		<edate>1616496387854</edate>
-		<id>162</id>
-		<pri>6</pri>
-		<Action sr="act0" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%url</Str>
-			<Str sr="arg1" ve="3">%CLIP</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-		</Action>
-		<Action sr="act1" ve="7">
-			<code>130</code>
-			<Str sr="arg0" ve="3">ytdl_check_url</Str>
-			<Int sr="arg1">
-				<var>%priority</var>
-			</Int>
-			<Str sr="arg2" ve="3"/>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3"/>
-			<Int sr="arg5" val="0"/>
-			<Int sr="arg6" val="1"/>
-			<Str sr="arg7" ve="3"/>
-			<Int sr="arg8" val="0"/>
-			<Int sr="arg9" val="0"/>
-		</Action>
-	</Task>
-	<Task sr="task163">
-		<cdate>1616459694147</cdate>
-		<edate>1616649199426</edate>
-		<id>163</id>
-		<nme>ytdl_check_for_update</nme>
-		<pri>100</pri>
-		<Action sr="act0" ve="7">
-			<code>300</code>
-			<label>&lt;font color="green"&gt;This task will check for project update from GitHub.
-&lt;br/&gt;
-&lt;br/&gt;
-It is important to keep it updated because this project is new and can still have bugs
-&lt;br/&gt;
-&lt;br/&gt;
-If there is an update you can copy the link and paste it in termux to update.
-&lt;br/&gt;
-&lt;br/&gt; Remember to overwrite project while importing.</label>
-		</Action>
-		<Action sr="act1" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%currversion</Str>
-			<Str sr="arg1" ve="3">1.1</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-		</Action>
-		<Action sr="act10" ve="7">
-			<code>105</code>
-			<Str sr="arg0" ve="3">curl https://raw.githubusercontent.com/Practicalbutterfly5/ytdl/main/installytdl &gt; installytdl &amp;&amp; chmod +x installytdl &amp;&amp; bash installytdl</Str>
-			<Int sr="arg1" val="0"/>
-		</Action>
-		<Action sr="act11" ve="7">
-			<code>548</code>
-			<Str sr="arg0" ve="3">Termux command copied to clipboard.</Str>
-			<Int sr="arg1" val="0"/>
-		</Action>
-		<Action sr="act12" ve="7">
-			<code>38</code>
-		</Action>
-		<Action sr="act13" ve="7">
-			<code>43</code>
-		</Action>
-		<Action sr="act14" ve="7">
-			<code>548</code>
-			<Str sr="arg0" ve="3">ytdl is up to date.
-Current version : %currversion
-Latest version : %http_data</Str>
-			<Int sr="arg1" val="0"/>
-		</Action>
-		<Action sr="act15" ve="7">
-			<code>38</code>
-		</Action>
-		<Action sr="act2" ve="7">
-			<code>339</code>
-			<Bundle sr="arg0">
-				<Vals sr="val">
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%http_data
-Data
-Data that the server responded from the HTTP request.&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%http_file_output
-File Output
-Will always contain the file's full path even if you specified a directory as the File to save.&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%http_response_code
-Response Code
-The HTTP Code the server responded&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;%http_cookies
-Cookies
-The cookies the server sent in the response in the Cookie:COOKIE_VALUE format. You can use this directly in the 'Headers' field of the HTTP Request action&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES4&gt;%http_headers()
-Response Headers
-The HTTP Headers the server sent in the response. Each header is in the 'key:value' format&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES4&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES5&gt;%http_response_length
-Response Length
-The size of the response in bytes&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES5&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
-				</Vals>
-			</Bundle>
-			<Int sr="arg1" val="0"/>
-			<Int sr="arg10" val="0"/>
-			<Int sr="arg11" val="0"/>
-			<Str sr="arg2" ve="3">https://raw.githubusercontent.com/Practicalbutterfly5/ytdl/main/versioninfo</Str>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3"/>
-			<Str sr="arg6" ve="3"/>
-			<Str sr="arg7" ve="3"/>
-			<Int sr="arg8" val="30"/>
-			<Int sr="arg9" val="0"/>
-		</Action>
-		<Action sr="act3" ve="7">
-			<code>37</code>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%http_data</lhs>
-					<op>7</op>
-					<rhs>%currversion</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act4" ve="7">
-			<code>377</code>
-			<Bundle sr="arg0">
-				<Vals sr="val">
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%td_button
-Button
-The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
-				</Vals>
-			</Bundle>
-			<Str sr="arg1" ve="3">New version available</Str>
-			<Str sr="arg2" ve="3">Current version : %currversion
-Latest version : %http_data
-
-To update simply paste the command in Termux.</Str>
-			<Str sr="arg3" ve="3">View Changelogs</Str>
-			<Str sr="arg4" ve="3">Copy termux command</Str>
-			<Str sr="arg5" ve="3">Cancel</Str>
-			<Int sr="arg6" val="30"/>
-			<Int sr="arg7" val="0"/>
-		</Action>
-		<Action sr="act5" ve="7">
-			<code>37</code>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%td_button</lhs>
-					<op>2</op>
-					<rhs>*Changelogs*</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act6" ve="7">
-			<code>339</code>
-			<Bundle sr="arg0">
-				<Vals sr="val">
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%http_data
-Data
-Data that the server responded from the HTTP request.&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%http_file_output
-File Output
-Will always contain the file's full path even if you specified a directory as the File to save.&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%http_response_code
-Response Code
-The HTTP Code the server responded&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;%http_cookies
-Cookies
-The cookies the server sent in the response in the Cookie:COOKIE_VALUE format. You can use this directly in the 'Headers' field of the HTTP Request action&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES4&gt;%http_headers()
-Response Headers
-The HTTP Headers the server sent in the response. Each header is in the 'key:value' format&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES4&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES5&gt;%http_response_length
-Response Length
-The size of the response in bytes&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES5&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
-				</Vals>
-			</Bundle>
-			<Int sr="arg1" val="0"/>
-			<Int sr="arg10" val="0"/>
-			<Int sr="arg11" val="0"/>
-			<Str sr="arg2" ve="3">https://raw.githubusercontent.com/Practicalbutterfly5/ytdl/main/Changelogs</Str>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3"/>
-			<Str sr="arg6" ve="3"/>
-			<Str sr="arg7" ve="3"/>
-			<Int sr="arg8" val="30"/>
-			<Int sr="arg9" val="0"/>
-		</Action>
-		<Action sr="act7" ve="7">
-			<code>377</code>
-			<Bundle sr="arg0">
-				<Vals sr="val">
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%td_button
-Button
-The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
-				</Vals>
-			</Bundle>
-			<Str sr="arg1" ve="3">Changelogs</Str>
-			<Str sr="arg2" ve="3">%http_data</Str>
-			<Str sr="arg3" ve="3">Copy termux command</Str>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3">Cancel</Str>
-			<Int sr="arg6" val="30"/>
-			<Int sr="arg7" val="0"/>
-		</Action>
-		<Action sr="act8" ve="7">
-			<code>38</code>
-		</Action>
-		<Action sr="act9" ve="7">
-			<code>37</code>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%td_button</lhs>
-					<op>2</op>
-					<rhs>*Copy*</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Img sr="icn" ve="2">
-			<nme>mw_notification_system_update</nme>
-		</Img>
 	</Task>
 </TaskerData>

@@ -1,3 +1,11 @@
+v1.2
+20210329
++[Added YT music support](https://github.com/Practicalbutterfly5/ytdl/pull/11/commits/297dc61f7a246790f09164c698086964cabed150)
++Added music format selected - mp3 or m4a
++Added silent mode (suppress playlist dialog and file exist confirmation. See ytdl_download task for more info)
++Pass yt link to ytdl_check_url as %par1 to download any link.
++Fixed a bug, showing incorrect names in file exist dialog.
+
 v1.1
 20210325
 +Fixed a bug where video titles with special characters like ( ` ' [ ] ) where not downloaded correctly.
@@ -5,6 +13,6 @@ v1.1
 +Added a prompt if video has been already downloaded.
 
 
-v1.
+v1.0
 20210323
 +First Release
