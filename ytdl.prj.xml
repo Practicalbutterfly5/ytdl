@@ -1,10 +1,25 @@
 <TaskerData sr="" dvi="1" tv="5.11.14">
-	<Profile sr="prof508" ve="2">
-		<cdate>1617033228095</cdate>
-		<edate>1617036341719</edate>
+	<Profile sr="prof156" ve="2">
+		<cdate>1617045590609</cdate>
+		<clp>true</clp>
+		<edate>1617047806550</edate>
+		<id>156</id>
+		<mid0>142</mid0>
+		<nme>ytdl_Clipboard_set</nme>
+		<Event sr="con0" ve="2">
+			<code>3050</code>
+			<pri>0</pri>
+			<Str sr="arg0" ve="3">%CLIP</Str>
+			<Str sr="arg1" ve="3"/>
+			<Int sr="arg2" val="0"/>
+		</Event>
+	</Profile>
+	<Profile sr="prof157" ve="2">
+		<cdate>1617045590611</cdate>
+		<edate>1617049033847</edate>
 		<flags>8</flags>
-		<id>508</id>
-		<mid0>496</mid0>
+		<id>157</id>
+		<mid0>144</mid0>
 		<nme>ytdl_Intent_recieved</nme>
 		<Event sr="con0" ve="2">
 			<code>599</code>
@@ -16,36 +31,21 @@
 			<Str sr="arg4" ve="3"/>
 		</Event>
 	</Profile>
-	<Profile sr="prof509" ve="2">
-		<cdate>1617033228098</cdate>
-		<clp>true</clp>
-		<edate>1617036319775</edate>
-		<id>509</id>
-		<mid0>494</mid0>
-		<nme>ytdl_Clipboard_set</nme>
-		<Event sr="con0" ve="2">
-			<code>3050</code>
-			<pri>0</pri>
-			<Str sr="arg0" ve="3">%CLIP</Str>
-			<Str sr="arg1" ve="3"/>
-			<Int sr="arg2" val="0"/>
-		</Event>
-	</Profile>
 	<Project sr="proj0" ve="2">
 		<cdate>1615345930714</cdate>
 		<name>ytdl</name>
-		<pids>508,509</pids>
-		<tids>506,504,500,501,505,499,496,498,495,497,503,507,493,494,502,492</tids>
+		<pids>157,156</pids>
+		<tids>142,149,145,154,147,148,153,155,151,146,144,152,143,140,141,150</tids>
 		<Share sr="Share">
 			<d>YTDL is tasker+termux project to download YouTube videos on android very easily and seamlessly.</d>
 			<p>false</p>
 			<t>ytdl_Initial_Setup(Run this)</t>
 		</Share>
 	</Project>
-	<Task sr="task492">
+	<Task sr="task140">
 		<cdate>1615918845957</cdate>
-		<edate>1616649196510</edate>
-		<id>492</id>
+		<edate>1617047688891</edate>
+		<id>140</id>
 		<nme>ytdl_PANIC_TASK</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -304,10 +304,10 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 			<nme>mw_places_golf_course</nme>
 		</Img>
 	</Task>
-	<Task sr="task493">
+	<Task sr="task141">
 		<cdate>1616121798577</cdate>
 		<edate>1617041860063</edate>
-		<id>493</id>
+		<id>141</id>
 		<nme>Grant clipboard access</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -350,10 +350,10 @@ Other if you are lazy like me, to not open your computer, simply share links to 
 			<nme>mw_card_text_outline</nme>
 		</Img>
 	</Task>
-	<Task sr="task494">
+	<Task sr="task142">
 		<cdate>1616170710774</cdate>
-		<edate>1617036319775</edate>
-		<id>494</id>
+		<edate>1617047806550</edate>
+		<id>142</id>
 		<pri>6</pri>
 		<Action sr="act0" ve="7">
 			<code>130</code>
@@ -371,10 +371,10 @@ Other if you are lazy like me, to not open your computer, simply share links to 
 			<Int sr="arg9" val="0"/>
 		</Action>
 	</Task>
-	<Task sr="task495">
+	<Task sr="task143">
 		<cdate>1616459694147</cdate>
-		<edate>1617037882996</edate>
-		<id>495</id>
+		<edate>1617045670360</edate>
+		<id>143</id>
 		<nme>ytdl_check_for_update</nme>
 		<pri>100</pri>
 		<Action sr="act0" ve="7">
@@ -564,10 +564,10 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 			<nme>mw_notification_system_update</nme>
 		</Img>
 	</Task>
-	<Task sr="task496">
+	<Task sr="task144">
 		<cdate>1615928580510</cdate>
-		<edate>1617036341719</edate>
-		<id>496</id>
+		<edate>1617049033847</edate>
+		<id>144</id>
 		<nme>ytdl_intent_handler</nme>
 		<pri>6</pri>
 		<rty>2</rty>
@@ -611,9 +611,7 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 		<Action sr="act14" ve="7">
 			<code>523</code>
 			<Str sr="arg0" ve="3">Error getting info (%returnurl)</Str>
-			<Str sr="arg1" ve="3">There was an error retrieving video information.
-Error: Couldn't connect to Internet
-Link: %returnurl</Str>
+			<Str sr="arg1" ve="3">%errorinfo</Str>
 			<Str sr="arg10" ve="3"/>
 			<Str sr="arg11" ve="3">ytdl</Str>
 			<Img sr="arg2" ve="2">
@@ -673,9 +671,7 @@ Link: %returnurl</Str>
 		</Action>
 		<Action sr="act15" ve="7">
 			<code>548</code>
-			<Str sr="arg0" ve="3">There was an error retrieving video information.
-Error: Couldn't connect to Internet
-Link: %returnurl</Str>
+			<Str sr="arg0" ve="3">%errorinfo</Str>
 			<Int sr="arg1" val="1"/>
 		</Action>
 		<Action sr="act16" ve="7">
@@ -807,10 +803,10 @@ Link: %returnurl</Str>
 			<Int sr="arg9" val="0"/>
 		</Action>
 	</Task>
-	<Task sr="task497">
+	<Task sr="task145">
 		<cdate>1615947227099</cdate>
 		<edate>1616649216561</edate>
-		<id>497</id>
+		<id>145</id>
 		<nme>ytdl_open_link_notify_cancel</nme>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
@@ -822,10 +818,10 @@ Link: %returnurl</Str>
 			<Str sr="arg0" ve="3">%par2</Str>
 		</Action>
 	</Task>
-	<Task sr="task498">
+	<Task sr="task146">
 		<cdate>1615928798250</cdate>
-		<edate>1617041998345</edate>
-		<id>498</id>
+		<edate>1617047669682</edate>
+		<id>146</id>
 		<nme>ytdl_info</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -1193,10 +1189,10 @@ true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.
 			<Str sr="arg2" ve="3">settings complete</Str>
 		</Action>
 	</Task>
-	<Task sr="task499">
+	<Task sr="task147">
 		<cdate>1615878126177</cdate>
 		<edate>1617040493210</edate>
-		<id>499</id>
+		<id>147</id>
 		<nme>ytdl_Initial_Setup(Run this)</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -1661,10 +1657,10 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 			<nme>cust_star</nme>
 		</Img>
 	</Task>
-	<Task sr="task500">
+	<Task sr="task148">
 		<cdate>1616355906145</cdate>
 		<edate>1617041989186</edate>
-		<id>500</id>
+		<id>148</id>
 		<nme>ytdl_stop_download</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -1694,10 +1690,10 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 			<Str sr="arg1" ve="3">TermuxCommand(/data/data/com.termux/files/home/ytdl/ytdl_stop_download,%process_id1,%process_id2,,true)</Str>
 		</Action>
 	</Task>
-	<Task sr="task501">
+	<Task sr="task149">
 		<cdate>1615929094045</cdate>
 		<edate>1617041844200</edate>
-		<id>501</id>
+		<id>149</id>
 		<nme>ytdl_downloader</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -2762,10 +2758,10 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 			<Int sr="arg7" val="0"/>
 		</Action>
 	</Task>
-	<Task sr="task502">
+	<Task sr="task150">
 		<cdate>1615912488849</cdate>
 		<edate>1616636929466</edate>
-		<id>502</id>
+		<id>150</id>
 		<nme>ytdl_cleanup_temporary_files</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -2858,10 +2854,10 @@ This step will delete the following directory:  /sdcard/Tasker/ytdl/*</Str>
 			<nme>mw_content_delete_sweep</nme>
 		</Img>
 	</Task>
-	<Task sr="task503">
+	<Task sr="task151">
 		<cdate>1615796080362</cdate>
 		<edate>1617041850994</edate>
-		<id>503</id>
+		<id>151</id>
 		<nme>ytdl_check_url</nme>
 		<pri>100</pri>
 		<rty>2</rty>
@@ -2925,10 +2921,10 @@ This step will delete the following directory:  /sdcard/Tasker/ytdl/*</Str>
 			<code>38</code>
 		</Action>
 	</Task>
-	<Task sr="task504">
+	<Task sr="task152">
 		<cdate>1616100669935</cdate>
 		<edate>1616649204931</edate>
-		<id>504</id>
+		<id>152</id>
 		<nme>ytdl_retry</nme>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
@@ -2975,10 +2971,10 @@ This step will delete the following directory:  /sdcard/Tasker/ytdl/*</Str>
 			<Int sr="arg9" val="0"/>
 		</Action>
 	</Task>
-	<Task sr="task505">
+	<Task sr="task153">
 		<cdate>1616109319759</cdate>
 		<edate>1617037912569</edate>
-		<id>505</id>
+		<id>153</id>
 		<nme>ytdl_open_file_notify_cancel</nme>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
@@ -3002,10 +2998,10 @@ This step will delete the following directory:  /sdcard/Tasker/ytdl/*</Str>
 			<Str sr="arg1" ve="3">%par22</Str>
 		</Action>
 	</Task>
-	<Task sr="task506">
+	<Task sr="task154">
 		<cdate>1616112674679</cdate>
 		<edate>1617037917118</edate>
-		<id>506</id>
+		<id>154</id>
 		<nme>ytdl_delete_file_notify_cancel</nme>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
@@ -3029,10 +3025,10 @@ This step will delete the following directory:  /sdcard/Tasker/ytdl/*</Str>
 			<Int sr="arg1" val="0"/>
 		</Action>
 	</Task>
-	<Task sr="task507">
+	<Task sr="task155">
 		<cdate>1615972225558</cdate>
-		<edate>1617041995078</edate>
-		<id>507</id>
+		<edate>1617045631830</edate>
+		<id>155</id>
 		<nme>ytdl_download_progress</nme>
 		<pri>100</pri>
 		<stayawake>true</stayawake>
