@@ -1,7 +1,7 @@
 v1.2
 20210329
 +Added YT music support
-+Added music format selected - mp3 or m4a
++Added music format support - mp3 or m4a
 +Added silent mode (suppress playlist dialog and file exist confirmation. See ytdl_download task for more info)
 +Pass yt link to ytdl_check_url as %par1 to download any link.
 +Fixed a bug, showing incorrect names in file exist dialog.
