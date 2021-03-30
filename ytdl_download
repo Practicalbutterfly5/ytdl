@@ -7,8 +7,6 @@
 # $5 is mode
 # $6 is extension
 
-#name=$(printf "%s" "$1" | LC_ALL=C sed -e 's/[^a-zA-Z0-9,._+@%/-]/\\&/g; 1{$s/^$/""/}; 1!s/^/"/; $!s/$/"/';)
-
 IFS="|" read -a array <<< "$1"
 IFS="|" read -a array2 <<< "$2"
 for i in "${!array[@]}"; do
@@ -24,25 +22,23 @@ EOF
 
 am broadcast --user '0' -a tasker.ytdl -e downloading "1"
 
-if [ "$5" = "audio" ]
-then
 if [ "$6" = "mp3" ]
 then
-bash -c 'echo "$$" & exec youtube-dl --ignore-config --socket-timeout 30 --newline --embed-thumbnail -x --audio-format "mp3"  -o "/sdcard/Tasker/ytdl/tmp/%(title)s.mp3" -- "$0" ' "${array2[i]}">>/sdcard/Tasker/ytdl/"${array2[i]}"
+bash -c 'echo "$$" & exec youtube-dl --ignore-config --socket-timeout 30 --newline  -x --audio-format "mp3"  -o "/sdcard/Tasker/ytdl/tmp/%(title)s.mp3" -- "$0" ' "${array2[i]}">>/sdcard/Tasker/ytdl/"${array2[i]}"
+errorcode="$?"
 fi
 if [ "$6" = "m4a" ]
 then
-bash -c 'echo "$$" & exec youtube-dl --ignore-config --socket-timeout 30 --newline --embed-thumbnail -f "bestaudio[ext=m4a]/bestaudio" -o "/sdcard/Tasker/ytdl/tmp/%(title)s.m4a" -- "$0" ' "${array2[i]}" >>/sdcard/Tasker/ytdl/"${array2[i]}"
-fi
-fi
-
-if [ "$5" = "video" ]
-then
-bash -c 'echo "$$" & exec youtube-dl --ignore-config --socket-timeout 30 --newline -f "bestvideo[height<="$1"][ext=mp4]+bestaudio[ext=m4a]/best[height<="$1"][ext=mp4]/best" -o "/sdcard/Tasker/ytdl/tmp/%(title)s.mp4" -- "$0" ' "${array2[i]}" "$4" >>/sdcard/Tasker/ytdl/"${array2[i]}"
-fi
-
+bash -c 'echo "$$" & exec youtube-dl --ignore-config --socket-timeout 30 --newline --embed-thumbnail  -f "bestaudio[ext=m4a]/bestaudio" -o "/sdcard/Tasker/ytdl/tmp/%(title)s.m4a" -- "$0" ' "${array2[i]}" >>/sdcard/Tasker/ytdl/"${array2[i]}"
 errorcode="$?"
-if [ $errorcode == 0 ]
+fi
+if [ "$6" = "mp4" ]
+then
+bash -c 'echo "$$" & exec youtube-dl --ignore-config --socket-timeout 30 --newline  -f "bestvideo[height<="$1"][ext=mp4]+bestaudio[ext=m4a]/best[height<="$1"][ext=mp4]/best" -o "/sdcard/Tasker/ytdl/tmp/%(title)s.mp4" -- "$0" ' "${array2[i]}" "$4" >>/sdcard/Tasker/ytdl/"${array2[i]}"
+errorcode="$?"
+fi
+
+if [ "$errorcode" = "0" ]
 then
  echo "Download complete">>/sdcard/Tasker/ytdl/"${array2[i]}"
  else
