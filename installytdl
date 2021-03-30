@@ -11,7 +11,7 @@ cd
 
 rm -rf ytdl
 
-git clone --depth 1 -b work https://github.com/Practicalbutterfly5/ytdl.git
+git clone --depth 1 -b main https://github.com/Practicalbutterfly5/ytdl.git
 
 
 chmod -R +x ytdl
