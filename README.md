@@ -6,7 +6,7 @@
 #### Features
 * Download YouTube videos, playlists, and audios.
 * Supports downloading by copying YouTube link to clipboard, or sharing link to termux app.
-* Supports all YouTube links, including channel links, playlist links, embedded vidoes links. Livestream downloading hasn't been tested yet. Youtube mix links are not supported by youtube-dl.
+* Supports all YouTube links, including channel links, playlist links, embedded vidoes links and **YT music** links. Livestream downloading hasn't been tested yet. Youtube mix links are not supported by youtube-dl.
 * Select or unselect videos in a playlist/channel that you want to download.
 * Get live update of download status in notification.
 * Cancel any download from notification.
