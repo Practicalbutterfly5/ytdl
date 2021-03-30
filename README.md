@@ -1,7 +1,7 @@
 # Ytdl
 
 
-**Ytdl** is tasker+termux project to download YouTube videos on **android** easily.
+**Ytdl** is tasker+termux project to download YouTube videos and audios on **android** easily.
 
 #### Features
 * Download YouTube videos, playlists, and audios.
