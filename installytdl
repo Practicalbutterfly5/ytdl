@@ -1,5 +1,8 @@
 #!/data/data/com.termux/files/usr/bin/bash
+
 yes | termux-setup-storage > /dev/null
+
+apt update
 
 yes | pkg install python ffmpeg atomicparsley git
 
@@ -12,7 +15,6 @@ cd
 rm -rf ytdl
 
 git clone --depth 1 -b main https://github.com/Practicalbutterfly5/ytdl.git
-
 
 chmod -R +x ytdl
 
