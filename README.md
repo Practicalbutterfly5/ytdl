@@ -35,7 +35,8 @@
 After ytdl is installed and setup task is run, you are ready to download using any of these method.
 
 * **Method 1**  
-  Share any YouTube link to termux app. Termux app will open momentarily and then close, if it didn't have any active sessions.
+  Share any YouTube link to termux app. Termux app will open momentarily and then close, if it didn't have any active sessions.  
+  
   To use this method on Android version>=10, make sure that Termux has "Display over other apps" permission.
 
 
