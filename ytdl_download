@@ -24,17 +24,17 @@ am broadcast --user '0' -a tasker.ytdl -e downloading "1"
 
 if [ "$6" = "mp3" ]
 then
-bash -c 'echo "$$" & exec youtube-dl --ignore-config --socket-timeout 30 --newline  -x --audio-format "mp3"  -o "/sdcard/Tasker/ytdl/tmp/%(title)s.mp3" -- "$0" ' "${array2[i]}">>/sdcard/Tasker/ytdl/"${array2[i]}"
+bash -c 'echo "$$" & exec yt-dlp --ignore-config --socket-timeout 30 --newline  -x --audio-format "mp3"  -o "/sdcard/Tasker/ytdl/tmp/%(title)s.mp3" -- "$0" ' "${array2[i]}">>/sdcard/Tasker/ytdl/"${array2[i]}"
 errorcode="$?"
 fi
 if [ "$6" = "m4a" ]
 then
-bash -c 'echo "$$" & exec youtube-dl --ignore-config --socket-timeout 30 --newline --embed-thumbnail  -f "bestaudio[ext=m4a]/bestaudio" -o "/sdcard/Tasker/ytdl/tmp/%(title)s.m4a" -- "$0" ' "${array2[i]}" >>/sdcard/Tasker/ytdl/"${array2[i]}"
+bash -c 'echo "$$" & exec yt-dlp --ignore-config --socket-timeout 30 --newline --embed-thumbnail  -f "bestaudio[ext=m4a]/bestaudio" -o "/sdcard/Tasker/ytdl/tmp/%(title)s.m4a" -- "$0" ' "${array2[i]}" >>/sdcard/Tasker/ytdl/"${array2[i]}"
 errorcode="$?"
 fi
 if [ "$6" = "mp4" ]
 then
-bash -c 'echo "$$" & exec youtube-dl --ignore-config --socket-timeout 30 --newline  -f "bestvideo[height<="$1"][ext=mp4]+bestaudio[ext=m4a]/best[height<="$1"][ext=mp4]/best" -o "/sdcard/Tasker/ytdl/tmp/%(title)s.mp4" -- "$0" ' "${array2[i]}" "$4" >>/sdcard/Tasker/ytdl/"${array2[i]}"
+bash -c 'echo "$$" & exec yt-dlp --ignore-config --socket-timeout 30 --newline  -f "bestvideo[height<="$1"][ext=mp4]+bestaudio[ext=m4a]/best[height<="$1"][ext=mp4]/best" -o "/sdcard/Tasker/ytdl/tmp/%(title)s.mp4" -- "$0" ' "${array2[i]}" "$4" >>/sdcard/Tasker/ytdl/"${array2[i]}"
 errorcode="$?"
 fi
 

@@ -6,7 +6,7 @@
 #### Features
 * Download YouTube videos, playlists, and audios.
 * Supports downloading by copying YouTube link to clipboard, or sharing link to termux app.
-* Supports all YouTube links, including channel links, playlist links, embedded videos links and **YT music** links. Livestream downloading hasn't been tested yet. Youtube mix links are not supported by youtube-dl.
+* Supports all YouTube links, including channel links, playlist links, embedded videos links and **YT music** links. Livestream downloading hasn't been tested yet. Youtube mix links are not supported by yt-dlp.
 * Select or unselect videos in a playlist/channel that you want to download.
 * Get live update of download status in notification.
 * Cancel any download from notification.
@@ -21,9 +21,9 @@
 
 
 1. Copy and paste the following single line command in termux and press Enter key.  
-      ```curl https://raw.githubusercontent.com/Practicalbutterfly5/ytdl/main/installytdl > installytdl && chmod +x installytdl && bash installytdl```  
+      ```curl https://raw.githubusercontent.com/Practicalbutterfly5/ytdl/main/installytdl | bash```  
    
-   It will automatically download these Termux packages- ffmpeg, python, youtube-dl, atomicparsley, git (Approx. download size 80 Mb), and clone ytdl repo.
+   It will automatically download these Termux packages- ffmpeg, python, yt-dlp, atomicparsley, git (Approx. download size 80 Mb), and clone ytdl repo.
 
 2. Tasker will open automatically and prompt to import ytdl project. If it doesn't, import project manually from /sdcard/Tasker/ytdl/ytdl.prj.xml
 
@@ -47,3 +47,4 @@ After ytdl is installed and setup task is run, you are ready to download using a
 
 
 #### [Changelogs](https://github.com/Practicalbutterfly5/ytdl/blob/main/Changelogs)
+**Version 1.30 -2023/03/12** - Moving over to yt-dlp and ditching youtube-dl for good. Functionality should not be affected.

@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 # $1 is url, $2 is download directory,$3  mode, $4 is resolution
 
-eval "$( (youtube-dl --socket-timeout 5 --ignore-config -i -o '"+"|"+"%(playlist_title)s"+"|"+"%(title)s"+"|"+"%(id)s"+"|"+"' --get-filename --skip-download --no-playlist "$1" ) \
+eval "$( (yt-dlp --socket-timeout 5 --ignore-config -i -o '"+"|"+"%(playlist_title)s"+"|"+"%(title)s"+"|"+"%(id)s"+"|"+"' --get-filename --skip-download --no-playlist "$1" ) \
         2> >(errorinfo=$(cat); typeset -p errorinfo) \
          > >(output=$(cat); typeset -p output); errorcodeinfo=$?; typeset -p errorcodeinfo )"
  

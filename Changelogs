@@ -1,3 +1,8 @@
+v1.30
+20230312
++Moving over to yt-dlp for better compatibility and download speeds. youtube-dl is slow in releasing updates.
+
+
 v1.21
 20210330
 +Fixed a bug, showing incorrect names in file exist dialog.
