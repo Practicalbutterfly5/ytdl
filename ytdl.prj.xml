@@ -2949,7 +2949,7 @@ This step will delete the following directory:  /sdcard/Tasker/ytdl/*</Str>
 				<Condition sr="c0" ve="3">
 					<lhs>%url</lhs>
 					<op>4</op>
-					<rhs>^((?:https?:)?\/\/)?((?:www|m|music)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$</rhs>
+					<rhs>^((?:https?:)?\/\/)?((?:www|m|music)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|@|v\/)?)([\w\-]+)(\S+)?$</rhs>
 				</Condition>
 			</ConditionList>
 		</Action>
