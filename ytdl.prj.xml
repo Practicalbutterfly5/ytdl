@@ -401,7 +401,7 @@ If there is an update you can copy the link and paste it in termux to update.
 		</Action>
 		<Action sr="act10" ve="7">
 			<code>105</code>
-			<Str sr="arg0" ve="3">curl https://raw.githubusercontent.com/Practicalbutterfly5/ytdl/main/installytdl &gt; installytdl &amp;&amp; chmod +x installytdl &amp;&amp; bash installytdl</Str>
+			<Str sr="arg0" ve="3">curl https://raw.githubusercontent.com/Practicalbutterfly5/ytdl/main/installytdl | bash</Str>
 			<Int sr="arg1" val="0"/>
 		</Action>
 		<Action sr="act11" ve="7">
