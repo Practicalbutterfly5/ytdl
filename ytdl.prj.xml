@@ -68,6 +68,7 @@ This task will NOT&lt;br/&gt;
 		</Action>
 		<Action sr="act1" ve="7">
 			<code>512</code>
+                        <se>false</se>
 			<Int sr="arg0" val="1"/>
 		</Action>
 		<Action sr="act10" ve="7">
@@ -811,6 +812,7 @@ The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
 			<code>512</code>
+                        <se>false</se>
 			<Int sr="arg0" val="1"/>
 		</Action>
 		<Action sr="act1" ve="7">
@@ -1957,6 +1959,7 @@ Setting the variable %silent_mode to "yes" will&lt;br/&gt;
 		</Action>
 		<Action sr="act15" ve="7">
 			<code>512</code>
+                        <se>false</se>
 			<Int sr="arg0" val="1"/>
 		</Action>
 		<Action sr="act16" ve="7">
@@ -3033,6 +3036,7 @@ This step will delete the following directory:  /sdcard/Tasker/ytdl/*</Str>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
 			<code>512</code>
+                        <se>false</se>
 			<Int sr="arg0" val="1"/>
 		</Action>
 		<Action sr="act1" ve="7">
@@ -3060,6 +3064,7 @@ This step will delete the following directory:  /sdcard/Tasker/ytdl/*</Str>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
 			<code>512</code>
+                        <se>false</se>
 			<Int sr="arg0" val="1"/>
 		</Action>
 		<Action sr="act1" ve="7">

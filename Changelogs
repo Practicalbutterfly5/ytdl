@@ -1,3 +1,8 @@
+v1.31
+20230313
++Change regex to allow new @channel format and fix file permissions
++Enable continue after error on Status bar collapse to fix error on some devices
+
 v1.30
 20230312
 +Moving over to yt-dlp for better compatibility and download speeds. youtube-dl is slow in releasing updates.
