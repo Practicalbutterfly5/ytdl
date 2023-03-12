@@ -1,17 +1,14 @@
-# Ytdl
-
-
-**Ytdl** is tasker+termux project to download YouTube videos and audios on **android** easily.
+This is a tasker+termux project to download YouTube videos, audio, playlists, etc on **android** easily.
 
 #### Features
-* Download YouTube videos, playlists, and audios.
-* Supports downloading by copying YouTube link to clipboard, or sharing link to termux app.
-* Supports all YouTube links, including channel links, playlist links, embedded videos links and **YT music** links. Livestream downloading hasn't been tested yet. Youtube mix links are not supported by yt-dlp.
+* Download YouTube videos, playlists and audio.
+* Supports downloading by copying the YouTube link to the clipboard, or sharing link to termux app.
+* **Supports all YouTube links, including channel links, playlist links, embedded video links, and YT music links.** Livestream downloading hasn't been tested yet.
 * Select or unselect videos in a playlist/channel that you want to download.
-* Get live update of download status in notification.
-* Cancel any download from notification.
+* Get a live update of download status in the notification.
+* Cancel any download from the notification.
 * Does not require any Tasker Plugins.
-* Option to enable cataloging of playlists, by downloading playlist to a seperate folder of its name.
+* Option to enable cataloging of playlists, by downloading playlists to a separate folder of their name.
 
 #### Pre-requisites
 * Tasker app ([Play store link](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm))
@@ -20,19 +17,19 @@
 #### Installation
 
 
-1. Copy and paste the following single line command in termux and press Enter key.  
+1. Copy and paste the following single-line command in termux and press Enter key.  
       ```curl https://raw.githubusercontent.com/Practicalbutterfly5/ytdl/main/installytdl | bash```  
    
    It will automatically download these Termux packages- ffmpeg, python, yt-dlp, atomicparsley, git (Approx. download size 80 Mb), and clone ytdl repo.
 
-2. Tasker will open automatically and prompt to import ytdl project. If it doesn't, import project manually from /sdcard/Tasker/ytdl/ytdl.prj.xml
+2. Tasker will open automatically and prompt to import ytdl project. If it doesn't, import the project manually from /sdcard/Tasker/ytdl/ytdl.prj.xml
 
-3. Launch the ytdl_Initial_Setup task and configure your preferences. Re-run this task if you want to change any setting in future.
+3. Launch the ytdl_Initial_Setup task and configure your preferences. Re-run this task if you want to change any settings in the future.
 
  
 #### USAGE
 
-After ytdl is installed and setup task is run, you are ready to download using any of these method.
+After ytdl is installed and the setup task is run, you are ready to download using any of these methods.
 
 * **Method 1**  
   Share any YouTube link to termux app. Termux app will open momentarily and then close, if it didn't have any active sessions.  
@@ -41,7 +38,7 @@ After ytdl is installed and setup task is run, you are ready to download using a
 
 
 * **Method 2**  
-  **Android version<=9**,  will be able to copy YouTube link to clipboard and trigger ytdl.  
+  **Android version<=9**,  will be able to copy the YouTube link to the clipboard and trigger ytdl.  
   
   **Android version>=10**, will need to give tasker ```android.permission.WRITE_SECURE_SETTINGS```. [This can be done using adb for non-root users](https://tasker.joaoapps.com/userguide/en/help/ah_secure_setting_grant.html), rooted users can simply execute ```pm grant net.dinglisch.android.taskerm android.permission.WRITE_SECURE_SETTINGS``` in rooted shell.
 
