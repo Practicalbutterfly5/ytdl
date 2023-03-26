@@ -18,7 +18,7 @@ This is a tasker+termux project to download YouTube videos, audio, playlists, et
 
 1. Copy and paste the following commands in termux and press Enter key (also press enter on any prompts).  
 * To upgrade termux packages:  
-`apt update && apt upgrade`
+`apt update && apt upgrade -y`
 * To install ytdl:  
 `curl https://raw.githubusercontent.com/Practicalbutterfly5/ytdl/main/installytdl | bash`  
 It will automatically download these Termux packages- ffmpeg, python, yt-dlp, atomicparsley, git and clone ytdl repo.
