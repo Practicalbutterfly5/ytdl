@@ -16,15 +16,16 @@ This is a tasker+termux project to download YouTube videos, audio, playlists, et
 
 #### Installation
 
-
-1. Copy and paste the following single-line command in termux and press Enter key.  
-      ```curl https://raw.githubusercontent.com/Practicalbutterfly5/ytdl/main/installytdl | bash```  
-   
-   It will automatically download these Termux packages- ffmpeg, python, yt-dlp, atomicparsley, git (Approx. download size 80 Mb), and clone ytdl repo.
+1. Copy and paste the following commands in termux and press Enter key (also press enter on any prompts).  
+* To upgrade termux packages:  
+`apt update && apt upgrade`
+* To install ytdl:  
+`curl https://raw.githubusercontent.com/Practicalbutterfly5/ytdl/main/installytdl | bash`  
+It will automatically download these Termux packages- ffmpeg, python, yt-dlp, atomicparsley, git and clone ytdl repo.
 
 2. Tasker will open automatically and prompt to import ytdl project. If it doesn't, import the project manually from /sdcard/Tasker/ytdl/ytdl.prj.xml
 
-3. Launch the ytdl_Initial_Setup task and configure your preferences. Re-run this task if you want to change any settings in the future.
+3. Launch the ytdl_Initial_Setup task in tasker and configure your preferences. Re-run this task if you want to change any settings in the future.
 
  
 #### USAGE
